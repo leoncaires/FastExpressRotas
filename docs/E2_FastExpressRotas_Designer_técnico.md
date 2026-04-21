@@ -75,7 +75,7 @@ PATRÃO, Brian. Dijkstra's vs Bellman-Ford Algorithm. Medium, [s.d.]. Disponíve
 
 > Insira o diagrama abaixo. Pode ser exportado do Draw.io, Excalidraw, etc.
 
-![Diagrama de arquitetura](./docs/E2_FastExpressRotas.png)
+![Diagrama de arquitetura](./docs/E2_FastExpressRotas.jpeg)
 
 ### Descrição das camadas
 
