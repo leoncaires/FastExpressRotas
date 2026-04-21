@@ -11,7 +11,7 @@
 | Campo | Preenchimento |
 |-------|---------------|
 | Nome do projeto | FastExpressRota |
-| Repositório GitHub | |
+| Repositório GitHub | https://github.com/leoncaires/FastExpressRotas |
 | Integrante 1 | Leonel Santos Caires — RA: 41074475 |
 | Integrante 2 | Matheus Henrique da Trindade — RA: 40855783 |
 | Integrante 3 | Elton dos Santos Rodrigues — RA: 38490005 |
