@@ -3,36 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastExpressRotas - MVP</title>
+    <title>FastExpressRotas</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <!-- Div para notificações do simulador -->
+    <!-- Barra de notificação do simulador -->
     <div id="notificacao_transito">
         <span id="texto_notificacao">Simulador de trânsito ativo...</span>
     </div>
 
     <h1>FastExpressRotas</h1>
+
+    <!-- Controles principais -->
     <div id="controles">
-        <!-- ... (selects e botão mantidos iguais) -->
+        <label for="origem">Origem:</label>
+        <select id="origem">
+            {% for v in vertices %}
+                <option value="{{ v.id }}">{{ v.nome }} (ID {{ v.id }})</option>
+            {% endfor %}
+        </select>
+
+        <label for="destino">Destino:</label>
+        <select id="destino">
+            {% for v in vertices %}
+                <option value="{{ v.id }}">{{ v.nome }} (ID {{ v.id }})</option>
+            {% endfor %}
+        </select>
+
+        <button id="botao_calcular">Calcular Rota</button>
+        <button id="botao_iniciar_entrega" disabled>Iniciar Entrega</button>
+        <button id="botao_parar_entrega" disabled>Parar Entrega</button>
     </div>
 
+    <!-- Área de resultado -->
     <div id="resultado">
         <div id="texto_rota"></div>
         <div id="mapa"></div>
     </div>
 
-<!-- ... (scripts) ... -->
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/map.js"></script>
+    <script src="/static/script.js"></script>
     <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
-    <script>
-        // Conecta ao servidor Flask-SocketIO
-        var socket = io.connect('http://' + document.domain + ':' + location.port);
-        
-        socket.on('evento_transito', function(data) {
-            document.getElementById('texto_notificacao').innerText = data.mensagem;
-            // Se uma rota já foi calculada, recalcule automaticamente aqui, se desejar
-        });
-    </script>
 </body>
 </html>

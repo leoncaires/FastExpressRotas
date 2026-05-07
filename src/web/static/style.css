@@ -8,6 +8,15 @@ h1 {
     text-align: center;
 }
 
+#notificacao_transito {
+    background: #fff3cd;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
 #controles {
     background: white;
     padding: 15px;

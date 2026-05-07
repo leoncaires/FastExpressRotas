@@ -1,7 +1,7 @@
 import random
 import time
 import threading
-from src.core.edge import Aresta   # <-- CORREÇÃO AQUI
+from src.core.edge import Aresta  
 
 
 class SimuladorTransito:
