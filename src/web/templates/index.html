@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastExpressRotas - MVP</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Div para notificações do simulador -->
+    <div id="notificacao_transito">
+        <span id="texto_notificacao">Simulador de trânsito ativo...</span>
+    </div>
+
+    <h1>FastExpressRotas</h1>
+    <div id="controles">
+        <!-- ... (selects e botão mantidos iguais) -->
+    </div>
+
+    <div id="resultado">
+        <div id="texto_rota"></div>
+        <div id="mapa"></div>
+    </div>
+
+<!-- ... (scripts) ... -->
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+    <script>
+        // Conecta ao servidor Flask-SocketIO
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+        
+        socket.on('evento_transito', function(data) {
+            document.getElementById('texto_notificacao').innerText = data.mensagem;
+            // Se uma rota já foi calculada, recalcule automaticamente aqui, se desejar
+        });
+    </script>
+</body>
+</html>

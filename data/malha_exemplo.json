@@ -1,0 +1,16 @@
+{
+  "vertices": [
+    { "id": 0, "nome": "Centro", "lat": -23.5505, "lon": -46.6333 },
+    { "id": 1, "nome": "Bairro A", "lat": -23.5612, "lon": -46.6558 },
+    { "id": 2, "nome": "Bairro B", "lat": -23.5754, "lon": -46.6221 },
+    { "id": 3, "nome": "Industrial", "lat": -23.5401, "lon": -46.6702 }
+  ],
+  "arestas": [
+    { "origem": 0, "destino": 1, "peso": 8 },
+    { "origem": 1, "destino": 0, "peso": 8 },
+    { "origem": 0, "destino": 2, "peso": 12 },
+    { "origem": 2, "destino": 0, "peso": 12 },
+    { "origem": 1, "destino": 3, "peso": 5 },
+    { "origem": 3, "destino": 2, "peso": 7 }
+  ]
+}
