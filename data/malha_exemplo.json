@@ -1,16 +1,5640 @@
 {
   "vertices": [
-    { "id": 0, "nome": "Centro", "lat": -23.5505, "lon": -46.6333 },
-    { "id": 1, "nome": "Bairro A", "lat": -23.5612, "lon": -46.6558 },
-    { "id": 2, "nome": "Bairro B", "lat": -23.5754, "lon": -46.6221 },
-    { "id": 3, "nome": "Industrial", "lat": -23.5401, "lon": -46.6702 }
+    {
+      "id": 597282,
+      "nome": "Viaduto do Rio Tamanduateí",
+      "lat": -23.5510876,
+      "lon": -46.6261325
+    },
+    {
+      "id": 25871670,
+      "nome": "Rua da Figueira",
+      "lat": -23.5523785,
+      "lon": -46.6257511
+    },
+    {
+      "id": 25871831,
+      "nome": "Rua da Figueira",
+      "lat": -23.5519102,
+      "lon": -46.6257308
+    },
+    {
+      "id": 25871833,
+      "nome": "Rua da Figueira",
+      "lat": -23.5522727,
+      "lon": -46.6256216
+    },
+    {
+      "id": 25872025,
+      "nome": "Avenida do Estado",
+      "lat": -23.5501074,
+      "lon": -46.6266488
+    },
+    {
+      "id": 25872075,
+      "nome": "Avenida do Estado",
+      "lat": -23.5481997,
+      "lon": -46.6286296
+    },
+    {
+      "id": 25872212,
+      "nome": "Avenida do Estado",
+      "lat": -23.5461204,
+      "lon": -46.6301486
+    },
+    {
+      "id": 25872232,
+      "nome": "Avenida do Estado",
+      "lat": -23.5444987,
+      "lon": -46.6297656
+    },
+    {
+      "id": 25872236,
+      "nome": "Viaduto Diário Popular",
+      "lat": -23.5448929,
+      "lon": -46.630562
+    },
+    {
+      "id": 25872258,
+      "nome": "Avenida do Estado",
+      "lat": -23.5438876,
+      "lon": -46.6294514
+    },
+    {
+      "id": 25872264,
+      "nome": "Parque Dom Pedro II",
+      "lat": -23.5436253,
+      "lon": -46.6297566
+    },
+    {
+      "id": 25928842,
+      "nome": "Avenida Vinte e Três de Maio",
+      "lat": -23.5468966,
+      "lon": -46.6376955
+    },
+    {
+      "id": 25928939,
+      "nome": "Avenida Vinte e Três de Maio",
+      "lat": -23.5495812,
+      "lon": -46.6385465
+    },
+    {
+      "id": 25928961,
+      "nome": "Parque Anhangabau",
+      "lat": -23.5481572,
+      "lon": -46.6387749
+    },
+    {
+      "id": 25928964,
+      "nome": "Parque Anhangabau",
+      "lat": -23.5493388,
+      "lon": -46.6387877
+    },
+    {
+      "id": 25929039,
+      "nome": "Avenida Vinte e Três de Maio",
+      "lat": -23.5548213,
+      "lon": -46.6371573
+    },
+    {
+      "id": 60641012,
+      "nome": "Viaduto Brigadeiro Luís Antônio",
+      "lat": -23.5522917,
+      "lon": -46.6376347
+    },
+    {
+      "id": 60641027,
+      "nome": "Viaduto Dona Paulina",
+      "lat": -23.552042,
+      "lon": -46.6359291
+    },
+    {
+      "id": 60641028,
+      "nome": "Viaduto Dona Paulina",
+      "lat": -23.5518993,
+      "lon": -46.635442
+    },
+    {
+      "id": 60641030,
+      "nome": "Praça Doutor João Mendes",
+      "lat": -23.5517667,
+      "lon": -46.634943
+    },
+    {
+      "id": 60641031,
+      "nome": "Praça Doutor João Mendes",
+      "lat": -23.5519876,
+      "lon": -46.6344161
+    },
+    {
+      "id": 60641034,
+      "nome": "Praça Doutor João Mendes",
+      "lat": -23.5520574,
+      "lon": -46.6342543
+    },
+    {
+      "id": 60641038,
+      "nome": "Praça Doutor João Mendes",
+      "lat": -23.5522027,
+      "lon": -46.633903
+    },
+    {
+      "id": 60641043,
+      "nome": "Rua Anita Garibaldi",
+      "lat": -23.5525309,
+      "lon": -46.6329267
+    },
+    {
+      "id": 60641048,
+      "nome": "Rua Anita Garibaldi",
+      "lat": -23.5517762,
+      "lon": -46.6325558
+    },
+    {
+      "id": 60641052,
+      "nome": "Rua Anita Garibaldi",
+      "lat": -23.5504696,
+      "lon": -46.6319095
+    },
+    {
+      "id": 60641086,
+      "nome": "Rua Quintino Bocaiuva",
+      "lat": -23.5511669,
+      "lon": -46.6354804
+    },
+    {
+      "id": 60641088,
+      "nome": "Praça Doutor João Mendes",
+      "lat": -23.5514227,
+      "lon": -46.6353811
+    },
+    {
+      "id": 60641089,
+      "nome": "Ladeira Porto Geral",
+      "lat": -23.5451434,
+      "lon": -46.6336403
+    },
+    {
+      "id": 60641100,
+      "nome": "Rua Floriano Peixoto",
+      "lat": -23.5486338,
+      "lon": -46.6322968
+    },
+    {
+      "id": 60641101,
+      "nome": "Rua Roberto Simonsen",
+      "lat": -23.549387,
+      "lon": -46.6320901
+    },
+    {
+      "id": 60641102,
+      "nome": "Rua Venceslau Brás",
+      "lat": -23.5494719,
+      "lon": -46.6328143
+    },
+    {
+      "id": 60641149,
+      "nome": "Avenida da Liberdade",
+      "lat": -23.5546563,
+      "lon": -46.6356661
+    },
+    {
+      "id": 60641181,
+      "nome": "Avenida da Liberdade",
+      "lat": -23.5554251,
+      "lon": -46.6360307
+    },
+    {
+      "id": 60641211,
+      "nome": "Rua Senador Feijó",
+      "lat": -23.550842,
+      "lon": -46.634488
+    },
+    {
+      "id": 60641252,
+      "nome": "Largo São Francisco",
+      "lat": -23.5495799,
+      "lon": -46.6366614
+    },
+    {
+      "id": 60641257,
+      "nome": "Largo São Francisco",
+      "lat": -23.5494279,
+      "lon": -46.6374572
+    },
+    {
+      "id": 60641282,
+      "nome": "Largo São Francisco",
+      "lat": -23.5501329,
+      "lon": -46.6365356
+    },
+    {
+      "id": 60641305,
+      "nome": "Rua Doutor Rodrigo Silva",
+      "lat": -23.552893,
+      "lon": -46.6355562
+    },
+    {
+      "id": 60641326,
+      "nome": "Rua dos Estudantes",
+      "lat": -23.5554524,
+      "lon": -46.6359047
+    },
+    {
+      "id": 60641336,
+      "nome": "Avenida da Liberdade",
+      "lat": -23.5567191,
+      "lon": -46.6362791
+    },
+    {
+      "id": 60641341,
+      "nome": "Rua Doutor Américo de Campos",
+      "lat": -23.5572532,
+      "lon": -46.6364403
+    },
+    {
+      "id": 60641359,
+      "nome": "Rua Anita Garibaldi",
+      "lat": -23.5529895,
+      "lon": -46.6331555
+    },
+    {
+      "id": 60641364,
+      "nome": "Praça Doutor João Mendes",
+      "lat": -23.5524714,
+      "lon": -46.6332336
+    },
+    {
+      "id": 60641382,
+      "nome": "Rua dos Estudantes",
+      "lat": -23.5555339,
+      "lon": -46.6342403
+    },
+    {
+      "id": 60641387,
+      "nome": "Rua dos Estudantes",
+      "lat": -23.555491,
+      "lon": -46.6352632
+    },
+    {
+      "id": 60641411,
+      "nome": "Rua dos Estudantes",
+      "lat": -23.5554703,
+      "lon": -46.6331061
+    },
+    {
+      "id": 60641414,
+      "nome": "Rua Conselheiro Furtado",
+      "lat": -23.5534514,
+      "lon": -46.6332639
+    },
+    {
+      "id": 60641427,
+      "nome": "Rua Doutor Américo de Campos",
+      "lat": -23.5571857,
+      "lon": -46.6351386
+    },
+    {
+      "id": 60641438,
+      "nome": "Rua Doutor Américo de Campos",
+      "lat": -23.5571091,
+      "lon": -46.6341192
+    },
+    {
+      "id": 60641444,
+      "nome": "Praça Almeida Júnior",
+      "lat": -23.5570412,
+      "lon": -46.6330029
+    },
+    {
+      "id": 60641488,
+      "nome": "Praça Ramos de Azevedo",
+      "lat": -23.5459268,
+      "lon": -46.6387625
+    },
+    {
+      "id": 60641571,
+      "nome": "Praça Ramos de Azevedo",
+      "lat": -23.5446995,
+      "lon": -46.6386448
+    },
+    {
+      "id": 60641664,
+      "nome": "Rua Coronel Xavier de Toledo",
+      "lat": -23.547423,
+      "lon": -46.6397608
+    },
+    {
+      "id": 60685349,
+      "nome": "Praça da Sé",
+      "lat": -23.5505721,
+      "lon": -46.6343559
+    },
+    {
+      "id": 60685350,
+      "nome": "Praça da Sé",
+      "lat": -23.5511695,
+      "lon": -46.6340198
+    },
+    {
+      "id": 60685352,
+      "nome": "Rua Tabatinguera",
+      "lat": -23.5525158,
+      "lon": -46.630443
+    },
+    {
+      "id": 60685357,
+      "nome": "Rua Conde de Sarzedas",
+      "lat": -23.5537481,
+      "lon": -46.6319924
+    },
+    {
+      "id": 60685358,
+      "nome": "Rua Conde de Sarzedas",
+      "lat": -23.5539581,
+      "lon": -46.6311399
+    },
+    {
+      "id": 60685360,
+      "nome": "Rua Oliveira Monteiro",
+      "lat": -23.5534267,
+      "lon": -46.6309942
+    },
+    {
+      "id": 60685363,
+      "nome": "Rua Carolina Augusta",
+      "lat": -23.5533244,
+      "lon": -46.6313901
+    },
+    {
+      "id": 60685365,
+      "nome": "Rua dos Estudantes",
+      "lat": -23.5553904,
+      "lon": -46.6319876
+    },
+    {
+      "id": 60685366,
+      "nome": "Rua Egas Moniz de Aragão",
+      "lat": -23.5553236,
+      "lon": -46.6310913
+    },
+    {
+      "id": 60685367,
+      "nome": "Rua Doutor Tomaz de Lima",
+      "lat": -23.5560866,
+      "lon": -46.6319979
+    },
+    {
+      "id": 60685368,
+      "nome": "Rua Conselheiro Furtado",
+      "lat": -23.5559736,
+      "lon": -46.6330693
+    },
+    {
+      "id": 60685370,
+      "nome": "Rua São Paulo",
+      "lat": -23.5569787,
+      "lon": -46.6319891
+    },
+    {
+      "id": 60685374,
+      "nome": "Rua dos Estudantes",
+      "lat": -23.5553045,
+      "lon": -46.6308289
+    },
+    {
+      "id": 60685376,
+      "nome": "Rua Conde de Sarzedas",
+      "lat": -23.5541514,
+      "lon": -46.6303592
+    },
+    {
+      "id": 60685377,
+      "nome": "Rua Carolina Augusta",
+      "lat": -23.5536287,
+      "lon": -46.6302011
+    },
+    {
+      "id": 60685384,
+      "nome": "Rua Doutor Bittencourt Rodrigues",
+      "lat": -23.5492637,
+      "lon": -46.6310381
+    },
+    {
+      "id": 60685391,
+      "nome": "Rua Doutor Bettencourt Rodrigues",
+      "lat": -23.5497736,
+      "lon": -46.6307917
+    },
+    {
+      "id": 60685397,
+      "nome": "Parque Anhangabau",
+      "lat": -23.5482349,
+      "lon": -46.638363
+    },
+    {
+      "id": 60685402,
+      "nome": "Parque Anhangabau",
+      "lat": -23.54701,
+      "lon": -46.6379608
+    },
+    {
+      "id": 60685404,
+      "nome": "Parque Anhangabau",
+      "lat": -23.5470445,
+      "lon": -46.6381737
+    },
+    {
+      "id": 60685409,
+      "nome": "Rua João Adolfo",
+      "lat": -23.549039,
+      "lon": -46.640862
+    },
+    {
+      "id": 60685428,
+      "nome": "Avenida Nove de Julho",
+      "lat": -23.5474587,
+      "lon": -46.6380116
+    },
+    {
+      "id": 60685429,
+      "nome": "Rua José Bonifácio",
+      "lat": -23.5488779,
+      "lon": -46.6377087
+    },
+    {
+      "id": 60685431,
+      "nome": "Rua Doutor Falcão Filho",
+      "lat": -23.5477248,
+      "lon": -46.6369703
+    },
+    {
+      "id": 60685446,
+      "nome": "Rua do Ouvidor",
+      "lat": -23.5491038,
+      "lon": -46.6379772
+    },
+    {
+      "id": 60685465,
+      "nome": "Parque Anhangabau",
+      "lat": -23.5485877,
+      "lon": -46.6386352
+    },
+    {
+      "id": 60685472,
+      "nome": "Avenida Nove de Julho",
+      "lat": -23.548471,
+      "lon": -46.6390938
+    },
+    {
+      "id": 60685476,
+      "nome": "Rua João Adolfo",
+      "lat": -23.5484984,
+      "lon": -46.6403711
+    },
+    {
+      "id": 60685613,
+      "nome": "Praça Ramos de Azevedo",
+      "lat": -23.5448939,
+      "lon": -46.6387906
+    },
+    {
+      "id": 60685971,
+      "nome": "Rua Vinte e Cinco de Março",
+      "lat": -23.5462944,
+      "lon": -46.6316718
+    },
+    {
+      "id": 60685973,
+      "nome": "Rua Vinte e Cinco de Março",
+      "lat": -23.5479521,
+      "lon": -46.6308565
+    },
+    {
+      "id": 60685975,
+      "nome": "Rua Hércules Florence",
+      "lat": -23.5476603,
+      "lon": -46.6303368
+    },
+    {
+      "id": 60685978,
+      "nome": "Parque Dom Pedro II",
+      "lat": -23.5456441,
+      "lon": -46.6312027
+    },
+    {
+      "id": 60685979,
+      "nome": "Parque Dom Pedro II",
+      "lat": -23.5451914,
+      "lon": -46.6310288
+    },
+    {
+      "id": 60685982,
+      "nome": "Parque Dom Pedro II",
+      "lat": -23.5450011,
+      "lon": -46.6310702
+    },
+    {
+      "id": 130009702,
+      "nome": "Viaduto do Rio Tamanduateí",
+      "lat": -23.5541793,
+      "lon": -46.6269934
+    },
+    {
+      "id": 130009851,
+      "nome": "Avenida Radial Leste-Oeste",
+      "lat": -23.5563391,
+      "lon": -46.6359441
+    },
+    {
+      "id": 130010321,
+      "nome": "Rua da Figueira",
+      "lat": -23.5492475,
+      "lon": -46.6255832
+    },
+    {
+      "id": 132347429,
+      "nome": "Avenida Radial Leste-Oeste",
+      "lat": -23.5566543,
+      "lon": -46.6345389
+    },
+    {
+      "id": 132347430,
+      "nome": "Avenida Radial Leste-Oeste",
+      "lat": -23.5566259,
+      "lon": -46.6332619
+    },
+    {
+      "id": 133484408,
+      "nome": "Rua da Figueira",
+      "lat": -23.5460347,
+      "lon": -46.6263973
+    },
+    {
+      "id": 133485698,
+      "nome": "Rua da Figueira",
+      "lat": -23.5455607,
+      "lon": -46.6264443
+    },
+    {
+      "id": 133491023,
+      "nome": "Viaduto do Glicério",
+      "lat": -23.556344,
+      "lon": -46.629504
+    },
+    {
+      "id": 133492789,
+      "nome": "Viaduto 31 de Março",
+      "lat": -23.5535228,
+      "lon": -46.6257238
+    },
+    {
+      "id": 142808179,
+      "nome": "Rua Aguiar de Barros",
+      "lat": -23.5542615,
+      "lon": -46.6387315
+    },
+    {
+      "id": 151239264,
+      "nome": "Rua da Figueira",
+      "lat": -23.5514866,
+      "lon": -46.6255187
+    },
+    {
+      "id": 151241233,
+      "nome": "Viaduto 31 de Março",
+      "lat": -23.5529605,
+      "lon": -46.6270519
+    },
+    {
+      "id": 151241987,
+      "nome": "Viaduto Therezinha Zerbini",
+      "lat": -23.5523849,
+      "lon": -46.6272139
+    },
+    {
+      "id": 151243285,
+      "nome": "Viaduto Mercúrio",
+      "lat": -23.5491642,
+      "lon": -46.627637
+    },
+    {
+      "id": 151243812,
+      "nome": "Viaduto Mercúrio",
+      "lat": -23.546317,
+      "lon": -46.6265784
+    },
+    {
+      "id": 171978399,
+      "nome": "Rua Barão de Duprat",
+      "lat": -23.5441697,
+      "lon": -46.6310981
+    },
+    {
+      "id": 175993428,
+      "nome": "Rua Doutor Lund",
+      "lat": -23.556069,
+      "lon": -46.6291677
+    },
+    {
+      "id": 175993483,
+      "nome": "Rua Vasco Pereira",
+      "lat": -23.5553727,
+      "lon": -46.6277093
+    },
+    {
+      "id": 175993568,
+      "nome": "Avenida Mercúrio",
+      "lat": -23.5448573,
+      "lon": -46.6265165
+    },
+    {
+      "id": 175993584,
+      "nome": "Rua Doutor Itapura de Miranda",
+      "lat": -23.5433718,
+      "lon": -46.6307197
+    },
+    {
+      "id": 176007901,
+      "nome": "Viaduto Shuhei Uetsuka",
+      "lat": -23.5562644,
+      "lon": -46.6330481
+    },
+    {
+      "id": 176009843,
+      "nome": "Avenida Vinte e Três de Maio",
+      "lat": -23.5555104,
+      "lon": -46.6374775
+    },
+    {
+      "id": 176010867,
+      "nome": "Rua 176010867",
+      "lat": -23.5547984,
+      "lon": -46.636495
+    },
+    {
+      "id": 176010870,
+      "nome": "Viaduto Doutor Manoel José Chaves",
+      "lat": -23.5533354,
+      "lon": -46.6361858
+    },
+    {
+      "id": 176010879,
+      "nome": "Viaduto Doutor Manoel José Chaves",
+      "lat": -23.5534229,
+      "lon": -46.6373392
+    },
+    {
+      "id": 176011400,
+      "nome": "Praça Carlos Gomes",
+      "lat": -23.5528583,
+      "lon": -46.6361584
+    },
+    {
+      "id": 176011687,
+      "nome": "Avenida Vinte e Três de Maio",
+      "lat": -23.5556922,
+      "lon": -46.6372329
+    },
+    {
+      "id": 176012605,
+      "nome": "Rua Asdrubal do Nascimento",
+      "lat": -23.5528553,
+      "lon": -46.6375428
+    },
+    {
+      "id": 176012607,
+      "nome": "Rua Asdrubal do Nascimento",
+      "lat": -23.5538074,
+      "lon": -46.6372216
+    },
+    {
+      "id": 176012608,
+      "nome": "Rua Asdrubal do Nascimento",
+      "lat": -23.5539344,
+      "lon": -46.6371816
+    },
+    {
+      "id": 176013188,
+      "nome": "Avenida Brigadeiro Luís Antônio",
+      "lat": -23.555603,
+      "lon": -46.6394752
+    },
+    {
+      "id": 176013518,
+      "nome": "Rua Assembleia",
+      "lat": -23.5556801,
+      "lon": -46.6383271
+    },
+    {
+      "id": 176022448,
+      "nome": "Avenida Prefeito Passos",
+      "lat": -23.55262,
+      "lon": -46.6274159
+    },
+    {
+      "id": 247949253,
+      "nome": "Rua Tabatinguera",
+      "lat": -23.552506,
+      "lon": -46.6295661
+    },
+    {
+      "id": 247949664,
+      "nome": "Rua Dom Pedro II",
+      "lat": -23.5522025,
+      "lon": -46.6273067
+    },
+    {
+      "id": 247949665,
+      "nome": "Avenida Prefeito Passos",
+      "lat": -23.5521767,
+      "lon": -46.6275619
+    },
+    {
+      "id": 247950279,
+      "nome": "Rua Conselheiro Furtado",
+      "lat": -23.5547151,
+      "lon": -46.6331632
+    },
+    {
+      "id": 247950321,
+      "nome": "Rua Doutor Tomaz de Lima",
+      "lat": -23.5546456,
+      "lon": -46.6319897
+    },
+    {
+      "id": 247950566,
+      "nome": "Rua João de Carvalho",
+      "lat": -23.5532248,
+      "lon": -46.6300803
+    },
+    {
+      "id": 247950657,
+      "nome": "Rua Oscar Cintra Gordinho",
+      "lat": -23.5531104,
+      "lon": -46.6284853
+    },
+    {
+      "id": 247950659,
+      "nome": "Rua Glicério",
+      "lat": -23.5529726,
+      "lon": -46.6275862
+    },
+    {
+      "id": 247951118,
+      "nome": "Rua Glicério",
+      "lat": -23.5547628,
+      "lon": -46.6285164
+    },
+    {
+      "id": 247951203,
+      "nome": "Rua dos Carmelitas",
+      "lat": -23.5513536,
+      "lon": -46.6292119
+    },
+    {
+      "id": 247951231,
+      "nome": "Rua Frederico Alvarenga",
+      "lat": -23.5503437,
+      "lon": -46.6291669
+    },
+    {
+      "id": 247951669,
+      "nome": "Rua dos Carmelitas",
+      "lat": -23.5519164,
+      "lon": -46.6292206
+    },
+    {
+      "id": 247951670,
+      "nome": "Rua Nioac",
+      "lat": -23.5517413,
+      "lon": -46.627872
+    },
+    {
+      "id": 247951678,
+      "nome": "Rua Joaquim dos Santos Andrade",
+      "lat": -23.5515837,
+      "lon": -46.6295351
+    },
+    {
+      "id": 247951684,
+      "nome": "Rua Alcides Bezerra",
+      "lat": -23.5509815,
+      "lon": -46.6301683
+    },
+    {
+      "id": 248110355,
+      "nome": "Rua Cavalheiro Basílio Jafet",
+      "lat": -23.5441992,
+      "lon": -46.6314774
+    },
+    {
+      "id": 248110869,
+      "nome": "Rua Barão de Duprat",
+      "lat": -23.5433232,
+      "lon": -46.6309644
+    },
+    {
+      "id": 248110873,
+      "nome": "Rua Cavalheiro Basílio Jafet",
+      "lat": -23.5442519,
+      "lon": -46.6322019
+    },
+    {
+      "id": 248110885,
+      "nome": "Rua Niazi Chohfi",
+      "lat": -23.5434447,
+      "lon": -46.632482
+    },
+    {
+      "id": 248111063,
+      "nome": "Rua Niazi Chohfi",
+      "lat": -23.5435116,
+      "lon": -46.6320653
+    },
+    {
+      "id": 248111143,
+      "nome": "Rua Vinte e Cinco de Março",
+      "lat": -23.543636,
+      "lon": -46.6325178
+    },
+    {
+      "id": 279225578,
+      "nome": "Rua Dom Pedro II",
+      "lat": -23.5511565,
+      "lon": -46.6278789
+    },
+    {
+      "id": 279225582,
+      "nome": "Rua Dom Pedro II",
+      "lat": -23.5506522,
+      "lon": -46.6282572
+    },
+    {
+      "id": 285488804,
+      "nome": "Praça da Bandeira",
+      "lat": -23.5491274,
+      "lon": -46.6387043
+    },
+    {
+      "id": 395763856,
+      "nome": "Rua Jaceguaí",
+      "lat": -23.555406,
+      "lon": -46.6401804
+    },
+    {
+      "id": 395763917,
+      "nome": "Praça da Bandeira",
+      "lat": -23.5494821,
+      "lon": -46.6404001
+    },
+    {
+      "id": 395763930,
+      "nome": "Praça da Bandeira",
+      "lat": -23.5502283,
+      "lon": -46.6385731
+    },
+    {
+      "id": 395763938,
+      "nome": "Rua Asdrúbal Nascimento",
+      "lat": -23.5510846,
+      "lon": -46.6381407
+    },
+    {
+      "id": 395763941,
+      "nome": "Rua Santo Amaro",
+      "lat": -23.5513314,
+      "lon": -46.6402991
+    },
+    {
+      "id": 395763951,
+      "nome": "Rua Santo Amaro",
+      "lat": -23.5550124,
+      "lon": -46.6402628
+    },
+    {
+      "id": 396034427,
+      "nome": "Avenida Prefeito Passos",
+      "lat": -23.5568419,
+      "lon": -46.6266079
+    },
+    {
+      "id": 396034430,
+      "nome": "Avenida Prefeito Passos",
+      "lat": -23.5562066,
+      "lon": -46.6266987
+    },
+    {
+      "id": 445042755,
+      "nome": "Rua da Figueira",
+      "lat": -23.5448442,
+      "lon": -46.6263167
+    },
+    {
+      "id": 445043024,
+      "nome": "Rua da Figueira",
+      "lat": -23.5483765,
+      "lon": -46.6261545
+    },
+    {
+      "id": 445043035,
+      "nome": "Rua Maria Domitila",
+      "lat": -23.5465568,
+      "lon": -46.6264327
+    },
+    {
+      "id": 445043190,
+      "nome": "Rua Glicério",
+      "lat": -23.5540002,
+      "lon": -46.6281162
+    },
+    {
+      "id": 445043191,
+      "nome": "Rua São Paulo",
+      "lat": -23.556798,
+      "lon": -46.629578
+    },
+    {
+      "id": 445043469,
+      "nome": "Praça Ministro Francisco Sá Carneiro",
+      "lat": -23.5534696,
+      "lon": -46.625882
+    },
+    {
+      "id": 445044187,
+      "nome": "Rua Teixeira Leite",
+      "lat": -23.5543868,
+      "lon": -46.6272103
+    },
+    {
+      "id": 445044376,
+      "nome": "Rua Teixeira Leite",
+      "lat": -23.5563209,
+      "lon": -46.6281549
+    },
+    {
+      "id": 445044382,
+      "nome": "Rua Teixeira Leite",
+      "lat": -23.5571894,
+      "lon": -46.6285581
+    },
+    {
+      "id": 445044395,
+      "nome": "Rua São Paulo",
+      "lat": -23.5569438,
+      "lon": -46.6315097
+    },
+    {
+      "id": 455606212,
+      "nome": "Rua Maria Paula",
+      "lat": -23.5515961,
+      "lon": -46.6397111
+    },
+    {
+      "id": 455606272,
+      "nome": "Rua Santo Amaro",
+      "lat": -23.5514356,
+      "lon": -46.6404349
+    },
+    {
+      "id": 455606284,
+      "nome": "Rua Francisca Miquelina",
+      "lat": -23.5522383,
+      "lon": -46.638712
+    },
+    {
+      "id": 455606385,
+      "nome": "Rua Genebra",
+      "lat": -23.5538285,
+      "lon": -46.6397196
+    },
+    {
+      "id": 455606415,
+      "nome": "Rua Genebra",
+      "lat": -23.550956,
+      "lon": -46.6397948
+    },
+    {
+      "id": 455606486,
+      "nome": "Rua Professor Laerte Ramos de Carvalho",
+      "lat": -23.555865,
+      "lon": -46.6403789
+    },
+    {
+      "id": 455606529,
+      "nome": "Rua Santo Amaro",
+      "lat": -23.555912,
+      "lon": -46.6400869
+    },
+    {
+      "id": 455606646,
+      "nome": "Rua Santo Antônio",
+      "lat": -23.549895,
+      "lon": -46.640729
+    },
+    {
+      "id": 455606720,
+      "nome": "Rua Santo Antônio",
+      "lat": -23.5497338,
+      "lon": -46.6404913
+    },
+    {
+      "id": 455606932,
+      "nome": "Rua Santo Amaro",
+      "lat": -23.5536747,
+      "lon": -46.640611
+    },
+    {
+      "id": 455606942,
+      "nome": "Rua Santo Amaro",
+      "lat": -23.5543368,
+      "lon": -46.6404379
+    },
+    {
+      "id": 459347433,
+      "nome": "Rua 459347433",
+      "lat": -23.5570105,
+      "lon": -46.6375881
+    },
+    {
+      "id": 459347453,
+      "nome": "Avenida Radial Leste-Oeste",
+      "lat": -23.5559915,
+      "lon": -46.6387928
+    },
+    {
+      "id": 459347476,
+      "nome": "Avenida Brigadeiro Luís Antônio",
+      "lat": -23.555988,
+      "lon": -46.6396793
+    },
+    {
+      "id": 598617885,
+      "nome": "Rua Doutor Rodrigo Silva",
+      "lat": -23.5537988,
+      "lon": -46.6356704
+    },
+    {
+      "id": 598667181,
+      "nome": "Rua Aguiar de Barros",
+      "lat": -23.5540282,
+      "lon": -46.6405185
+    },
+    {
+      "id": 598668807,
+      "nome": "Avenida da Liberdade",
+      "lat": -23.5531597,
+      "lon": -46.6348984
+    },
+    {
+      "id": 599043055,
+      "nome": "Rua Abelardo Pinto Piolin",
+      "lat": -23.5437327,
+      "lon": -46.6369058
+    },
+    {
+      "id": 599043066,
+      "nome": "Rua Varnhagen",
+      "lat": -23.5440992,
+      "lon": -46.633451
+    },
+    {
+      "id": 599043071,
+      "nome": "Rua Abelardo Pinto Piolin",
+      "lat": -23.5433317,
+      "lon": -46.6377826
+    },
+    {
+      "id": 617798750,
+      "nome": "Viaduto do Chá",
+      "lat": -23.547233,
+      "lon": -46.6370328
+    },
+    {
+      "id": 631977641,
+      "nome": "Praça Doutor Mário Margarido",
+      "lat": -23.5548514,
+      "lon": -46.6293295
+    },
+    {
+      "id": 631977642,
+      "nome": "Rua Glicério",
+      "lat": -23.555125,
+      "lon": -46.6287025
+    },
+    {
+      "id": 661211978,
+      "nome": "Rua Conselheiro Furtado",
+      "lat": -23.553132,
+      "lon": -46.6332863
+    },
+    {
+      "id": 661211979,
+      "nome": "Viaduto Vinte e Cinco de Março",
+      "lat": -23.5493739,
+      "lon": -46.6291378
+    },
+    {
+      "id": 661211990,
+      "nome": "Avenida Rangel Pestana",
+      "lat": -23.5490647,
+      "lon": -46.6293357
+    },
+    {
+      "id": 661211993,
+      "nome": "Avenida Rangel Pestana",
+      "lat": -23.5478212,
+      "lon": -46.6259975
+    },
+    {
+      "id": 661212028,
+      "nome": "Rua do Gasômetro",
+      "lat": -23.5448692,
+      "lon": -46.6266973
+    },
+    {
+      "id": 865280536,
+      "nome": "Avenida Brigadeiro Luís Antônio",
+      "lat": -23.5564824,
+      "lon": -46.6399756
+    },
+    {
+      "id": 891033574,
+      "nome": "Parque Dom Pedro II",
+      "lat": -23.5485558,
+      "lon": -46.6297099
+    },
+    {
+      "id": 891033585,
+      "nome": "Rua Vinte e Cinco de Março",
+      "lat": -23.5488442,
+      "lon": -46.6304195
+    },
+    {
+      "id": 1113784382,
+      "nome": "Rua da Glória",
+      "lat": -23.5529992,
+      "lon": -46.6347008
+    },
+    {
+      "id": 1113784886,
+      "nome": "Rua da Glória",
+      "lat": -23.5529628,
+      "lon": -46.6347994
+    },
+    {
+      "id": 1243571522,
+      "nome": "Praça da Liberdade",
+      "lat": -23.5549833,
+      "lon": -46.6353183
+    },
+    {
+      "id": 1420099938,
+      "nome": "Rua Leopoldo Miguez",
+      "lat": -23.5568743,
+      "lon": -46.6268463
+    },
+    {
+      "id": 1420099939,
+      "nome": "Peca Nina Rodrigues",
+      "lat": -23.5575758,
+      "lon": -46.626829
+    },
+    {
+      "id": 1420099941,
+      "nome": "Praça Ministro Francisco Sá Carneiro",
+      "lat": -23.5539469,
+      "lon": -46.6259035
+    },
+    {
+      "id": 1420099953,
+      "nome": "Viaduto do Glicério",
+      "lat": -23.5546665,
+      "lon": -46.6270015
+    },
+    {
+      "id": 1420099956,
+      "nome": "Rua Glicério",
+      "lat": -23.5549401,
+      "lon": -46.6286082
+    },
+    {
+      "id": 1420138394,
+      "nome": "Rua da Figueira",
+      "lat": -23.5494682,
+      "lon": -46.625502
+    },
+    {
+      "id": 1420146734,
+      "nome": "Parque Dom Pedro II",
+      "lat": -23.5445076,
+      "lon": -46.6305789
+    },
+    {
+      "id": 1420146737,
+      "nome": "Avenida do Estado",
+      "lat": -23.5497422,
+      "lon": -46.6282383
+    },
+    {
+      "id": 1420146741,
+      "nome": "Rua Frederico Alvarenga",
+      "lat": -23.550906,
+      "lon": -46.6286459
+    },
+    {
+      "id": 1420150299,
+      "nome": "Avenida do Estado",
+      "lat": -23.5528747,
+      "lon": -46.6266053
+    },
+    {
+      "id": 1477495382,
+      "nome": "Rua Conselheiro Crispiniano",
+      "lat": -23.5435525,
+      "lon": -46.638088
+    },
+    {
+      "id": 1659499493,
+      "nome": "Parque Anhangabau",
+      "lat": -23.546819,
+      "lon": -46.6381541
+    },
+    {
+      "id": 1665039639,
+      "nome": "Avenida Radial Leste-Oeste",
+      "lat": -23.5560917,
+      "lon": -46.6381676
+    },
+    {
+      "id": 1665039645,
+      "nome": "Rua 1665039645",
+      "lat": -23.5561115,
+      "lon": -46.6367332
+    },
+    {
+      "id": 1665298733,
+      "nome": "Rua Conde do Pinhal",
+      "lat": -23.5527525,
+      "lon": -46.6332192
+    },
+    {
+      "id": 1665298735,
+      "nome": "Rua Conde do Pinhal",
+      "lat": -23.5528075,
+      "lon": -46.6332848
+    },
+    {
+      "id": 1665298737,
+      "nome": "Rua da Glória",
+      "lat": -23.5535256,
+      "lon": -46.6343598
+    },
+    {
+      "id": 1665298739,
+      "nome": "Rua Assembleia",
+      "lat": -23.5547115,
+      "lon": -46.6376151
+    },
+    {
+      "id": 1665298742,
+      "nome": "Avenida Radial Leste-Oeste",
+      "lat": -23.5557592,
+      "lon": -46.6393501
+    },
+    {
+      "id": 1836035452,
+      "nome": "Rua dos Aflitos",
+      "lat": -23.5560675,
+      "lon": -46.634651
+    },
+    {
+      "id": 1836035458,
+      "nome": "Rua dos Estudantes",
+      "lat": -23.5555266,
+      "lon": -46.6346329
+    },
+    {
+      "id": 1836035459,
+      "nome": "Rua dos Estudantes",
+      "lat": -23.5552643,
+      "lon": -46.6302755
+    },
+    {
+      "id": 1836035460,
+      "nome": "Rua dos Estudantes",
+      "lat": -23.5553622,
+      "lon": -46.6316104
+    },
+    {
+      "id": 1836039193,
+      "nome": "Avenida da Liberdade",
+      "lat": -23.5566864,
+      "lon": -46.6363824
+    },
+    {
+      "id": 2210723698,
+      "nome": "Rua Doutor Américo de Campos",
+      "lat": -23.5572852,
+      "lon": -46.636587
+    },
+    {
+      "id": 2225397474,
+      "nome": "Rua Glicério",
+      "lat": -23.5562935,
+      "lon": -46.6293236
+    },
+    {
+      "id": 2323782354,
+      "nome": "Praça Doutor João Mendes",
+      "lat": -23.5521146,
+      "lon": -46.6348598
+    },
+    {
+      "id": 2382948291,
+      "nome": "Praça José Luiz de Mello Malheiro",
+      "lat": -23.5563897,
+      "lon": -46.6276709
+    },
+    {
+      "id": 2382948300,
+      "nome": "Praça José Luiz de Mello Malheiro",
+      "lat": -23.5562002,
+      "lon": -46.6278819
+    },
+    {
+      "id": 2382948305,
+      "nome": "Avenida Radial Leste-Oeste",
+      "lat": -23.5564469,
+      "lon": -46.6293868
+    },
+    {
+      "id": 2389060458,
+      "nome": "Rua da Cantareira",
+      "lat": -23.543614,
+      "lon": -46.6308154
+    },
+    {
+      "id": 2389060470,
+      "nome": "Rua Cavalheiro Basílio Jafet",
+      "lat": -23.5442651,
+      "lon": -46.6308598
+    },
+    {
+      "id": 2389060528,
+      "nome": "Avenida Rangel Pestana",
+      "lat": -23.5477003,
+      "lon": -46.6260136
+    },
+    {
+      "id": 2389060592,
+      "nome": "Rua da Cantareira",
+      "lat": -23.5438642,
+      "lon": -46.6309148
+    },
+    {
+      "id": 2389060616,
+      "nome": "Rua 2389060616",
+      "lat": -23.5438986,
+      "lon": -46.6296914
+    },
+    {
+      "id": 2389087286,
+      "nome": "Avenida Prefeito Passos",
+      "lat": -23.5545273,
+      "lon": -46.6268528
+    },
+    {
+      "id": 2389087291,
+      "nome": "Rua Egas Moniz de Aragão",
+      "lat": -23.5559878,
+      "lon": -46.6310367
+    },
+    {
+      "id": 2389087293,
+      "nome": "Rua Antônio de Sá",
+      "lat": -23.5543781,
+      "lon": -46.6257635
+    },
+    {
+      "id": 2389087315,
+      "nome": "Viaduto Governador Roberto Abreu Sodré",
+      "lat": -23.5543545,
+      "lon": -46.6266115
+    },
+    {
+      "id": 2390857079,
+      "nome": "Rua Leopoldo Miguez",
+      "lat": -23.5570212,
+      "lon": -46.6280945
+    },
+    {
+      "id": 2396502011,
+      "nome": "Avenida Rangel Pestana",
+      "lat": -23.5500007,
+      "lon": -46.630988
+    },
+    {
+      "id": 2396502031,
+      "nome": "Rua Floriano Peixoto",
+      "lat": -23.5488698,
+      "lon": -46.6329951
+    },
+    {
+      "id": 2397820354,
+      "nome": "Rua Mituto Mizumoto",
+      "lat": -23.5566394,
+      "lon": -46.6319886
+    },
+    {
+      "id": 2429561621,
+      "nome": "Viaduto Dona Paulina",
+      "lat": -23.552478,
+      "lon": -46.6374635
+    },
+    {
+      "id": 2429561623,
+      "nome": "Viaduto Dona Paulina",
+      "lat": -23.5525357,
+      "lon": -46.6376785
+    },
+    {
+      "id": 2429561624,
+      "nome": "Rua Maria Paula",
+      "lat": -23.5526561,
+      "lon": -46.6378303
+    },
+    {
+      "id": 2435474855,
+      "nome": "Avenida Prefeito Passos",
+      "lat": -23.5524041,
+      "lon": -46.6274632
+    },
+    {
+      "id": 2435474871,
+      "nome": "Avenida Prefeito Passos",
+      "lat": -23.5530584,
+      "lon": -46.6273662
+    },
+    {
+      "id": 2435474915,
+      "nome": "Rua Teixeira Leite",
+      "lat": -23.5567079,
+      "lon": -46.6283241
+    },
+    {
+      "id": 2449978409,
+      "nome": "Praça Ministro Francisco Sá Carneiro",
+      "lat": -23.5543995,
+      "lon": -46.627061
+    },
+    {
+      "id": 2451555632,
+      "nome": "Rua Doutor Rodrigo Silva",
+      "lat": -23.5542537,
+      "lon": -46.6356874
+    },
+    {
+      "id": 2451555636,
+      "nome": "Avenida da Liberdade",
+      "lat": -23.5543346,
+      "lon": -46.635351
+    },
+    {
+      "id": 2451555637,
+      "nome": "Avenida da Liberdade",
+      "lat": -23.5543714,
+      "lon": -46.6355195
+    },
+    {
+      "id": 2453466163,
+      "nome": "Praça Ramos de Azevedo",
+      "lat": -23.5454999,
+      "lon": -46.6392858
+    },
+    {
+      "id": 2453626790,
+      "nome": "Avenida Brigadeiro Luís Antônio",
+      "lat": -23.5528159,
+      "lon": -46.6379193
+    },
+    {
+      "id": 2578181686,
+      "nome": "Parque Anhangabau",
+      "lat": -23.5480775,
+      "lon": -46.6382567
+    },
+    {
+      "id": 2832098720,
+      "nome": "Travessa Rugiero",
+      "lat": -23.5559687,
+      "lon": -46.6307697
+    },
+    {
+      "id": 3064409129,
+      "nome": "Rua Conde de Sarzedas",
+      "lat": -23.5542724,
+      "lon": -46.6298827
+    },
+    {
+      "id": 3064409130,
+      "nome": "Praça Doutor Mário Margarido",
+      "lat": -23.5544873,
+      "lon": -46.6291623
+    },
+    {
+      "id": 3266333520,
+      "nome": "Rua Santo Amaro",
+      "lat": -23.5502385,
+      "lon": -46.6389966
+    },
+    {
+      "id": 3278570084,
+      "nome": "Viaduto Brigadeiro Luís Antônio",
+      "lat": -23.5525201,
+      "lon": -46.6377596
+    },
+    {
+      "id": 3278570087,
+      "nome": "Rua Asdrúbal Nascimento",
+      "lat": -23.5517232,
+      "lon": -46.637924
+    },
+    {
+      "id": 3278570088,
+      "nome": "Travessa Grassi",
+      "lat": -23.5513397,
+      "lon": -46.6374988
+    },
+    {
+      "id": 3278570091,
+      "nome": "Avenida Vinte e Três de Maio",
+      "lat": -23.5504193,
+      "lon": -46.6381536
+    },
+    {
+      "id": 3312393273,
+      "nome": "Rua Riachuelo",
+      "lat": -23.5506159,
+      "lon": -46.6367399
+    },
+    {
+      "id": 3375721632,
+      "nome": "Vila Suíça",
+      "lat": -23.5546005,
+      "lon": -46.6296845
+    },
+    {
+      "id": 3375721633,
+      "nome": "Vila Suíça",
+      "lat": -23.5547716,
+      "lon": -46.6297092
+    },
+    {
+      "id": 3375721636,
+      "nome": "Vila Suíça",
+      "lat": -23.5549595,
+      "lon": -46.6297363
+    },
+    {
+      "id": 3609406629,
+      "nome": "Rua Maria Domitila",
+      "lat": -23.5462957,
+      "lon": -46.6258591
+    },
+    {
+      "id": 3609406630,
+      "nome": "Travessa Queiroga",
+      "lat": -23.5474969,
+      "lon": -46.6254603
+    },
+    {
+      "id": 3609406632,
+      "nome": "Rua Maria Domitila",
+      "lat": -23.5461439,
+      "lon": -46.6255269
+    },
+    {
+      "id": 3609406634,
+      "nome": "Rua Assunção",
+      "lat": -23.5436003,
+      "lon": -46.6256228
+    },
+    {
+      "id": 3713147144,
+      "nome": "Praça da Sé",
+      "lat": -23.5490354,
+      "lon": -46.633657
+    },
+    {
+      "id": 3713147155,
+      "nome": "Rua Venceslau Brás",
+      "lat": -23.5494387,
+      "lon": -46.6331864
+    },
+    {
+      "id": 3713156706,
+      "nome": "Rua Onze de Agosto",
+      "lat": -23.5513823,
+      "lon": -46.6335006
+    },
+    {
+      "id": 3713156708,
+      "nome": "Rua Irmã Simpliciana",
+      "lat": -23.550075,
+      "lon": -46.6328769
+    },
+    {
+      "id": 3738626452,
+      "nome": "Rua Boa Vista",
+      "lat": -23.5443606,
+      "lon": -46.6341503
+    },
+    {
+      "id": 3757650387,
+      "nome": "Praça da Sé",
+      "lat": -23.5500724,
+      "lon": -46.6341114
+    },
+    {
+      "id": 4034133824,
+      "nome": "Praça da Bandeira",
+      "lat": -23.5503295,
+      "lon": -46.638361
+    },
+    {
+      "id": 4239879420,
+      "nome": "Rua 4239879420",
+      "lat": -23.5435197,
+      "lon": -46.6308024
+    },
+    {
+      "id": 4239879689,
+      "nome": "Rua 4239879689",
+      "lat": -23.5433795,
+      "lon": -46.6308522
+    },
+    {
+      "id": 4239881193,
+      "nome": "Rua Vinte e Cinco de Março",
+      "lat": -23.5442821,
+      "lon": -46.6326182
+    },
+    {
+      "id": 4239881404,
+      "nome": "Rua Vinte e Cinco de Março",
+      "lat": -23.5450373,
+      "lon": -46.632269
+    },
+    {
+      "id": 4240268306,
+      "nome": "Rua Frederico Alvarenga",
+      "lat": -23.5499855,
+      "lon": -46.6295126
+    },
+    {
+      "id": 4240270294,
+      "nome": "Rua Frederico Alvarenga",
+      "lat": -23.5520083,
+      "lon": -46.6276008
+    },
+    {
+      "id": 4240270316,
+      "nome": "Rua do Carmo",
+      "lat": -23.5519543,
+      "lon": -46.6300638
+    },
+    {
+      "id": 4247740324,
+      "nome": "Viaduto do Chá",
+      "lat": -23.5475799,
+      "lon": -46.6368896
+    },
+    {
+      "id": 4247741412,
+      "nome": "Rua Líbero Badaró",
+      "lat": -23.5489008,
+      "lon": -46.6375531
+    },
+    {
+      "id": 4247741913,
+      "nome": "Rua Benjamim Constant",
+      "lat": -23.5498758,
+      "lon": -46.6350842
+    },
+    {
+      "id": 4249855098,
+      "nome": "Rua Vinte e Cinco de Março",
+      "lat": -23.5470901,
+      "lon": -46.6312806
+    },
+    {
+      "id": 4249862475,
+      "nome": "Ladeira Porto Geral",
+      "lat": -23.5445634,
+      "lon": -46.633071
+    },
+    {
+      "id": 4251727358,
+      "nome": "Praça da Bandeira",
+      "lat": -23.5502404,
+      "lon": -46.638739
+    },
+    {
+      "id": 4251734560,
+      "nome": "Praça da Bandeira",
+      "lat": -23.5496576,
+      "lon": -46.640321
+    },
+    {
+      "id": 4251881389,
+      "nome": "Rua Formosa",
+      "lat": -23.5467033,
+      "lon": -46.6382262
+    },
+    {
+      "id": 4251881423,
+      "nome": "Parque Anhangabau",
+      "lat": -23.5479637,
+      "lon": -46.6386587
+    },
+    {
+      "id": 4293887737,
+      "nome": "Praça José Luiz de Mello Malheiro",
+      "lat": -23.5568286,
+      "lon": -46.6274323
+    },
+    {
+      "id": 4293910187,
+      "nome": "Rua Lins",
+      "lat": -23.5574565,
+      "lon": -46.6307272
+    },
+    {
+      "id": 4293910188,
+      "nome": "Rua Sinimbú",
+      "lat": -23.5575148,
+      "lon": -46.6314556
+    },
+    {
+      "id": 4339336566,
+      "nome": "Rua Jaceguaí",
+      "lat": -23.5554008,
+      "lon": -46.6402423
+    },
+    {
+      "id": 4509498149,
+      "nome": "Rua General Carneiro",
+      "lat": -23.5461025,
+      "lon": -46.6320626
+    },
+    {
+      "id": 4509498152,
+      "nome": "Rua General Carneiro",
+      "lat": -23.5461431,
+      "lon": -46.6317594
+    },
+    {
+      "id": 4511007491,
+      "nome": "Rua José Bonifácio",
+      "lat": -23.54865,
+      "lon": -46.6384413
+    },
+    {
+      "id": 4511071307,
+      "nome": "Rua Aguiar de Barros",
+      "lat": -23.5538557,
+      "lon": -46.6395977
+    },
+    {
+      "id": 4511071312,
+      "nome": "Rua Santo Amaro",
+      "lat": -23.5516323,
+      "lon": -46.6405739
+    },
+    {
+      "id": 4511105625,
+      "nome": "Rua Dom Pedro II",
+      "lat": -23.5515073,
+      "lon": -46.627686
+    },
+    {
+      "id": 4561913702,
+      "nome": "Avenida Brigadeiro Luís Antônio",
+      "lat": -23.5571716,
+      "lon": -46.6405815
+    },
+    {
+      "id": 4802624937,
+      "nome": "Praça Ragueb Chohfi",
+      "lat": -23.5448454,
+      "lon": -46.6315586
+    },
+    {
+      "id": 4802625028,
+      "nome": "Rua Vinte e Cinco de Março",
+      "lat": -23.5458984,
+      "lon": -46.6318807
+    },
+    {
+      "id": 4803680668,
+      "nome": "Parque Dom Pedro II",
+      "lat": -23.545462,
+      "lon": -46.6314088
+    },
+    {
+      "id": 4803680669,
+      "nome": "Rua General Carneiro",
+      "lat": -23.5455883,
+      "lon": -46.631617
+    },
+    {
+      "id": 4806688566,
+      "nome": "Rua Líbero Badaró",
+      "lat": -23.5473095,
+      "lon": -46.636727
+    },
+    {
+      "id": 4872255634,
+      "nome": "Rua Doutor Bittencourt Rodrigues",
+      "lat": -23.5473568,
+      "lon": -46.631929
+    },
+    {
+      "id": 4902214144,
+      "nome": "Avenida do Estado",
+      "lat": -23.5533456,
+      "lon": -46.6257161
+    },
+    {
+      "id": 4903887706,
+      "nome": "Largo Pátio do Colégio",
+      "lat": -23.5484477,
+      "lon": -46.6329779
+    },
+    {
+      "id": 5044001584,
+      "nome": "Rua da Glória",
+      "lat": -23.5561302,
+      "lon": -46.6341942
+    },
+    {
+      "id": 5044001588,
+      "nome": "Rua Livreiro Alves",
+      "lat": -23.5559507,
+      "lon": -46.6299073
+    },
+    {
+      "id": 5062832283,
+      "nome": "Praça da Sé",
+      "lat": -23.5516772,
+      "lon": -46.6348962
+    },
+    {
+      "id": 5407688432,
+      "nome": "Rua Glicério",
+      "lat": -23.5567548,
+      "lon": -46.6295534
+    },
+    {
+      "id": 5407688434,
+      "nome": "Viaduto do Glicério",
+      "lat": -23.5546158,
+      "lon": -46.6272087
+    },
+    {
+      "id": 5539086397,
+      "nome": "Rua Santo Antônio",
+      "lat": -23.5497529,
+      "lon": -46.6402732
+    },
+    {
+      "id": 6363137823,
+      "nome": "Rua Conde do Pinhal",
+      "lat": -23.5534292,
+      "lon": -46.6342181
+    },
+    {
+      "id": 6391243911,
+      "nome": "Rua Anita Ferraz",
+      "lat": -23.5542071,
+      "lon": -46.6310862
+    },
+    {
+      "id": 6564989830,
+      "nome": "Rua da Figueira",
+      "lat": -23.5467768,
+      "lon": -46.6264446
+    },
+    {
+      "id": 6595269556,
+      "nome": "Avenida Mercúrio",
+      "lat": -23.5451601,
+      "lon": -46.6266089
+    },
+    {
+      "id": 6595319985,
+      "nome": "Avenida Mercúrio",
+      "lat": -23.5437656,
+      "lon": -46.6265887
+    },
+    {
+      "id": 6707729732,
+      "nome": "Avenida Brigadeiro Luís Antônio",
+      "lat": -23.556275,
+      "lon": -46.6398343
+    },
+    {
+      "id": 6707729735,
+      "nome": "Rua Santo Amaro",
+      "lat": -23.5562005,
+      "lon": -46.6400292
+    },
+    {
+      "id": 6990772391,
+      "nome": "Avenida Nove de Julho",
+      "lat": -23.5488445,
+      "lon": -46.6398084
+    },
+    {
+      "id": 7280183487,
+      "nome": "Rua Vasco Pereira",
+      "lat": -23.5553127,
+      "lon": -46.6277465
+    },
+    {
+      "id": 7280183488,
+      "nome": "Rua Teixeira Leite",
+      "lat": -23.5553297,
+      "lon": -46.6276818
+    },
+    {
+      "id": 7280183492,
+      "nome": "Rua Barão de Duprat",
+      "lat": -23.5438328,
+      "lon": -46.6310215
+    },
+    {
+      "id": 7284616866,
+      "nome": "Viaduto Doutor Eusebio Stevaux",
+      "lat": -23.5491932,
+      "lon": -46.6407219
+    },
+    {
+      "id": 7284727152,
+      "nome": "Avenida Vinte e Três de Maio",
+      "lat": -23.5499222,
+      "lon": -46.6384466
+    },
+    {
+      "id": 7285140917,
+      "nome": "Rua da Cantareira",
+      "lat": -23.5439951,
+      "lon": -46.630956
+    },
+    {
+      "id": 7289269107,
+      "nome": "Avenida Brigadeiro Luís Antônio",
+      "lat": -23.552262,
+      "lon": -46.6376185
+    },
+    {
+      "id": 8081258686,
+      "nome": "Rua Leopoldo Miguez",
+      "lat": -23.5569409,
+      "lon": -46.6274248
+    },
+    {
+      "id": 8083712851,
+      "nome": "Rua Jaceguaí",
+      "lat": -23.5563733,
+      "lon": -46.6373591
+    },
+    {
+      "id": 8377467363,
+      "nome": "Praça da Bandeira",
+      "lat": -23.5501327,
+      "lon": -46.6389592
+    },
+    {
+      "id": 8659531011,
+      "nome": "Rua Dom Pedro II",
+      "lat": -23.5497462,
+      "lon": -46.6288985
+    },
+    {
+      "id": 8659537219,
+      "nome": "Parque Dom Pedro II",
+      "lat": -23.549629,
+      "lon": -46.628981
+    },
+    {
+      "id": 8659537220,
+      "nome": "Rua Alexandria",
+      "lat": -23.549802,
+      "lon": -46.6291275
+    },
+    {
+      "id": 8659537226,
+      "nome": "Rua Dom Pedro II",
+      "lat": -23.5499204,
+      "lon": -46.6287741
+    },
+    {
+      "id": 8681118741,
+      "nome": "Rua Maria Paula",
+      "lat": -23.5515024,
+      "lon": -46.6402866
+    },
+    {
+      "id": 8728792690,
+      "nome": "Rua da Glória",
+      "lat": -23.5533327,
+      "lon": -46.6343766
+    },
+    {
+      "id": 8729255877,
+      "nome": "Rua Barão de Duprat",
+      "lat": -23.5434768,
+      "lon": -46.6309832
+    },
+    {
+      "id": 8729315639,
+      "nome": "Rua Barão de Duprat",
+      "lat": -23.5439834,
+      "lon": -46.6310444
+    },
+    {
+      "id": 8747316252,
+      "nome": "Praça Ragueb Chohfi",
+      "lat": -23.5450384,
+      "lon": -46.6309072
+    },
+    {
+      "id": 8892740570,
+      "nome": "Rua Genebra",
+      "lat": -23.551773,
+      "lon": -46.6396905
+    },
+    {
+      "id": 8932144981,
+      "nome": "Avenida Mercúrio",
+      "lat": -23.5437989,
+      "lon": -46.6265786
+    },
+    {
+      "id": 10253168505,
+      "nome": "Rua Quintino Bocaiuva",
+      "lat": -23.5505601,
+      "lon": -46.6352934
+    },
+    {
+      "id": 10573115224,
+      "nome": "Viaduto Vinte e Cinco de Março",
+      "lat": -23.5493991,
+      "lon": -46.6289019
+    },
+    {
+      "id": 10706826499,
+      "nome": "Viaduto do Glicério",
+      "lat": -23.5564187,
+      "lon": -46.6329118
+    },
+    {
+      "id": 11117108151,
+      "nome": "Rua Tabatinguera",
+      "lat": -23.5523586,
+      "lon": -46.629154
+    },
+    {
+      "id": 11453986130,
+      "nome": "Rua Teixeira Leite",
+      "lat": -23.5570922,
+      "lon": -46.6285117
+    },
+    {
+      "id": 11812733018,
+      "nome": "Rua Doutor Lund",
+      "lat": -23.5561184,
+      "lon": -46.6309481
+    },
+    {
+      "id": 12113811917,
+      "nome": "Praça Ramos de Azevedo",
+      "lat": -23.5458812,
+      "lon": -46.6387189
+    },
+    {
+      "id": 13085509190,
+      "nome": "Parque Dom Pedro II",
+      "lat": -23.5495635,
+      "lon": -46.6290242
+    }
   ],
   "arestas": [
-    { "origem": 0, "destino": 1, "peso": 8 },
-    { "origem": 1, "destino": 0, "peso": 8 },
-    { "origem": 0, "destino": 2, "peso": 12 },
-    { "origem": 2, "destino": 0, "peso": 12 },
-    { "origem": 1, "destino": 3, "peso": 5 },
-    { "origem": 3, "destino": 2, "peso": 7 }
+    {
+      "origem": 597282,
+      "destino": 130009702,
+      "peso": 1.02,
+      "nome": "Viaduto do Rio Tamanduateí"
+    },
+    {
+      "origem": 597282,
+      "destino": 25872025,
+      "peso": 0.24,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 25871670,
+      "destino": 25871831,
+      "peso": 0.1,
+      "nome": "Rua da Figueira"
+    },
+    {
+      "origem": 25871670,
+      "destino": 25872025,
+      "peso": 0.54,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 25871831,
+      "destino": 597282,
+      "peso": 0.2,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 25871831,
+      "destino": 151239264,
+      "peso": 0.1,
+      "nome": "Rua da Figueira"
+    },
+    {
+      "origem": 25871833,
+      "destino": 151239264,
+      "peso": 0.18,
+      "nome": "Rua da Figueira"
+    },
+    {
+      "origem": 25871833,
+      "destino": 25871831,
+      "peso": 0.08,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 25872075,
+      "destino": 1420146737,
+      "peso": 0.36,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 25872075,
+      "destino": 4902214144,
+      "peso": 1.3,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 25872212,
+      "destino": 25872075,
+      "peso": 0.56,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 25872232,
+      "destino": 25872212,
+      "peso": 0.39,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 25872236,
+      "destino": 25872212,
+      "peso": 0.29,
+      "nome": "Via 25872236→25872212"
+    },
+    {
+      "origem": 25872236,
+      "destino": 8747316252,
+      "peso": 0.08,
+      "nome": "Via 25872236→8747316252"
+    },
+    {
+      "origem": 25872258,
+      "destino": 25872232,
+      "peso": 0.15,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 25872264,
+      "destino": 1420146734,
+      "peso": 0.26,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 25872264,
+      "destino": 2389060616,
+      "peso": 0.06,
+      "nome": "Via 25872264→2389060616"
+    },
+    {
+      "origem": 25872264,
+      "destino": 25872258,
+      "peso": 0.09,
+      "nome": "Via 25872264→25872258"
+    },
+    {
+      "origem": 25928939,
+      "destino": 25928842,
+      "peso": 0.68,
+      "nome": "Avenida Vinte e Três de Maio"
+    },
+    {
+      "origem": 25928939,
+      "destino": 285488804,
+      "peso": 0.11,
+      "nome": "Via 25928939→285488804"
+    },
+    {
+      "origem": 25928961,
+      "destino": 25928964,
+      "peso": 0.28,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 25928961,
+      "destino": 60685472,
+      "peso": 0.1,
+      "nome": "Avenida Nove de Julho"
+    },
+    {
+      "origem": 25928964,
+      "destino": 7284727152,
+      "peso": 0.15,
+      "nome": "Avenida Vinte e Três de Maio"
+    },
+    {
+      "origem": 25928964,
+      "destino": 8377467363,
+      "peso": 0.18,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 25929039,
+      "destino": 176009843,
+      "peso": 0.17,
+      "nome": "Avenida Vinte e Três de Maio"
+    },
+    {
+      "origem": 60641012,
+      "destino": 3278570084,
+      "peso": 0.06,
+      "nome": "Viaduto Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 60641012,
+      "destino": 3278570087,
+      "peso": 0.14,
+      "nome": "Rua Asdrúbal Nascimento"
+    },
+    {
+      "origem": 60641027,
+      "destino": 60641028,
+      "peso": 0.1,
+      "nome": "Viaduto Dona Paulina"
+    },
+    {
+      "origem": 60641028,
+      "destino": 2323782354,
+      "peso": 0.13,
+      "nome": "Praça Doutor João Mendes"
+    },
+    {
+      "origem": 60641028,
+      "destino": 60641088,
+      "peso": 0.11,
+      "nome": "Praça Doutor João Mendes"
+    },
+    {
+      "origem": 60641028,
+      "destino": 60641030,
+      "peso": 0.11,
+      "nome": "Praça Doutor João Mendes"
+    },
+    {
+      "origem": 60641030,
+      "destino": 60641031,
+      "peso": 0.12,
+      "nome": "Praça Doutor João Mendes"
+    },
+    {
+      "origem": 60641030,
+      "destino": 2323782354,
+      "peso": 0.09,
+      "nome": "Praça Doutor João Mendes"
+    },
+    {
+      "origem": 60641031,
+      "destino": 60685350,
+      "peso": 0.2,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 60641031,
+      "destino": 60641034,
+      "peso": 0.04,
+      "nome": "Praça Doutor João Mendes"
+    },
+    {
+      "origem": 60641034,
+      "destino": 60641038,
+      "peso": 0.08,
+      "nome": "Praça Doutor João Mendes"
+    },
+    {
+      "origem": 60641038,
+      "destino": 60641364,
+      "peso": 0.15,
+      "nome": "Praça Doutor João Mendes"
+    },
+    {
+      "origem": 60641038,
+      "destino": 3713156706,
+      "peso": 0.2,
+      "nome": "Rua Onze de Agosto"
+    },
+    {
+      "origem": 60641043,
+      "destino": 60641048,
+      "peso": 0.18,
+      "nome": "Rua Anita Garibaldi"
+    },
+    {
+      "origem": 60641043,
+      "destino": 60685352,
+      "peso": 0.51,
+      "nome": "Rua Tabatinguera"
+    },
+    {
+      "origem": 60641048,
+      "destino": 3713156706,
+      "peso": 0.21,
+      "nome": "Praça Clóvis Beviláqua"
+    },
+    {
+      "origem": 60641048,
+      "destino": 60641052,
+      "peso": 0.32,
+      "nome": "Rua Anita Garibaldi"
+    },
+    {
+      "origem": 60641052,
+      "destino": 2396502011,
+      "peso": 0.22,
+      "nome": "Avenida Rangel Pestana"
+    },
+    {
+      "origem": 60641052,
+      "destino": 60641101,
+      "peso": 0.25,
+      "nome": "Rua Roberto Simonsen"
+    },
+    {
+      "origem": 60641086,
+      "destino": 10253168505,
+      "peso": 0.14,
+      "nome": "Rua Quintino Bocaiuva"
+    },
+    {
+      "origem": 60641086,
+      "destino": 3312393273,
+      "peso": 0.28,
+      "nome": "Rua Riachuelo"
+    },
+    {
+      "origem": 60641088,
+      "destino": 60641086,
+      "peso": 0.06,
+      "nome": "Rua Riachuelo"
+    },
+    {
+      "origem": 60641089,
+      "destino": 4249862475,
+      "peso": 0.17,
+      "nome": "Ladeira Porto Geral"
+    },
+    {
+      "origem": 60641089,
+      "destino": 3738626452,
+      "peso": 0.2,
+      "nome": "Rua Boa Vista"
+    },
+    {
+      "origem": 60641100,
+      "destino": 2396502031,
+      "peso": 0.15,
+      "nome": "Rua Floriano Peixoto"
+    },
+    {
+      "origem": 60641100,
+      "destino": 4903887706,
+      "peso": 0.2,
+      "nome": "Largo Pátio do Colégio"
+    },
+    {
+      "origem": 60641101,
+      "destino": 60641100,
+      "peso": 0.17,
+      "nome": "Rua Roberto Simonsen"
+    },
+    {
+      "origem": 60641101,
+      "destino": 60641102,
+      "peso": 0.15,
+      "nome": "Rua Venceslau Brás"
+    },
+    {
+      "origem": 60641102,
+      "destino": 3713156708,
+      "peso": 0.13,
+      "nome": "Rua Irmã Simpliciana"
+    },
+    {
+      "origem": 60641102,
+      "destino": 3713147155,
+      "peso": 0.08,
+      "nome": "Rua Venceslau Brás"
+    },
+    {
+      "origem": 60641149,
+      "destino": 60641181,
+      "peso": 0.19,
+      "nome": "Avenida da Liberdade"
+    },
+    {
+      "origem": 60641181,
+      "destino": 1836039193,
+      "peso": 0.29,
+      "nome": "Avenida da Liberdade"
+    },
+    {
+      "origem": 60641211,
+      "destino": 10253168505,
+      "peso": 0.18,
+      "nome": "Rua Senador Feijó"
+    },
+    {
+      "origem": 60641211,
+      "destino": 5062832283,
+      "peso": 0.2,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 60641252,
+      "destino": 60641282,
+      "peso": 0.14,
+      "nome": "Largo São Francisco"
+    },
+    {
+      "origem": 60641252,
+      "destino": 4247741913,
+      "peso": 0.33,
+      "nome": "Rua Benjamim Constant"
+    },
+    {
+      "origem": 60641257,
+      "destino": 60641252,
+      "peso": 0.17,
+      "nome": "Largo São Francisco"
+    },
+    {
+      "origem": 60641282,
+      "destino": 3312393273,
+      "peso": 0.12,
+      "nome": "Rua Cristóvão Colombo"
+    },
+    {
+      "origem": 60641305,
+      "destino": 598617885,
+      "peso": 0.2,
+      "nome": "Rua Doutor Rodrigo Silva"
+    },
+    {
+      "origem": 60641305,
+      "destino": 60641028,
+      "peso": 0.22,
+      "nome": "Rua Doutor Rodrigo Silva"
+    },
+    {
+      "origem": 60641326,
+      "destino": 60641181,
+      "peso": 0.03,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 60641326,
+      "destino": 60641387,
+      "peso": 0.13,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 60641326,
+      "destino": 2451555636,
+      "peso": 0.27,
+      "nome": "Avenida da Liberdade"
+    },
+    {
+      "origem": 60641336,
+      "destino": 60641326,
+      "peso": 0.29,
+      "nome": "Avenida da Liberdade"
+    },
+    {
+      "origem": 60641341,
+      "destino": 2210723698,
+      "peso": 0.03,
+      "nome": "Rua Doutor Américo de Campos"
+    },
+    {
+      "origem": 60641341,
+      "destino": 60641336,
+      "peso": 0.12,
+      "nome": "Avenida da Liberdade"
+    },
+    {
+      "origem": 60641359,
+      "destino": 1665298733,
+      "peso": 0.06,
+      "nome": "Via 60641359→1665298733"
+    },
+    {
+      "origem": 60641359,
+      "destino": 60641043,
+      "peso": 0.11,
+      "nome": "Rua Anita Garibaldi"
+    },
+    {
+      "origem": 60641364,
+      "destino": 1665298733,
+      "peso": 0.07,
+      "nome": "Rua Conde do Pinhal"
+    },
+    {
+      "origem": 60641364,
+      "destino": 60641043,
+      "peso": 0.06,
+      "nome": "Praça Doutor João Mendes"
+    },
+    {
+      "origem": 60641382,
+      "destino": 60641411,
+      "peso": 0.23,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 60641382,
+      "destino": 5044001584,
+      "peso": 0.13,
+      "nome": "Rua da Glória"
+    },
+    {
+      "origem": 60641387,
+      "destino": 1243571522,
+      "peso": 0.11,
+      "nome": "Praça da Liberdade"
+    },
+    {
+      "origem": 60641387,
+      "destino": 1836035458,
+      "peso": 0.13,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 60641387,
+      "destino": 60641326,
+      "peso": 0.13,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 60641411,
+      "destino": 60685368,
+      "peso": 0.11,
+      "nome": "Rua Conselheiro Furtado"
+    },
+    {
+      "origem": 60641411,
+      "destino": 60685365,
+      "peso": 0.23,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 60641411,
+      "destino": 247950279,
+      "peso": 0.17,
+      "nome": "Rua Conselheiro Furtado"
+    },
+    {
+      "origem": 60641414,
+      "destino": 661211978,
+      "peso": 0.07,
+      "nome": "Rua Conselheiro Furtado"
+    },
+    {
+      "origem": 60641414,
+      "destino": 60685357,
+      "peso": 0.27,
+      "nome": "Rua Conde de Sarzedas"
+    },
+    {
+      "origem": 60641414,
+      "destino": 247950279,
+      "peso": 0.28,
+      "nome": "Rua Conselheiro Furtado"
+    },
+    {
+      "origem": 60641427,
+      "destino": 60641341,
+      "peso": 0.27,
+      "nome": "Rua Doutor Américo de Campos"
+    },
+    {
+      "origem": 60641427,
+      "destino": 60641387,
+      "peso": 0.38,
+      "nome": "Viaduto Cidade de Osaka"
+    },
+    {
+      "origem": 60641438,
+      "destino": 60641427,
+      "peso": 0.21,
+      "nome": "Rua Doutor Américo de Campos"
+    },
+    {
+      "origem": 60641444,
+      "destino": 60641438,
+      "peso": 0.23,
+      "nome": "Praça Almeida Júnior"
+    },
+    {
+      "origem": 60641444,
+      "destino": 176007901,
+      "peso": 0.17,
+      "nome": "Viaduto Shuhei Uetsuka"
+    },
+    {
+      "origem": 60641488,
+      "destino": 12113811917,
+      "peso": 0.01,
+      "nome": "Praça Ramos de Azevedo"
+    },
+    {
+      "origem": 60641488,
+      "destino": 617798750,
+      "peso": 0.46,
+      "nome": "Viaduto do Chá"
+    },
+    {
+      "origem": 60641571,
+      "destino": 60685613,
+      "peso": 0.05,
+      "nome": "Praça Ramos de Azevedo"
+    },
+    {
+      "origem": 60641571,
+      "destino": 1477495382,
+      "peso": 0.29,
+      "nome": "Rua Conselheiro Crispiniano"
+    },
+    {
+      "origem": 60641664,
+      "destino": 60641488,
+      "peso": 0.39,
+      "nome": "Rua Coronel Xavier de Toledo"
+    },
+    {
+      "origem": 60685349,
+      "destino": 60685350,
+      "peso": 0.2,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 60685349,
+      "destino": 60641211,
+      "peso": 0.07,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 60685350,
+      "destino": 60641031,
+      "peso": 0.2,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 60685350,
+      "destino": 60685349,
+      "peso": 0.2,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 60685350,
+      "destino": 3713156706,
+      "peso": 0.12,
+      "nome": "Rua Filipe de Oliveira"
+    },
+    {
+      "origem": 60685352,
+      "destino": 247949253,
+      "peso": 0.18,
+      "nome": "Rua Tabatinguera"
+    },
+    {
+      "origem": 60685357,
+      "destino": 60641414,
+      "peso": 0.27,
+      "nome": "Rua Conde de Sarzedas"
+    },
+    {
+      "origem": 60685357,
+      "destino": 60685358,
+      "peso": 0.18,
+      "nome": "Rua Conde de Sarzedas"
+    },
+    {
+      "origem": 60685357,
+      "destino": 247950321,
+      "peso": 0.2,
+      "nome": "Rua Doutor Tomaz de Lima"
+    },
+    {
+      "origem": 60685358,
+      "destino": 60685360,
+      "peso": 0.12,
+      "nome": "Rua Oliveira Monteiro"
+    },
+    {
+      "origem": 60685358,
+      "destino": 60685376,
+      "peso": 0.16,
+      "nome": "Rua Conde de Sarzedas"
+    },
+    {
+      "origem": 60685360,
+      "destino": 60685377,
+      "peso": 0.17,
+      "nome": "Rua Carolina Augusta"
+    },
+    {
+      "origem": 60685360,
+      "destino": 60685363,
+      "peso": 0.08,
+      "nome": "Rua Carolina Augusta"
+    },
+    {
+      "origem": 60685360,
+      "destino": 60685358,
+      "peso": 0.12,
+      "nome": "Rua Oliveira Monteiro"
+    },
+    {
+      "origem": 60685363,
+      "destino": 60685360,
+      "peso": 0.08,
+      "nome": "Rua Carolina Augusta"
+    },
+    {
+      "origem": 60685365,
+      "destino": 60685367,
+      "peso": 0.15,
+      "nome": "Rua Doutor Tomaz de Lima"
+    },
+    {
+      "origem": 60685365,
+      "destino": 247950321,
+      "peso": 0.17,
+      "nome": "Rua Doutor Tomaz de Lima"
+    },
+    {
+      "origem": 60685365,
+      "destino": 1836035460,
+      "peso": 0.08,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 60685366,
+      "destino": 2389087291,
+      "peso": 0.15,
+      "nome": "Rua Egas Moniz de Aragão"
+    },
+    {
+      "origem": 60685366,
+      "destino": 60685374,
+      "peso": 0.05,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 60685366,
+      "destino": 6391243911,
+      "peso": 0.25,
+      "nome": "Rua Anita Ferraz"
+    },
+    {
+      "origem": 60685367,
+      "destino": 60685368,
+      "peso": 0.22,
+      "nome": "Rua Doutor Lund"
+    },
+    {
+      "origem": 60685367,
+      "destino": 60685365,
+      "peso": 0.15,
+      "nome": "Rua Doutor Tomaz de Lima"
+    },
+    {
+      "origem": 60685368,
+      "destino": 60641411,
+      "peso": 0.11,
+      "nome": "Rua Conselheiro Furtado"
+    },
+    {
+      "origem": 60685368,
+      "destino": 176007901,
+      "peso": 0.06,
+      "nome": "Rua Conselheiro Furtado"
+    },
+    {
+      "origem": 60685370,
+      "destino": 60641444,
+      "peso": 0.21,
+      "nome": "Rua São Paulo"
+    },
+    {
+      "origem": 60685370,
+      "destino": 2397820354,
+      "peso": 0.08,
+      "nome": "Rua Mituto Mizumoto"
+    },
+    {
+      "origem": 60685374,
+      "destino": 1836035459,
+      "peso": 0.11,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 60685374,
+      "destino": 2832098720,
+      "peso": 0.15,
+      "nome": "Travessa Rugiero"
+    },
+    {
+      "origem": 60685376,
+      "destino": 3064409129,
+      "peso": 0.1,
+      "nome": "Rua Conde de Sarzedas"
+    },
+    {
+      "origem": 60685376,
+      "destino": 60685377,
+      "peso": 0.12,
+      "nome": "Rua João de Carvalho"
+    },
+    {
+      "origem": 60685377,
+      "destino": 60685360,
+      "peso": 0.17,
+      "nome": "Rua Carolina Augusta"
+    },
+    {
+      "origem": 60685377,
+      "destino": 247950566,
+      "peso": 0.09,
+      "nome": "Rua João de Carvalho"
+    },
+    {
+      "origem": 60685377,
+      "destino": 60685376,
+      "peso": 0.12,
+      "nome": "Rua João de Carvalho"
+    },
+    {
+      "origem": 60685384,
+      "destino": 4872255634,
+      "peso": 0.46,
+      "nome": "Rua Doutor Bittencourt Rodrigues"
+    },
+    {
+      "origem": 60685384,
+      "destino": 60641101,
+      "peso": 0.22,
+      "nome": "Rua Venceslau Brás"
+    },
+    {
+      "origem": 60685391,
+      "destino": 60685384,
+      "peso": 0.12,
+      "nome": "Rua Doutor Bettencourt Rodrigues"
+    },
+    {
+      "origem": 60685397,
+      "destino": 2578181686,
+      "peso": 0.04,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 60685397,
+      "destino": 60685431,
+      "peso": 0.34,
+      "nome": "Rua Doutor Falcão Filho"
+    },
+    {
+      "origem": 60685402,
+      "destino": 1659499493,
+      "peso": 0.06,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 60685402,
+      "destino": 60685404,
+      "peso": 0.04,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 60685404,
+      "destino": 4251881423,
+      "peso": 0.23,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 60685428,
+      "destino": 25928842,
+      "peso": 0.14,
+      "nome": "Avenida Nove de Julho"
+    },
+    {
+      "origem": 60685429,
+      "destino": 4511007491,
+      "peso": 0.17,
+      "nome": "Rua José Bonifácio"
+    },
+    {
+      "origem": 60685429,
+      "destino": 60685446,
+      "peso": 0.07,
+      "nome": "Rua do Ouvidor"
+    },
+    {
+      "origem": 60685431,
+      "destino": 4247741412,
+      "peso": 0.29,
+      "nome": "Rua Líbero Badaró"
+    },
+    {
+      "origem": 60685446,
+      "destino": 60641257,
+      "peso": 0.13,
+      "nome": "Rua São Francisco"
+    },
+    {
+      "origem": 60685465,
+      "destino": 60685397,
+      "peso": 0.1,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 60685465,
+      "destino": 4511007491,
+      "peso": 0.04,
+      "nome": "Rua São Francisco"
+    },
+    {
+      "origem": 60685472,
+      "destino": 4251881389,
+      "peso": 0.47,
+      "nome": "Rua Formosa"
+    },
+    {
+      "origem": 60685472,
+      "destino": 6990772391,
+      "peso": 0.17,
+      "nome": "Avenida Nove de Julho"
+    },
+    {
+      "origem": 60685476,
+      "destino": 60685409,
+      "peso": 0.16,
+      "nome": "Rua João Adolfo"
+    },
+    {
+      "origem": 60685613,
+      "destino": 2453466163,
+      "peso": 0.17,
+      "nome": "Praça Ramos de Azevedo"
+    },
+    {
+      "origem": 60685971,
+      "destino": 4249855098,
+      "peso": 0.19,
+      "nome": "Rua Vinte e Cinco de Março"
+    },
+    {
+      "origem": 60685973,
+      "destino": 891033585,
+      "peso": 0.22,
+      "nome": "Rua Vinte e Cinco de Março"
+    },
+    {
+      "origem": 60685973,
+      "destino": 60685975,
+      "peso": 0.12,
+      "nome": "Rua Hércules Florence"
+    },
+    {
+      "origem": 60685975,
+      "destino": 891033574,
+      "peso": 0.24,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 60685978,
+      "destino": 60685975,
+      "peso": 0.49,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 60685979,
+      "destino": 60685978,
+      "peso": 0.11,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 60685982,
+      "destino": 60685979,
+      "peso": 0.04,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 60685982,
+      "destino": 4803680668,
+      "peso": 0.13,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 60685982,
+      "destino": 4802624937,
+      "peso": 0.11,
+      "nome": "Praça Ragueb Chohfi"
+    },
+    {
+      "origem": 130009702,
+      "destino": 5407688434,
+      "peso": 0.11,
+      "nome": "Viaduto do Glicério"
+    },
+    {
+      "origem": 130009851,
+      "destino": 1665039645,
+      "peso": 0.17,
+      "nome": "Via 130009851→1665039645"
+    },
+    {
+      "origem": 130009851,
+      "destino": 1665298742,
+      "peso": 0.71,
+      "nome": "Avenida Radial Leste-Oeste"
+    },
+    {
+      "origem": 130010321,
+      "destino": 445043024,
+      "peso": 0.23,
+      "nome": "Rua da Figueira"
+    },
+    {
+      "origem": 132347429,
+      "destino": 132347430,
+      "peso": 0.26,
+      "nome": "Avenida Radial Leste-Oeste"
+    },
+    {
+      "origem": 132347430,
+      "destino": 2225397474,
+      "peso": 0.81,
+      "nome": "Via 132347430→2225397474"
+    },
+    {
+      "origem": 132347430,
+      "destino": 133491023,
+      "peso": 0.77,
+      "nome": "Viaduto do Glicério"
+    },
+    {
+      "origem": 133484408,
+      "destino": 133485698,
+      "peso": 0.11,
+      "nome": "Rua da Figueira"
+    },
+    {
+      "origem": 133484408,
+      "destino": 445042755,
+      "peso": 0.27,
+      "nome": "Rua da Figueira"
+    },
+    {
+      "origem": 133485698,
+      "destino": 175993568,
+      "peso": 0.16,
+      "nome": "Avenida Mercúrio"
+    },
+    {
+      "origem": 133485698,
+      "destino": 6595269556,
+      "peso": 0.1,
+      "nome": "Via 133485698→6595269556"
+    },
+    {
+      "origem": 133491023,
+      "destino": 1420099953,
+      "peso": 0.71,
+      "nome": "Viaduto do Glicério"
+    },
+    {
+      "origem": 142808179,
+      "destino": 4511071307,
+      "peso": 0.2,
+      "nome": "Rua Aguiar de Barros"
+    },
+    {
+      "origem": 142808179,
+      "destino": 2453626790,
+      "peso": 0.36,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 142808179,
+      "destino": 176013188,
+      "peso": 0.33,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 151241233,
+      "destino": 133492789,
+      "peso": 0.34,
+      "nome": "Viaduto 31 de Março"
+    },
+    {
+      "origem": 151241987,
+      "destino": 151241233,
+      "peso": 0.13,
+      "nome": "Viaduto Therezinha Zerbini"
+    },
+    {
+      "origem": 151241987,
+      "destino": 1420150299,
+      "peso": 0.17,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 151243285,
+      "destino": 151243812,
+      "peso": 0.69,
+      "nome": "Viaduto Mercúrio"
+    },
+    {
+      "origem": 151243812,
+      "destino": 6595269556,
+      "peso": 0.26,
+      "nome": "Avenida Mercúrio"
+    },
+    {
+      "origem": 151243812,
+      "destino": 133484408,
+      "peso": 0.07,
+      "nome": "Via 151243812→133484408"
+    },
+    {
+      "origem": 171978399,
+      "destino": 8729315639,
+      "peso": 0.04,
+      "nome": "Rua Barão de Duprat"
+    },
+    {
+      "origem": 171978399,
+      "destino": 2389060470,
+      "peso": 0.06,
+      "nome": "Rua Cavalheiro Basílio Jafet"
+    },
+    {
+      "origem": 175993428,
+      "destino": 10706826499,
+      "peso": 0.77,
+      "nome": "Via 175993428→10706826499"
+    },
+    {
+      "origem": 175993428,
+      "destino": 11812733018,
+      "peso": 0.37,
+      "nome": "Rua Doutor Lund"
+    },
+    {
+      "origem": 175993483,
+      "destino": 7280183487,
+      "peso": 0.02,
+      "nome": "Rua Vasco Pereira"
+    },
+    {
+      "origem": 175993483,
+      "destino": 2382948300,
+      "peso": 0.22,
+      "nome": "Praça José Luiz de Mello Malheiro"
+    },
+    {
+      "origem": 175993483,
+      "destino": 175993428,
+      "peso": 0.35,
+      "nome": "Rua Teixeira Leite"
+    },
+    {
+      "origem": 175993568,
+      "destino": 661212028,
+      "peso": 0.04,
+      "nome": "Rua do Gasômetro"
+    },
+    {
+      "origem": 175993568,
+      "destino": 25872236,
+      "peso": 1.24,
+      "nome": "Viaduto Diário Popular"
+    },
+    {
+      "origem": 175993584,
+      "destino": 4239879689,
+      "peso": 0.03,
+      "nome": "Via 175993584→4239879689"
+    },
+    {
+      "origem": 175993584,
+      "destino": 25872264,
+      "peso": 0.21,
+      "nome": "Rua Doutor Itapura de Miranda"
+    },
+    {
+      "origem": 175993584,
+      "destino": 2389060458,
+      "peso": 0.06,
+      "nome": "Rua da Cantareira"
+    },
+    {
+      "origem": 176007901,
+      "destino": 60685368,
+      "peso": 0.06,
+      "nome": "Rua Conselheiro Furtado"
+    },
+    {
+      "origem": 176007901,
+      "destino": 60641444,
+      "peso": 0.17,
+      "nome": "Viaduto Shuhei Uetsuka"
+    },
+    {
+      "origem": 176010867,
+      "destino": 176010870,
+      "peso": 0.33,
+      "nome": "Via 176010867→176010870"
+    },
+    {
+      "origem": 176010870,
+      "destino": 176011400,
+      "peso": 0.11,
+      "nome": "Via 176010870→176011400"
+    },
+    {
+      "origem": 176010870,
+      "destino": 176010879,
+      "peso": 0.48,
+      "nome": "Viaduto Doutor Manoel José Chaves"
+    },
+    {
+      "origem": 176010879,
+      "destino": 176012607,
+      "peso": 0.09,
+      "nome": "Rua Asdrubal do Nascimento"
+    },
+    {
+      "origem": 176011400,
+      "destino": 60641027,
+      "peso": 0.2,
+      "nome": "Via 176011400→60641027"
+    },
+    {
+      "origem": 176011400,
+      "destino": 598617885,
+      "peso": 0.28,
+      "nome": "Praça Carlos Gomes"
+    },
+    {
+      "origem": 176011687,
+      "destino": 176010867,
+      "peso": 0.25,
+      "nome": "Via 176011687→176010867"
+    },
+    {
+      "origem": 176011687,
+      "destino": 25928939,
+      "peso": 1.49,
+      "nome": "Avenida Vinte e Três de Maio"
+    },
+    {
+      "origem": 176012605,
+      "destino": 176010879,
+      "peso": 0.13,
+      "nome": "Rua Asdrubal do Nascimento"
+    },
+    {
+      "origem": 176012607,
+      "destino": 176013188,
+      "peso": 0.67,
+      "nome": "Rua Jandaia"
+    },
+    {
+      "origem": 176012607,
+      "destino": 176012608,
+      "peso": 0.03,
+      "nome": "Rua Asdrubal do Nascimento"
+    },
+    {
+      "origem": 176012608,
+      "destino": 1665298739,
+      "peso": 0.2,
+      "nome": "Rua Assembleia"
+    },
+    {
+      "origem": 176012608,
+      "destino": 25929039,
+      "peso": 0.2,
+      "nome": "Rua Asdrubal do Nascimento"
+    },
+    {
+      "origem": 176013188,
+      "destino": 395763856,
+      "peso": 0.15,
+      "nome": "Rua Jaceguaí"
+    },
+    {
+      "origem": 176013188,
+      "destino": 142808179,
+      "peso": 0.33,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 176013188,
+      "destino": 459347476,
+      "peso": 0.1,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 176013518,
+      "destino": 1665298739,
+      "peso": 0.26,
+      "nome": "Rua Assembleia"
+    },
+    {
+      "origem": 176013518,
+      "destino": 1665298742,
+      "peso": 0.21,
+      "nome": "Rua Assembleia"
+    },
+    {
+      "origem": 176022448,
+      "destino": 2435474871,
+      "peso": 0.1,
+      "nome": "Avenida Prefeito Passos"
+    },
+    {
+      "origem": 176022448,
+      "destino": 247950659,
+      "peso": 0.09,
+      "nome": "Rua Glicério"
+    },
+    {
+      "origem": 247949253,
+      "destino": 4240270316,
+      "peso": 0.16,
+      "nome": "Rua do Carmo"
+    },
+    {
+      "origem": 247949253,
+      "destino": 11117108151,
+      "peso": 0.09,
+      "nome": "Rua Tabatinguera"
+    },
+    {
+      "origem": 247949664,
+      "destino": 151241987,
+      "peso": 0.04,
+      "nome": "Rua Dom Pedro II"
+    },
+    {
+      "origem": 247949665,
+      "destino": 2435474855,
+      "peso": 0.05,
+      "nome": "Avenida Prefeito Passos"
+    },
+    {
+      "origem": 247949665,
+      "destino": 247949664,
+      "peso": 0.05,
+      "nome": "Rua Tabatinguera"
+    },
+    {
+      "origem": 247950279,
+      "destino": 60641414,
+      "peso": 0.28,
+      "nome": "Rua Conselheiro Furtado"
+    },
+    {
+      "origem": 247950279,
+      "destino": 60641411,
+      "peso": 0.17,
+      "nome": "Rua Conselheiro Furtado"
+    },
+    {
+      "origem": 247950321,
+      "destino": 60685365,
+      "peso": 0.17,
+      "nome": "Rua Doutor Tomaz de Lima"
+    },
+    {
+      "origem": 247950321,
+      "destino": 60685357,
+      "peso": 0.2,
+      "nome": "Rua Doutor Tomaz de Lima"
+    },
+    {
+      "origem": 247950321,
+      "destino": 247950279,
+      "peso": 0.24,
+      "nome": "Rua Santa Luzia"
+    },
+    {
+      "origem": 247950566,
+      "destino": 60685377,
+      "peso": 0.09,
+      "nome": "Rua João de Carvalho"
+    },
+    {
+      "origem": 247950657,
+      "destino": 3064409129,
+      "peso": 0.41,
+      "nome": "Rua Oscar Cintra Gordinho"
+    },
+    {
+      "origem": 247950657,
+      "destino": 247950659,
+      "peso": 0.2,
+      "nome": "Rua Oscar Cintra Gordinho"
+    },
+    {
+      "origem": 247950659,
+      "destino": 445043190,
+      "peso": 0.25,
+      "nome": "Rua Glicério"
+    },
+    {
+      "origem": 247950659,
+      "destino": 2435474871,
+      "peso": 0.05,
+      "nome": "Rua Oscar Cintra Gordinho"
+    },
+    {
+      "origem": 247950659,
+      "destino": 247950657,
+      "peso": 0.2,
+      "nome": "Rua Oscar Cintra Gordinho"
+    },
+    {
+      "origem": 247951118,
+      "destino": 1420099956,
+      "peso": 0.04,
+      "nome": "Rua Glicério"
+    },
+    {
+      "origem": 247951203,
+      "destino": 247951669,
+      "peso": 0.13,
+      "nome": "Rua dos Carmelitas"
+    },
+    {
+      "origem": 247951203,
+      "destino": 247951678,
+      "peso": 0.08,
+      "nome": "Rua Joaquim dos Santos Andrade"
+    },
+    {
+      "origem": 247951231,
+      "destino": 1420146741,
+      "peso": 0.16,
+      "nome": "Rua Frederico Alvarenga"
+    },
+    {
+      "origem": 247951231,
+      "destino": 247951203,
+      "peso": 0.23,
+      "nome": "Rua dos Carmelitas"
+    },
+    {
+      "origem": 247951669,
+      "destino": 247951670,
+      "peso": 0.28,
+      "nome": "Rua Nioac"
+    },
+    {
+      "origem": 247951669,
+      "destino": 11117108151,
+      "peso": 0.1,
+      "nome": "Rua dos Carmelitas"
+    },
+    {
+      "origem": 247951670,
+      "destino": 4240270294,
+      "peso": 0.08,
+      "nome": "Rua Frederico Alvarenga"
+    },
+    {
+      "origem": 247951678,
+      "destino": 4240270316,
+      "peso": 0.14,
+      "nome": "Rua Joaquim dos Santos Andrade"
+    },
+    {
+      "origem": 247951678,
+      "destino": 247951684,
+      "peso": 0.19,
+      "nome": "Rua Alcides Bezerra"
+    },
+    {
+      "origem": 247951684,
+      "destino": 247951678,
+      "peso": 0.19,
+      "nome": "Rua Alcides Bezerra"
+    },
+    {
+      "origem": 248110355,
+      "destino": 171978399,
+      "peso": 0.08,
+      "nome": "Rua Cavalheiro Basílio Jafet"
+    },
+    {
+      "origem": 248110869,
+      "destino": 4239879689,
+      "peso": 0.03,
+      "nome": "Via 248110869→4239879689"
+    },
+    {
+      "origem": 248110873,
+      "destino": 248110355,
+      "peso": 0.15,
+      "nome": "Rua Cavalheiro Basílio Jafet"
+    },
+    {
+      "origem": 248110885,
+      "destino": 248111063,
+      "peso": 0.09,
+      "nome": "Rua Niazi Chohfi"
+    },
+    {
+      "origem": 248110885,
+      "destino": 248111143,
+      "peso": 0.04,
+      "nome": "Rua Vinte e Cinco de Março"
+    },
+    {
+      "origem": 248111063,
+      "destino": 248110873,
+      "peso": 0.17,
+      "nome": "Rua Comendador Abdo Schahin"
+    },
+    {
+      "origem": 248111143,
+      "destino": 4239881193,
+      "peso": 0.15,
+      "nome": "Rua Vinte e Cinco de Março"
+    },
+    {
+      "origem": 279225578,
+      "destino": 4511105625,
+      "peso": 0.09,
+      "nome": "Rua Dom Pedro II"
+    },
+    {
+      "origem": 279225582,
+      "destino": 279225578,
+      "peso": 0.14,
+      "nome": "Rua Dom Pedro II"
+    },
+    {
+      "origem": 285488804,
+      "destino": 60685465,
+      "peso": 0.12,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 395763856,
+      "destino": 4339336566,
+      "peso": 0.01,
+      "nome": "Rua Jaceguaí"
+    },
+    {
+      "origem": 395763856,
+      "destino": 455606529,
+      "peso": 0.11,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 395763917,
+      "destino": 4251734560,
+      "peso": 0.04,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 395763917,
+      "destino": 455606720,
+      "peso": 0.06,
+      "nome": "Rua Santo Antônio"
+    },
+    {
+      "origem": 395763930,
+      "destino": 4034133824,
+      "peso": 0.05,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 395763930,
+      "destino": 4251727358,
+      "peso": 0.03,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 395763938,
+      "destino": 4034133824,
+      "peso": 0.18,
+      "nome": "Rua Asdrúbal Nascimento"
+    },
+    {
+      "origem": 395763941,
+      "destino": 455606272,
+      "peso": 0.04,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 395763941,
+      "destino": 455606212,
+      "peso": 0.13,
+      "nome": "Rua Maria Paula"
+    },
+    {
+      "origem": 395763951,
+      "destino": 395763856,
+      "peso": 0.09,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 396034427,
+      "destino": 396034430,
+      "peso": 0.14,
+      "nome": "Avenida Prefeito Passos"
+    },
+    {
+      "origem": 396034430,
+      "destino": 2389087286,
+      "peso": 0.38,
+      "nome": "Avenida Prefeito Passos"
+    },
+    {
+      "origem": 396034430,
+      "destino": 396034427,
+      "peso": 0.14,
+      "nome": "Avenida Prefeito Passos"
+    },
+    {
+      "origem": 445042755,
+      "destino": 175993568,
+      "peso": 0.04,
+      "nome": "Rua do Gasômetro"
+    },
+    {
+      "origem": 445042755,
+      "destino": 8932144981,
+      "peso": 0.24,
+      "nome": "Avenida Mercúrio"
+    },
+    {
+      "origem": 445043024,
+      "destino": 661211993,
+      "peso": 0.15,
+      "nome": "Avenida Rangel Pestana"
+    },
+    {
+      "origem": 445043024,
+      "destino": 6564989830,
+      "peso": 0.37,
+      "nome": "Rua da Figueira"
+    },
+    {
+      "origem": 445043035,
+      "destino": 3609406629,
+      "peso": 0.13,
+      "nome": "Rua Maria Domitila"
+    },
+    {
+      "origem": 445043035,
+      "destino": 133484408,
+      "peso": 0.12,
+      "nome": "Rua da Figueira"
+    },
+    {
+      "origem": 445043190,
+      "destino": 247951118,
+      "peso": 0.19,
+      "nome": "Rua Glicério"
+    },
+    {
+      "origem": 445043191,
+      "destino": 445044395,
+      "peso": 0.4,
+      "nome": "Rua São Paulo"
+    },
+    {
+      "origem": 445043469,
+      "destino": 1420099941,
+      "peso": 0.11,
+      "nome": "Praça Ministro Francisco Sá Carneiro"
+    },
+    {
+      "origem": 445044187,
+      "destino": 7280183488,
+      "peso": 0.23,
+      "nome": "Rua Teixeira Leite"
+    },
+    {
+      "origem": 445044187,
+      "destino": 445043190,
+      "peso": 0.2,
+      "nome": "Rua Almirante Mauriti"
+    },
+    {
+      "origem": 445044376,
+      "destino": 2435474915,
+      "peso": 0.09,
+      "nome": "Rua Teixeira Leite"
+    },
+    {
+      "origem": 445044376,
+      "destino": 2382948305,
+      "peso": 0.25,
+      "nome": "Avenida Radial Leste-Oeste"
+    },
+    {
+      "origem": 445044382,
+      "destino": 11453986130,
+      "peso": 0.02,
+      "nome": "Rua Teixeira Leite"
+    },
+    {
+      "origem": 445044382,
+      "destino": 1420099939,
+      "peso": 0.37,
+      "nome": "Peca Nina Rodrigues"
+    },
+    {
+      "origem": 445044395,
+      "destino": 60685370,
+      "peso": 0.1,
+      "nome": "Rua São Paulo"
+    },
+    {
+      "origem": 445044395,
+      "destino": 4293910188,
+      "peso": 0.13,
+      "nome": "Rua Sinimbú"
+    },
+    {
+      "origem": 455606212,
+      "destino": 3278570084,
+      "peso": 0.45,
+      "nome": "Rua Maria Paula"
+    },
+    {
+      "origem": 455606212,
+      "destino": 455606415,
+      "peso": 0.15,
+      "nome": "Rua Genebra"
+    },
+    {
+      "origem": 455606272,
+      "destino": 8681118741,
+      "peso": 0.03,
+      "nome": "Rua Maria Paula"
+    },
+    {
+      "origem": 455606272,
+      "destino": 4511071312,
+      "peso": 0.05,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 455606284,
+      "destino": 4511071307,
+      "peso": 0.4,
+      "nome": "Rua Francisca Miquelina"
+    },
+    {
+      "origem": 455606284,
+      "destino": 2429561624,
+      "peso": 0.2,
+      "nome": "Rua Maria Paula"
+    },
+    {
+      "origem": 455606385,
+      "destino": 8892740570,
+      "peso": 0.46,
+      "nome": "Rua Genebra"
+    },
+    {
+      "origem": 455606385,
+      "destino": 598667181,
+      "peso": 0.17,
+      "nome": "Rua Aguiar de Barros"
+    },
+    {
+      "origem": 455606415,
+      "destino": 395763941,
+      "peso": 0.13,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 455606486,
+      "destino": 455606529,
+      "peso": 0.06,
+      "nome": "Rua Professor Laerte Ramos de Carvalho"
+    },
+    {
+      "origem": 455606486,
+      "destino": 4339336566,
+      "peso": 0.11,
+      "nome": "Praça Pérola Byington"
+    },
+    {
+      "origem": 455606529,
+      "destino": 6707729735,
+      "peso": 0.07,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 455606646,
+      "destino": 5539086397,
+      "peso": 0.1,
+      "nome": "Rua Santo Antônio"
+    },
+    {
+      "origem": 455606720,
+      "destino": 455606646,
+      "peso": 0.06,
+      "nome": "Rua Santo Antônio"
+    },
+    {
+      "origem": 455606932,
+      "destino": 598667181,
+      "peso": 0.08,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 455606932,
+      "destino": 4511071312,
+      "peso": 0.46,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 455606942,
+      "destino": 395763951,
+      "peso": 0.15,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 459347433,
+      "destino": 8083712851,
+      "peso": 0.15,
+      "nome": "Via 459347433→8083712851"
+    },
+    {
+      "origem": 459347433,
+      "destino": 132347429,
+      "peso": 0.66,
+      "nome": "Via 459347433→132347429"
+    },
+    {
+      "origem": 459347453,
+      "destino": 1665039639,
+      "peso": 0.13,
+      "nome": "Avenida Radial Leste-Oeste"
+    },
+    {
+      "origem": 459347476,
+      "destino": 6707729732,
+      "peso": 0.07,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 459347476,
+      "destino": 176013188,
+      "peso": 0.1,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 598617885,
+      "destino": 2451555632,
+      "peso": 0.1,
+      "nome": "Rua Doutor Rodrigo Silva"
+    },
+    {
+      "origem": 598667181,
+      "destino": 455606932,
+      "peso": 0.08,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 598667181,
+      "destino": 455606942,
+      "peso": 0.07,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 598667181,
+      "destino": 455606385,
+      "peso": 0.17,
+      "nome": "Rua Aguiar de Barros"
+    },
+    {
+      "origem": 598668807,
+      "destino": 2451555637,
+      "peso": 0.3,
+      "nome": "Avenida da Liberdade"
+    },
+    {
+      "origem": 598668807,
+      "destino": 60641305,
+      "peso": 0.15,
+      "nome": "Rua Alvares Machado"
+    },
+    {
+      "origem": 599043055,
+      "destino": 599043071,
+      "peso": 0.2,
+      "nome": "Rua Abelardo Pinto Piolin"
+    },
+    {
+      "origem": 599043066,
+      "destino": 4249862475,
+      "peso": 0.13,
+      "nome": "Rua Varnhagen"
+    },
+    {
+      "origem": 599043071,
+      "destino": 599043055,
+      "peso": 0.2,
+      "nome": "Rua Abelardo Pinto Piolin"
+    },
+    {
+      "origem": 599043071,
+      "destino": 1477495382,
+      "peso": 0.08,
+      "nome": "Largo do Paissandú"
+    },
+    {
+      "origem": 617798750,
+      "destino": 4247740324,
+      "peso": 0.08,
+      "nome": "Viaduto do Chá"
+    },
+    {
+      "origem": 617798750,
+      "destino": 60641488,
+      "peso": 0.46,
+      "nome": "Viaduto do Chá"
+    },
+    {
+      "origem": 631977641,
+      "destino": 3064409130,
+      "peso": 0.09,
+      "nome": "Praça Doutor Mário Margarido"
+    },
+    {
+      "origem": 631977641,
+      "destino": 3375721633,
+      "peso": 0.08,
+      "nome": "Vila Suíça"
+    },
+    {
+      "origem": 631977642,
+      "destino": 175993428,
+      "peso": 0.23,
+      "nome": "Rua Glicério"
+    },
+    {
+      "origem": 631977642,
+      "destino": 631977641,
+      "peso": 0.14,
+      "nome": "Praça Doutor Mário Margarido"
+    },
+    {
+      "origem": 661211978,
+      "destino": 60641414,
+      "peso": 0.07,
+      "nome": "Rua Conselheiro Furtado"
+    },
+    {
+      "origem": 661211978,
+      "destino": 60641359,
+      "peso": 0.04,
+      "nome": "Rua Anita Garibaldi"
+    },
+    {
+      "origem": 661211979,
+      "destino": 10573115224,
+      "peso": 0.05,
+      "nome": "Viaduto Vinte e Cinco de Março"
+    },
+    {
+      "origem": 661211979,
+      "destino": 13085509190,
+      "peso": 0.05,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 661211990,
+      "destino": 60685391,
+      "peso": 0.34,
+      "nome": "Avenida Rangel Pestana"
+    },
+    {
+      "origem": 661211990,
+      "destino": 661211979,
+      "peso": 0.08,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 661211993,
+      "destino": 2389060528,
+      "peso": 0.03,
+      "nome": "Via 661211993→2389060528"
+    },
+    {
+      "origem": 865280536,
+      "destino": 6707729732,
+      "peso": 0.05,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 865280536,
+      "destino": 4561913702,
+      "peso": 0.2,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 891033574,
+      "destino": 891033585,
+      "peso": 0.16,
+      "nome": "Rua Fernão Sales"
+    },
+    {
+      "origem": 891033574,
+      "destino": 661211990,
+      "peso": 0.14,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 891033585,
+      "destino": 891033574,
+      "peso": 0.16,
+      "nome": "Rua Fernão Sales"
+    },
+    {
+      "origem": 891033585,
+      "destino": 4240268306,
+      "peso": 0.32,
+      "nome": "Rua Frederico Alvarenga"
+    },
+    {
+      "origem": 1113784382,
+      "destino": 8728792690,
+      "peso": 0.11,
+      "nome": "Rua da Glória"
+    },
+    {
+      "origem": 1113784382,
+      "destino": 60641034,
+      "peso": 0.23,
+      "nome": "Avenida da Liberdade"
+    },
+    {
+      "origem": 1113784382,
+      "destino": 1113784886,
+      "peso": 0.02,
+      "nome": "Rua da Glória"
+    },
+    {
+      "origem": 1113784886,
+      "destino": 1113784382,
+      "peso": 0.02,
+      "nome": "Rua da Glória"
+    },
+    {
+      "origem": 1113784886,
+      "destino": 598668807,
+      "peso": 0.05,
+      "nome": "Avenida da Liberdade"
+    },
+    {
+      "origem": 1243571522,
+      "destino": 60641387,
+      "peso": 0.11,
+      "nome": "Praça da Liberdade"
+    },
+    {
+      "origem": 1420099938,
+      "destino": 396034427,
+      "peso": 0.05,
+      "nome": "Rua Leopoldo Miguez"
+    },
+    {
+      "origem": 1420099938,
+      "destino": 1420099953,
+      "peso": 0.5,
+      "nome": "Avenida Prefeito Passos"
+    },
+    {
+      "origem": 1420099938,
+      "destino": 4293887737,
+      "peso": 0.12,
+      "nome": "Praça José Luiz de Mello Malheiro"
+    },
+    {
+      "origem": 1420099939,
+      "destino": 1420099938,
+      "peso": 0.16,
+      "nome": "Praça Nina Rodrigues"
+    },
+    {
+      "origem": 1420099941,
+      "destino": 2449978409,
+      "peso": 0.26,
+      "nome": "Praça Ministro Francisco Sá Carneiro"
+    },
+    {
+      "origem": 1420099953,
+      "destino": 133492789,
+      "peso": 0.37,
+      "nome": "Viaduto 31 de Março"
+    },
+    {
+      "origem": 1420099956,
+      "destino": 631977642,
+      "peso": 0.05,
+      "nome": "Rua Glicério"
+    },
+    {
+      "origem": 1420138394,
+      "destino": 130010321,
+      "peso": 0.05,
+      "nome": "Rua da Figueira"
+    },
+    {
+      "origem": 1420138394,
+      "destino": 661211990,
+      "peso": 0.99,
+      "nome": "Viaduto Antônio Nakashima"
+    },
+    {
+      "origem": 1420146734,
+      "destino": 2389060616,
+      "peso": 0.24,
+      "nome": "Via 1420146734→2389060616"
+    },
+    {
+      "origem": 1420146734,
+      "destino": 60685982,
+      "peso": 0.15,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 1420146734,
+      "destino": 25872236,
+      "peso": 0.09,
+      "nome": "Via 1420146734→25872236"
+    },
+    {
+      "origem": 1420146737,
+      "destino": 279225578,
+      "peso": 0.33,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 1420146737,
+      "destino": 8659537226,
+      "peso": 0.15,
+      "nome": "Via 1420146737→8659537226"
+    },
+    {
+      "origem": 1420146741,
+      "destino": 279225582,
+      "peso": 0.1,
+      "nome": "Rua Lousada"
+    },
+    {
+      "origem": 1420146741,
+      "destino": 247951670,
+      "peso": 0.24,
+      "nome": "Rua Frederico Alvarenga"
+    },
+    {
+      "origem": 1420150299,
+      "destino": 4902214144,
+      "peso": 0.21,
+      "nome": "Via 1420150299→4902214144"
+    },
+    {
+      "origem": 1420150299,
+      "destino": 445043469,
+      "peso": 0.2,
+      "nome": "Avenida do Estado"
+    },
+    {
+      "origem": 1659499493,
+      "destino": 60685404,
+      "peso": 0.05,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 1659499493,
+      "destino": 4251881389,
+      "peso": 0.03,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 1665039639,
+      "destino": 8083712851,
+      "peso": 0.18,
+      "nome": "Rua Jaceguaí"
+    },
+    {
+      "origem": 1665039639,
+      "destino": 132347429,
+      "peso": 0.75,
+      "nome": "Viaduto Jaceguai"
+    },
+    {
+      "origem": 1665039645,
+      "destino": 176010867,
+      "peso": 0.34,
+      "nome": "Via 1665039645→176010867"
+    },
+    {
+      "origem": 1665039645,
+      "destino": 176013518,
+      "peso": 0.36,
+      "nome": "Via 1665039645→176013518"
+    },
+    {
+      "origem": 1665298733,
+      "destino": 1665298735,
+      "peso": 0.02,
+      "nome": "Rua Conde do Pinhal"
+    },
+    {
+      "origem": 1665298735,
+      "destino": 661211978,
+      "peso": 0.07,
+      "nome": "Rua Conselheiro Furtado"
+    },
+    {
+      "origem": 1665298735,
+      "destino": 6363137823,
+      "peso": 0.24,
+      "nome": "Rua Conde do Pinhal"
+    },
+    {
+      "origem": 1665298737,
+      "destino": 60641382,
+      "peso": 0.45,
+      "nome": "Rua da Glória"
+    },
+    {
+      "origem": 1665298739,
+      "destino": 176013518,
+      "peso": 0.26,
+      "nome": "Rua Assembleia"
+    },
+    {
+      "origem": 1665298739,
+      "destino": 176009843,
+      "peso": 0.25,
+      "nome": "Via 1665298739→176009843"
+    },
+    {
+      "origem": 1836035452,
+      "destino": 1836035458,
+      "peso": 0.12,
+      "nome": "Rua dos Aflitos"
+    },
+    {
+      "origem": 1836035458,
+      "destino": 1836035452,
+      "peso": 0.12,
+      "nome": "Rua dos Aflitos"
+    },
+    {
+      "origem": 1836035458,
+      "destino": 60641382,
+      "peso": 0.08,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 1836035459,
+      "destino": 5044001588,
+      "peso": 0.22,
+      "nome": "Rua Livreiro Alves"
+    },
+    {
+      "origem": 1836035459,
+      "destino": 631977641,
+      "peso": 0.24,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 1836035460,
+      "destino": 60685366,
+      "peso": 0.11,
+      "nome": "Rua dos Estudantes"
+    },
+    {
+      "origem": 1836035460,
+      "destino": 2389087291,
+      "peso": 0.25,
+      "nome": "Travessa dos Estudantes"
+    },
+    {
+      "origem": 1836039193,
+      "destino": 60641336,
+      "peso": 0.02,
+      "nome": "Rua Jaceguaí"
+    },
+    {
+      "origem": 1836039193,
+      "destino": 2210723698,
+      "peso": 0.14,
+      "nome": "Avenida da Liberdade"
+    },
+    {
+      "origem": 2225397474,
+      "destino": 2382948305,
+      "peso": 0.04,
+      "nome": "Rua Glicério"
+    },
+    {
+      "origem": 2323782354,
+      "destino": 1113784886,
+      "peso": 0.24,
+      "nome": "Praça Doutor João Mendes"
+    },
+    {
+      "origem": 2382948291,
+      "destino": 7280183488,
+      "peso": 0.26,
+      "nome": "Praça José Luiz de Mello Malheiro"
+    },
+    {
+      "origem": 2382948291,
+      "destino": 2382948300,
+      "peso": 0.06,
+      "nome": "Praça José Luiz de Mello Malheiro"
+    },
+    {
+      "origem": 2382948300,
+      "destino": 445044376,
+      "peso": 0.06,
+      "nome": "Praça José Luiz de Mello Malheiro"
+    },
+    {
+      "origem": 2382948305,
+      "destino": 5407688432,
+      "peso": 0.08,
+      "nome": "Rua Glicério"
+    },
+    {
+      "origem": 2389060458,
+      "destino": 2389060592,
+      "peso": 0.06,
+      "nome": "Rua da Cantareira"
+    },
+    {
+      "origem": 2389060470,
+      "destino": 1420146734,
+      "peso": 0.08,
+      "nome": "Rua Cavalheiro Basílio Jafet"
+    },
+    {
+      "origem": 2389060528,
+      "destino": 6564989830,
+      "peso": 0.24,
+      "nome": "Avenida Rangel Pestana"
+    },
+    {
+      "origem": 2389060592,
+      "destino": 7285140917,
+      "peso": 0.03,
+      "nome": "Rua da Cantareira"
+    },
+    {
+      "origem": 2389060592,
+      "destino": 7280183492,
+      "peso": 0.03,
+      "nome": "Via 2389060592→7280183492"
+    },
+    {
+      "origem": 2389060616,
+      "destino": 25872232,
+      "peso": 0.13,
+      "nome": "Via 2389060616→25872232"
+    },
+    {
+      "origem": 2389087286,
+      "destino": 2389087293,
+      "peso": 0.23,
+      "nome": "Rua Antônio de Sá"
+    },
+    {
+      "origem": 2389087286,
+      "destino": 2389087315,
+      "peso": 0.06,
+      "nome": "Viaduto Governador Roberto Abreu Sodré"
+    },
+    {
+      "origem": 2389087286,
+      "destino": 396034430,
+      "peso": 0.38,
+      "nome": "Avenida Prefeito Passos"
+    },
+    {
+      "origem": 2389087291,
+      "destino": 2832098720,
+      "peso": 0.05,
+      "nome": "Travessa dos Estudantes"
+    },
+    {
+      "origem": 2389087291,
+      "destino": 1836035460,
+      "peso": 0.25,
+      "nome": "Travessa dos Estudantes"
+    },
+    {
+      "origem": 2389087291,
+      "destino": 60685366,
+      "peso": 0.15,
+      "nome": "Rua Egas Moniz de Aragão"
+    },
+    {
+      "origem": 2389087293,
+      "destino": 1420099941,
+      "peso": 0.12,
+      "nome": "Praça Ministro Francisco Sá Carneiro"
+    },
+    {
+      "origem": 2389087315,
+      "destino": 2389087286,
+      "peso": 0.06,
+      "nome": "Viaduto Governador Roberto Abreu Sodré"
+    },
+    {
+      "origem": 2389087315,
+      "destino": 2449978409,
+      "peso": 0.09,
+      "nome": "Viaduto Governador Roberto Abreu Sodré"
+    },
+    {
+      "origem": 2390857079,
+      "destino": 8081258686,
+      "peso": 0.14,
+      "nome": "Rua Leopoldo Miguez"
+    },
+    {
+      "origem": 2396502011,
+      "destino": 60685391,
+      "peso": 0.07,
+      "nome": "Via 2396502011→60685391"
+    },
+    {
+      "origem": 2396502011,
+      "destino": 661211979,
+      "peso": 0.41,
+      "nome": "Avenida Rangel Pestana"
+    },
+    {
+      "origem": 2396502031,
+      "destino": 60641089,
+      "peso": 0.84,
+      "nome": "Largo Pátio do Colégio"
+    },
+    {
+      "origem": 2396502031,
+      "destino": 3713147144,
+      "peso": 0.14,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 2397820354,
+      "destino": 60685370,
+      "peso": 0.08,
+      "nome": "Rua Mituto Mizumoto"
+    },
+    {
+      "origem": 2429561621,
+      "destino": 60641027,
+      "peso": 0.33,
+      "nome": "Viaduto Dona Paulina"
+    },
+    {
+      "origem": 2429561623,
+      "destino": 2429561621,
+      "peso": 0.05,
+      "nome": "Viaduto Dona Paulina"
+    },
+    {
+      "origem": 2429561624,
+      "destino": 3278570084,
+      "peso": 0.03,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 2429561624,
+      "destino": 2429561623,
+      "peso": 0.04,
+      "nome": "Viaduto Dona Paulina"
+    },
+    {
+      "origem": 2429561624,
+      "destino": 176012605,
+      "peso": 0.08,
+      "nome": "Rua Asdrubal do Nascimento"
+    },
+    {
+      "origem": 2429561624,
+      "destino": 2453626790,
+      "peso": 0.04,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 2435474855,
+      "destino": 176022448,
+      "peso": 0.05,
+      "nome": "Avenida Prefeito Passos"
+    },
+    {
+      "origem": 2435474855,
+      "destino": 151241233,
+      "peso": 0.15,
+      "nome": "Viaduto 31 de Março"
+    },
+    {
+      "origem": 2435474871,
+      "destino": 445044187,
+      "peso": 0.3,
+      "nome": "Avenida Prefeito Passos"
+    },
+    {
+      "origem": 2435474915,
+      "destino": 11453986130,
+      "peso": 0.09,
+      "nome": "Rua Teixeira Leite"
+    },
+    {
+      "origem": 2435474915,
+      "destino": 2390857079,
+      "peso": 0.08,
+      "nome": "Rua Leopoldo Miguez"
+    },
+    {
+      "origem": 2449978409,
+      "destino": 445044187,
+      "peso": 0.03,
+      "nome": "Rua Almirante Mauriti"
+    },
+    {
+      "origem": 2451555632,
+      "destino": 2451555637,
+      "peso": 0.04,
+      "nome": "Via 2451555632→2451555637"
+    },
+    {
+      "origem": 2451555632,
+      "destino": 60641149,
+      "peso": 0.09,
+      "nome": "Rua Doutor Rodrigo Silva"
+    },
+    {
+      "origem": 2451555636,
+      "destino": 1113784382,
+      "peso": 0.33,
+      "nome": "Avenida da Liberdade"
+    },
+    {
+      "origem": 2451555637,
+      "destino": 60641149,
+      "peso": 0.07,
+      "nome": "Avenida da Liberdade"
+    },
+    {
+      "origem": 2451555637,
+      "destino": 2451555636,
+      "peso": 0.04,
+      "nome": "Via 2451555637→2451555636"
+    },
+    {
+      "origem": 2453466163,
+      "destino": 12113811917,
+      "peso": 0.14,
+      "nome": "Praça Ramos de Azevedo"
+    },
+    {
+      "origem": 2453466163,
+      "destino": 60641488,
+      "peso": 0.15,
+      "nome": "Praça Ramos de Azevedo"
+    },
+    {
+      "origem": 2453626790,
+      "destino": 2429561624,
+      "peso": 0.04,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 2453626790,
+      "destino": 142808179,
+      "peso": 0.36,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 2453626790,
+      "destino": 176012605,
+      "peso": 0.08,
+      "nome": "Via 2453626790→176012605"
+    },
+    {
+      "origem": 2578181686,
+      "destino": 60685428,
+      "peso": 0.15,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 2578181686,
+      "destino": 60685402,
+      "peso": 0.29,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 2832098720,
+      "destino": 11812733018,
+      "peso": 0.05,
+      "nome": "Travessa Rugiero"
+    },
+    {
+      "origem": 2832098720,
+      "destino": 2389087291,
+      "peso": 0.05,
+      "nome": "Travessa dos Estudantes"
+    },
+    {
+      "origem": 2832098720,
+      "destino": 60685374,
+      "peso": 0.15,
+      "nome": "Travessa Rugiero"
+    },
+    {
+      "origem": 3064409129,
+      "destino": 3064409130,
+      "peso": 0.15,
+      "nome": "Rua Conde de Sarzedas"
+    },
+    {
+      "origem": 3064409130,
+      "destino": 247951118,
+      "peso": 0.15,
+      "nome": "Praça Doutor Mário Margarido"
+    },
+    {
+      "origem": 3064409130,
+      "destino": 247950657,
+      "peso": 0.34,
+      "nome": "Rua Helena Zerrener"
+    },
+    {
+      "origem": 3266333520,
+      "destino": 455606415,
+      "peso": 0.23,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 3266333520,
+      "destino": 4251727358,
+      "peso": 0.05,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 3278570084,
+      "destino": 2429561624,
+      "peso": 0.03,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 3278570084,
+      "destino": 2429561623,
+      "peso": 0.02,
+      "nome": "Viaduto Dona Paulina"
+    },
+    {
+      "origem": 3278570087,
+      "destino": 395763938,
+      "peso": 0.15,
+      "nome": "Rua Asdrúbal Nascimento"
+    },
+    {
+      "origem": 3278570087,
+      "destino": 3278570088,
+      "peso": 0.14,
+      "nome": "Travessa Grassi"
+    },
+    {
+      "origem": 3278570088,
+      "destino": 25929039,
+      "peso": 0.82,
+      "nome": "Avenida Vinte e Três de Maio"
+    },
+    {
+      "origem": 3278570091,
+      "destino": 3278570088,
+      "peso": 0.24,
+      "nome": "Avenida Vinte e Três de Maio"
+    },
+    {
+      "origem": 3312393273,
+      "destino": 7289269107,
+      "peso": 0.41,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 3312393273,
+      "destino": 285488804,
+      "peso": 0.54,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 3375721632,
+      "destino": 3375721633,
+      "peso": 0.04,
+      "nome": "Vila Suíça"
+    },
+    {
+      "origem": 3375721633,
+      "destino": 3375721632,
+      "peso": 0.04,
+      "nome": "Vila Suíça"
+    },
+    {
+      "origem": 3375721633,
+      "destino": 3375721636,
+      "peso": 0.04,
+      "nome": "Vila Suíça"
+    },
+    {
+      "origem": 3375721633,
+      "destino": 631977641,
+      "peso": 0.08,
+      "nome": "Vila Suíça"
+    },
+    {
+      "origem": 3375721636,
+      "destino": 3375721633,
+      "peso": 0.04,
+      "nome": "Vila Suíça"
+    },
+    {
+      "origem": 3609406629,
+      "destino": 445043035,
+      "peso": 0.13,
+      "nome": "Rua Maria Domitila"
+    },
+    {
+      "origem": 3609406629,
+      "destino": 3609406632,
+      "peso": 0.08,
+      "nome": "Rua Maria Domitila"
+    },
+    {
+      "origem": 3609406629,
+      "destino": 3609406630,
+      "peso": 0.28,
+      "nome": "Travessa Queiroga"
+    },
+    {
+      "origem": 3609406630,
+      "destino": 2389060528,
+      "peso": 0.12,
+      "nome": "Avenida Rangel Pestana"
+    },
+    {
+      "origem": 3609406632,
+      "destino": 3609406629,
+      "peso": 0.08,
+      "nome": "Rua Maria Domitila"
+    },
+    {
+      "origem": 3609406634,
+      "destino": 8932144981,
+      "peso": 0.2,
+      "nome": "Rua Assunção"
+    },
+    {
+      "origem": 3713147144,
+      "destino": 3757650387,
+      "peso": 0.25,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 3713147155,
+      "destino": 2396502031,
+      "peso": 0.13,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 3713147155,
+      "destino": 3713147144,
+      "peso": 0.13,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 3713156706,
+      "destino": 60641038,
+      "peso": 0.2,
+      "nome": "Rua Onze de Agosto"
+    },
+    {
+      "origem": 3713156706,
+      "destino": 60641048,
+      "peso": 0.21,
+      "nome": "Praça Clóvis Beviláqua"
+    },
+    {
+      "origem": 3713156706,
+      "destino": 60685350,
+      "peso": 0.12,
+      "nome": "Rua Filipe de Oliveira"
+    },
+    {
+      "origem": 3713156708,
+      "destino": 60641102,
+      "peso": 0.13,
+      "nome": "Rua Irmã Simpliciana"
+    },
+    {
+      "origem": 3738626452,
+      "destino": 4806688566,
+      "peso": 0.93,
+      "nome": "Rua Líbero Badaró"
+    },
+    {
+      "origem": 3757650387,
+      "destino": 60685349,
+      "peso": 0.12,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 4034133824,
+      "destino": 395763938,
+      "peso": 0.18,
+      "nome": "Rua Asdrúbal Nascimento"
+    },
+    {
+      "origem": 4034133824,
+      "destino": 3278570091,
+      "peso": 0.05,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 4239879420,
+      "destino": 2389060458,
+      "peso": 0.02,
+      "nome": "Via 4239879420→2389060458"
+    },
+    {
+      "origem": 4239879689,
+      "destino": 175993584,
+      "peso": 0.03,
+      "nome": "Via 4239879689→175993584"
+    },
+    {
+      "origem": 4239879689,
+      "destino": 4239879420,
+      "peso": 0.03,
+      "nome": "Via 4239879689→4239879420"
+    },
+    {
+      "origem": 4239881193,
+      "destino": 248110873,
+      "peso": 0.09,
+      "nome": "Rua Cavalheiro Basílio Jafet"
+    },
+    {
+      "origem": 4239881193,
+      "destino": 4239881404,
+      "peso": 0.18,
+      "nome": "Rua Vinte e Cinco de Março"
+    },
+    {
+      "origem": 4239881404,
+      "destino": 4802625028,
+      "peso": 0.21,
+      "nome": "Rua Vinte e Cinco de Março"
+    },
+    {
+      "origem": 4240268306,
+      "destino": 247951231,
+      "peso": 0.11,
+      "nome": "Rua Frederico Alvarenga"
+    },
+    {
+      "origem": 4240270294,
+      "destino": 247949665,
+      "peso": 0.04,
+      "nome": "Avenida Prefeito Passos"
+    },
+    {
+      "origem": 4240270316,
+      "destino": 60685352,
+      "peso": 0.61,
+      "nome": "Rua Silveira Martins"
+    },
+    {
+      "origem": 4247740324,
+      "destino": 60685431,
+      "peso": 0.04,
+      "nome": "Rua Líbero Badaró"
+    },
+    {
+      "origem": 4247741412,
+      "destino": 60685429,
+      "peso": 0.03,
+      "nome": "Rua José Bonifácio"
+    },
+    {
+      "origem": 4247741412,
+      "destino": 60641257,
+      "peso": 0.12,
+      "nome": "Rua Líbero Badaró"
+    },
+    {
+      "origem": 4247741913,
+      "destino": 10253168505,
+      "peso": 0.16,
+      "nome": "Rua Quintino Bocaiuva"
+    },
+    {
+      "origem": 4247741913,
+      "destino": 3757650387,
+      "peso": 0.2,
+      "nome": "Rua Benjamim Constant"
+    },
+    {
+      "origem": 4249855098,
+      "destino": 60685973,
+      "peso": 0.21,
+      "nome": "Rua Vinte e Cinco de Março"
+    },
+    {
+      "origem": 4249855098,
+      "destino": 4872255634,
+      "peso": 0.14,
+      "nome": "Praça Fernando Costa"
+    },
+    {
+      "origem": 4249862475,
+      "destino": 599043066,
+      "peso": 0.13,
+      "nome": "Rua Varnhagen"
+    },
+    {
+      "origem": 4249862475,
+      "destino": 4239881193,
+      "peso": 0.11,
+      "nome": "Ladeira Porto Geral"
+    },
+    {
+      "origem": 4251727358,
+      "destino": 8377467363,
+      "peso": 0.05,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 4251727358,
+      "destino": 395763930,
+      "peso": 0.03,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 4251734560,
+      "destino": 5539086397,
+      "peso": 0.02,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 4251734560,
+      "destino": 455606720,
+      "peso": 0.04,
+      "nome": "Rua Santo Antônio"
+    },
+    {
+      "origem": 4251881389,
+      "destino": 1659499493,
+      "peso": 0.03,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 4251881423,
+      "destino": 25928961,
+      "peso": 0.05,
+      "nome": "Parque Anhangabau"
+    },
+    {
+      "origem": 4293887737,
+      "destino": 8081258686,
+      "peso": 0.03,
+      "nome": "Via 4293887737→8081258686"
+    },
+    {
+      "origem": 4293887737,
+      "destino": 2382948291,
+      "peso": 0.12,
+      "nome": "Praça José Luiz de Mello Malheiro"
+    },
+    {
+      "origem": 4293910187,
+      "destino": 4293910188,
+      "peso": 0.15,
+      "nome": "Rua Lins"
+    },
+    {
+      "origem": 4293910188,
+      "destino": 4293910187,
+      "peso": 0.15,
+      "nome": "Rua Lins"
+    },
+    {
+      "origem": 4293910188,
+      "destino": 445044395,
+      "peso": 0.13,
+      "nome": "Rua Sinimbú"
+    },
+    {
+      "origem": 4509498149,
+      "destino": 4802625028,
+      "peso": 0.06,
+      "nome": "Rua General Carneiro"
+    },
+    {
+      "origem": 4509498149,
+      "destino": 4509498152,
+      "peso": 0.07,
+      "nome": "Rua General Carneiro"
+    },
+    {
+      "origem": 4509498152,
+      "destino": 60685971,
+      "peso": 0.04,
+      "nome": "Rua Vinte e Cinco de Março"
+    },
+    {
+      "origem": 4511007491,
+      "destino": 60685446,
+      "peso": 0.14,
+      "nome": "Rua São Francisco"
+    },
+    {
+      "origem": 4511071307,
+      "destino": 455606385,
+      "peso": 0.03,
+      "nome": "Rua Aguiar de Barros"
+    },
+    {
+      "origem": 4511071307,
+      "destino": 395763951,
+      "peso": 0.29,
+      "nome": "Rua Francisca Miquelina"
+    },
+    {
+      "origem": 4511071312,
+      "destino": 455606932,
+      "peso": 0.46,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 4511071312,
+      "destino": 8681118741,
+      "peso": 0.07,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 4511105625,
+      "destino": 4240270294,
+      "peso": 0.11,
+      "nome": "Avenida Prefeito Passos"
+    },
+    {
+      "origem": 4511105625,
+      "destino": 247949664,
+      "peso": 0.17,
+      "nome": "Rua Dom Pedro II"
+    },
+    {
+      "origem": 4561913702,
+      "destino": 865280536,
+      "peso": 0.2,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 4802624937,
+      "destino": 248110355,
+      "peso": 0.14,
+      "nome": "Rua Jorge Azem"
+    },
+    {
+      "origem": 4802624937,
+      "destino": 4239881404,
+      "peso": 0.15,
+      "nome": "Praça Ragueb Chohfi"
+    },
+    {
+      "origem": 4802625028,
+      "destino": 4803680669,
+      "peso": 0.09,
+      "nome": "Rua General Carneiro"
+    },
+    {
+      "origem": 4802625028,
+      "destino": 4509498152,
+      "peso": 0.06,
+      "nome": "Rua Vinte e Cinco de Março"
+    },
+    {
+      "origem": 4803680668,
+      "destino": 60685978,
+      "peso": 0.06,
+      "nome": "Rua General Carneiro"
+    },
+    {
+      "origem": 4803680668,
+      "destino": 60685971,
+      "peso": 0.19,
+      "nome": "Praça Fernando Costa"
+    },
+    {
+      "origem": 4803680669,
+      "destino": 4803680668,
+      "peso": 0.05,
+      "nome": "Rua General Carneiro"
+    },
+    {
+      "origem": 4803680669,
+      "destino": 4802624937,
+      "peso": 0.17,
+      "nome": "Praça Ragueb Chohfi"
+    },
+    {
+      "origem": 4806688566,
+      "destino": 617798750,
+      "peso": 0.06,
+      "nome": "Viaduto do Chá"
+    },
+    {
+      "origem": 4806688566,
+      "destino": 4247740324,
+      "peso": 0.07,
+      "nome": "Rua Líbero Badaró"
+    },
+    {
+      "origem": 4872255634,
+      "destino": 4249855098,
+      "peso": 0.14,
+      "nome": "Praça Fernando Costa"
+    },
+    {
+      "origem": 4872255634,
+      "destino": 4509498149,
+      "peso": 0.32,
+      "nome": "Praça Fernando Costa"
+    },
+    {
+      "origem": 4903887706,
+      "destino": 60641100,
+      "peso": 0.2,
+      "nome": "Largo Pátio do Colégio"
+    },
+    {
+      "origem": 5044001584,
+      "destino": 176007901,
+      "peso": 0.24,
+      "nome": "Praça Almeida Júnior"
+    },
+    {
+      "origem": 5044001584,
+      "destino": 60641438,
+      "peso": 0.22,
+      "nome": "Rua da Glória"
+    },
+    {
+      "origem": 5044001588,
+      "destino": 1836035459,
+      "peso": 0.22,
+      "nome": "Rua Livreiro Alves"
+    },
+    {
+      "origem": 5062832283,
+      "destino": 60641030,
+      "peso": 0.02,
+      "nome": "Praça da Sé"
+    },
+    {
+      "origem": 5062832283,
+      "destino": 60641088,
+      "peso": 0.11,
+      "nome": "Praça Doutor João Mendes"
+    },
+    {
+      "origem": 5407688432,
+      "destino": 445043191,
+      "peso": 0.01,
+      "nome": "Rua Glicério"
+    },
+    {
+      "origem": 5407688432,
+      "destino": 445044382,
+      "peso": 0.22,
+      "nome": "Rua São Paulo"
+    },
+    {
+      "origem": 5407688434,
+      "destino": 2225397474,
+      "peso": 0.63,
+      "nome": "Viaduto do Glicério"
+    },
+    {
+      "origem": 5407688434,
+      "destino": 10706826499,
+      "peso": 1.33,
+      "nome": "Viaduto do Glicério"
+    },
+    {
+      "origem": 5539086397,
+      "destino": 3266333520,
+      "peso": 0.32,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 6363137823,
+      "destino": 8728792690,
+      "peso": 0.04,
+      "nome": "Via 6363137823→8728792690"
+    },
+    {
+      "origem": 6363137823,
+      "destino": 1665298737,
+      "peso": 0.04,
+      "nome": "Rua Conde do Pinhal"
+    },
+    {
+      "origem": 6391243911,
+      "destino": 60685366,
+      "peso": 0.25,
+      "nome": "Rua Anita Ferraz"
+    },
+    {
+      "origem": 6564989830,
+      "destino": 445043035,
+      "peso": 0.05,
+      "nome": "Rua da Figueira"
+    },
+    {
+      "origem": 6595269556,
+      "destino": 661212028,
+      "peso": 0.07,
+      "nome": "Avenida Mercúrio"
+    },
+    {
+      "origem": 6707729732,
+      "destino": 865280536,
+      "peso": 0.05,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 6707729732,
+      "destino": 459347476,
+      "peso": 0.07,
+      "nome": "Avenida Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 6707729735,
+      "destino": 865280536,
+      "peso": 0.06,
+      "nome": "Rua Santo Amaro"
+    },
+    {
+      "origem": 6707729735,
+      "destino": 6707729732,
+      "peso": 0.04,
+      "nome": "Via 6707729735→6707729732"
+    },
+    {
+      "origem": 6990772391,
+      "destino": 60685476,
+      "peso": 0.14,
+      "nome": "Rua Alfredo Gagliotti"
+    },
+    {
+      "origem": 6990772391,
+      "destino": 60685409,
+      "peso": 0.22,
+      "nome": "Avenida Nove de Julho"
+    },
+    {
+      "origem": 7280183487,
+      "destino": 1420099956,
+      "peso": 0.19,
+      "nome": "Rua Vasco Pereira"
+    },
+    {
+      "origem": 7280183488,
+      "destino": 175993483,
+      "peso": 0.01,
+      "nome": "Rua Teixeira Leite"
+    },
+    {
+      "origem": 7280183488,
+      "destino": 7280183487,
+      "peso": 0.01,
+      "nome": "Rua Vasco Pereira"
+    },
+    {
+      "origem": 7280183492,
+      "destino": 8729255877,
+      "peso": 0.08,
+      "nome": "Rua Barão de Duprat"
+    },
+    {
+      "origem": 7284616866,
+      "destino": 60685428,
+      "peso": 0.74,
+      "nome": "Viaduto Doutor Eusebio Stevaux"
+    },
+    {
+      "origem": 7284616866,
+      "destino": 395763917,
+      "peso": 0.1,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 7284727152,
+      "destino": 3278570091,
+      "peso": 0.13,
+      "nome": "Avenida Vinte e Três de Maio"
+    },
+    {
+      "origem": 7284727152,
+      "destino": 395763930,
+      "peso": 0.08,
+      "nome": "Rua Asdrúbal Nascimento"
+    },
+    {
+      "origem": 7285140917,
+      "destino": 8729315639,
+      "peso": 0.02,
+      "nome": "Via 7285140917→8729315639"
+    },
+    {
+      "origem": 7285140917,
+      "destino": 2389060470,
+      "peso": 0.07,
+      "nome": "Rua Cavalheiro Basílio Jafet"
+    },
+    {
+      "origem": 7289269107,
+      "destino": 60641012,
+      "peso": 0.01,
+      "nome": "Viaduto Brigadeiro Luís Antônio"
+    },
+    {
+      "origem": 7289269107,
+      "destino": 2429561621,
+      "peso": 0.06,
+      "nome": "Via 7289269107→2429561621"
+    },
+    {
+      "origem": 8081258686,
+      "destino": 1420099938,
+      "peso": 0.12,
+      "nome": "Rua Leopoldo Miguez"
+    },
+    {
+      "origem": 8083712851,
+      "destino": 1836039193,
+      "peso": 0.21,
+      "nome": "Rua Jaceguaí"
+    },
+    {
+      "origem": 8377467363,
+      "destino": 3266333520,
+      "peso": 0.02,
+      "nome": "Praça da Bandeira"
+    },
+    {
+      "origem": 8659531011,
+      "destino": 8659537226,
+      "peso": 0.05,
+      "nome": "Rua Dom Pedro II"
+    },
+    {
+      "origem": 8659531011,
+      "destino": 8659537219,
+      "peso": 0.03,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 8659531011,
+      "destino": 8659537220,
+      "peso": 0.05,
+      "nome": "Rua Alexandria"
+    },
+    {
+      "origem": 8659537219,
+      "destino": 8659531011,
+      "peso": 0.03,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 8659537219,
+      "destino": 10573115224,
+      "peso": 0.06,
+      "nome": "Via 8659537219→10573115224"
+    },
+    {
+      "origem": 8659537220,
+      "destino": 4240268306,
+      "peso": 0.09,
+      "nome": "Rua Alexandria"
+    },
+    {
+      "origem": 8659537226,
+      "destino": 8659531011,
+      "peso": 0.05,
+      "nome": "Rua Dom Pedro II"
+    },
+    {
+      "origem": 8659537226,
+      "destino": 279225582,
+      "peso": 0.19,
+      "nome": "Rua Dom Pedro II"
+    },
+    {
+      "origem": 8681118741,
+      "destino": 8892740570,
+      "peso": 0.14,
+      "nome": "Rua Maria Paula"
+    },
+    {
+      "origem": 8728792690,
+      "destino": 1665298737,
+      "peso": 0.04,
+      "nome": "Rua da Glória"
+    },
+    {
+      "origem": 8728792690,
+      "destino": 1113784382,
+      "peso": 0.11,
+      "nome": "Rua da Glória"
+    },
+    {
+      "origem": 8729255877,
+      "destino": 248110869,
+      "peso": 0.03,
+      "nome": "Rua Barão de Duprat"
+    },
+    {
+      "origem": 8729255877,
+      "destino": 4239879420,
+      "peso": 0.06,
+      "nome": "Via 8729255877→4239879420"
+    },
+    {
+      "origem": 8729315639,
+      "destino": 7280183492,
+      "peso": 0.03,
+      "nome": "Rua Barão de Duprat"
+    },
+    {
+      "origem": 8729315639,
+      "destino": 7285140917,
+      "peso": 0.02,
+      "nome": "Via 8729315639→7285140917"
+    },
+    {
+      "origem": 8747316252,
+      "destino": 60685982,
+      "peso": 0.03,
+      "nome": "Praça Ragueb Chohfi"
+    },
+    {
+      "origem": 8747316252,
+      "destino": 60685979,
+      "peso": 0.04,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 8892740570,
+      "destino": 455606284,
+      "peso": 0.22,
+      "nome": "Rua Maria Paula"
+    },
+    {
+      "origem": 8932144981,
+      "destino": 6595319985,
+      "peso": 0.01,
+      "nome": "Avenida Mercúrio"
+    },
+    {
+      "origem": 10253168505,
+      "destino": 60641282,
+      "peso": 0.27,
+      "nome": "Rua Senador Feijó"
+    },
+    {
+      "origem": 10573115224,
+      "destino": 151243285,
+      "peso": 0.27,
+      "nome": "Viaduto Vinte e Cinco de Março"
+    },
+    {
+      "origem": 10706826499,
+      "destino": 130009851,
+      "peso": 0.62,
+      "nome": "Avenida Radial Leste-Oeste"
+    },
+    {
+      "origem": 11117108151,
+      "destino": 247949665,
+      "peso": 0.33,
+      "nome": "Rua Tabatinguera"
+    },
+    {
+      "origem": 11453986130,
+      "destino": 445044382,
+      "peso": 0.02,
+      "nome": "Rua Teixeira Leite"
+    },
+    {
+      "origem": 11453986130,
+      "destino": 2390857079,
+      "peso": 0.09,
+      "nome": "Rua Leopoldo Miguez"
+    },
+    {
+      "origem": 11812733018,
+      "destino": 2832098720,
+      "peso": 0.05,
+      "nome": "Travessa Rugiero"
+    },
+    {
+      "origem": 11812733018,
+      "destino": 60685367,
+      "peso": 0.22,
+      "nome": "Rua Doutor Lund"
+    },
+    {
+      "origem": 12113811917,
+      "destino": 60641571,
+      "peso": 0.36,
+      "nome": "Praça Ramos de Azevedo"
+    },
+    {
+      "origem": 13085509190,
+      "destino": 8659537219,
+      "peso": 0.02,
+      "nome": "Parque Dom Pedro II"
+    },
+    {
+      "origem": 13085509190,
+      "destino": 8659537220,
+      "peso": 0.06,
+      "nome": "Rua Alexandria"
+    }
   ]
 }
