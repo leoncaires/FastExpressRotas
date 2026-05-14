@@ -1,8 +1,6 @@
 import random
 import time
 import threading
-from src.core.edge import Aresta  
-
 
 class SimuladorTransito:
     """Simula a obtenção de dados de trânsito em tempo real."""
@@ -15,7 +13,6 @@ class SimuladorTransito:
 
     def _executar_simulacao(self):
         while self.executando:
-            # Obtém vértices que possuem pelo menos uma aresta de saída
             vertices_com_arestas = [
                 id_v for id_v, arestas in self.grafo.lista_adj.items() if arestas
             ]
@@ -46,7 +43,26 @@ class SimuladorTransito:
                 )
 
             self.funcao_retorno(mensagem)
-            time.sleep(20)  # Intervalo entre simulações
+            time.sleep(20)
+
+    def aplicar_evento_manual(self, id_origem, id_destino, tipo="congestionamento", fator=3.0):
+        """
+        Aplica um evento em uma aresta específica e retorna a mensagem.
+        Chamado via API para simular evento na rota atual.
+        """
+        arestas = self.grafo.obter_adjacentes(id_origem)
+        for aresta in arestas:
+            if aresta.destino == id_destino:
+                if tipo == "acidente":
+                    aresta.peso = 9999
+                    mensagem = f"Acidente simulado em {id_origem}→{id_destino}. Via bloqueada!"
+                else:
+                    aresta.peso = int(aresta.peso * fator)
+                    mensagem = f"Congestionamento simulado em {id_origem}→{id_destino}. Peso multiplicado por {fator}."
+                # Notifica os clientes via callback
+                self.funcao_retorno(mensagem)
+                return mensagem
+        return f"Aresta {id_origem}→{id_destino} não encontrada."
 
     def iniciar(self):
         if not self.executando:

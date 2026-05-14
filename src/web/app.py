@@ -22,9 +22,8 @@ def notificar_evento_transito(mensagem):
     print(f"Evento de trânsito: {mensagem}")
     socketio.emit('traffic_event', {'mensagem': mensagem})
 
-# Inicia o simulador de trânsito (thread separada)
+# Instancia o simulador (a thread será iniciada apenas no main)
 simulador = SimuladorTransito(grafo, notificar_evento_transito)
-simulador.iniciar()
 
 # -- Rotas --
 @app.route('/')
@@ -47,7 +46,9 @@ def calcular_rota():
     caminho, distancia = servico_rota.encontrar_caminho_mais_curto(id_inicio, id_alvo)
 
     detalhes_caminho = []
-    for id_v in caminho:
+    ruas_percurso = []  # para descrever a rota como sequência de ruas
+
+    for i, id_v in enumerate(caminho):
         vertice = grafo.obter_vertice(id_v)
         detalhes_caminho.append({
             "id": id_v,
@@ -55,14 +56,24 @@ def calcular_rota():
             "lat": vertice.lat,
             "lon": vertice.lon
         })
+        if i > 0:
+            # Busca a aresta entre caminho[i-1] e caminho[i]
+            origem = caminho[i-1]
+            destino = id_v
+            arestas = grafo.obter_adjacentes(origem)
+            nome_rua = None
+            for aresta in arestas:
+                if aresta.destino == destino:
+                    nome_rua = getattr(aresta, 'nome', None)  # se existir o atributo nome
+                    break
+            ruas_percurso.append(nome_rua if nome_rua else f"Via {origem}→{destino}")
 
     return jsonify({
         "path": detalhes_caminho,
         "distance": distancia if distancia != float('inf') else None,
-        "has_path": distancia != float('inf')
+        "has_path": distancia != float('inf'),
+        "ruas": ruas_percurso  # lista de nomes das ruas (tamanho N-1)
     })
-
-
 
 @app.route('/api/rota_real', methods=['POST'])
 def calcular_rota_real():
@@ -79,9 +90,7 @@ def calcular_rota_real():
         return jsonify({"erro": "Falha ao consultar API de rotas"}), 500
 
     resultado = resposta.json()
-
     rota = resultado['routes'][0]
-
     coordenadas = rota['geometry']['coordinates']
 
     caminho_formatado = [
@@ -100,5 +109,17 @@ def calcular_rota_real():
         "destino": destino.nome
     })
 
+@app.route('/api/simular_evento', methods=['POST'])
+def simular_evento():
+    dados = request.get_json()
+    id_origem = int(dados['origem'])
+    id_destino = int(dados['destino'])
+    tipo = dados.get('tipo', 'congestionamento')
+    fator = dados.get('fator', 3.0)
+
+    mensagem = simulador.aplicar_evento_manual(id_origem, id_destino, tipo, fator)
+    return jsonify({"mensagem": mensagem})
+
 if __name__ == '__main__':
-    socketio.run(app, debug=True, allow_unsafe_werkzeug=True)
+    simulador.iniciar()
+    socketio.run(app, debug=False)
