@@ -31,7 +31,10 @@
             {% endfor %}
         </select>
 
-        <button id="botao_calcular">Calcular Rota</button>
+        
+        <button id="botao_calcular_real">Calcular Rota (Real)</button>
+        <button id="botao_calcular_interno">Calcular Rota Interna (Dijkstra)</button>
+        <button id="botao_simular_evento">Simular Evento na Rota Atual</button>
         <button id="botao_iniciar_entrega" disabled>Iniciar Entrega</button>
         <button id="botao_parar_entrega" disabled>Parar Entrega</button>
     </div>
@@ -43,9 +46,9 @@
     </div>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="/static/map.js"></script>
-    <script src="/static/script.js"></script>
-    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>  
+<script src="/static/map.js"></script>
+<script src="/static/script.js"></script>                       
 </body>
 </html>

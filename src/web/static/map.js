@@ -23,7 +23,12 @@ function limpar_rota() {
     marcadores = [];
 }
 
-function desenhar_rota(dados_caminho) {
+/**
+ * Desenha uma rota no mapa com a cor especificada.
+ * @param {Array} dados_caminho - Array de objetos {lat, lon, nome}
+ * @param {string} cor - Cor da polyline (ex: 'green', 'blue')
+ */
+function desenhar_rota(dados_caminho, cor) {
     // Limpa desenho anterior
     limpar_rota();
     if (!dados_caminho || dados_caminho.length === 0) return;
@@ -33,8 +38,8 @@ function desenhar_rota(dados_caminho) {
         return [v.lat, v.lon];
     });
 
-    // Cria uma polyline verde e adiciona ao mapa
-    camada_rota = L.polyline(coordenadas, { color: 'green', weight: 4 }).addTo(mapa);
+    // Cria uma polyline com a cor escolhida e adiciona ao mapa
+    camada_rota = L.polyline(coordenadas, { color: cor, weight: 4 }).addTo(mapa);
 
     // Adiciona marcadores no início e fim da rota
     var marcador_inicio = L.marker(coordenadas[0], { title: 'Origem' })
@@ -48,40 +53,4 @@ function desenhar_rota(dados_caminho) {
 
     // Ajusta a visualização para enquadrar toda a rota
     mapa.fitBounds(coordenadas);
-}
-
-async function calcularRotaReal(startId, targetId) {
-    const resposta = await fetch('/api/rota_real', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            start: startId,
-            target: targetId
-        })
-    });
-
-    const dados = await resposta.json();
-
-    limpar_rota();
-
-    const coordenadas = dados.path.map(function(p) {
-        return [p.lat, p.lon];
-    });
-
-    camada_rota = L.polyline(coordenadas, {
-        color: 'blue',
-        weight: 5
-    }).addTo(mapa);
-
-    mapa.fitBounds(coordenadas);
-
-    alert(
-        'Rota real calculada via API OSRM\n' +
-        'Origem: ' + dados.origem + '\n' +
-        'Destino: ' + dados.destino + '\n' +
-        'Distância: ' + dados.distance_km + ' km\n' +
-        'Tempo estimado: ' + dados.duration_min + ' min'
-    );
 }
