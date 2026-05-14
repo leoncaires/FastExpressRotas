@@ -4,6 +4,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 
 from flask import Flask, render_template, request, jsonify
 from flask_socketio import SocketIO
+import requests
 from src.io.file_reader import carregar_grafo_de_json
 from src.service.route_service import ServicoRota
 from src.service.traffic_simulator import SimuladorTransito
@@ -59,6 +60,44 @@ def calcular_rota():
         "path": detalhes_caminho,
         "distance": distancia if distancia != float('inf') else None,
         "has_path": distancia != float('inf')
+    })
+
+
+
+@app.route('/api/rota_real', methods=['POST'])
+def calcular_rota_real():
+    dados = request.get_json()
+
+    inicio = grafo.obter_vertice(int(dados['start']))
+    destino = grafo.obter_vertice(int(dados['target']))
+
+    url = f"https://router.project-osrm.org/route/v1/driving/{inicio.lon},{inicio.lat};{destino.lon},{destino.lat}?overview=full&geometries=geojson"
+
+    resposta = requests.get(url)
+
+    if resposta.status_code != 200:
+        return jsonify({"erro": "Falha ao consultar API de rotas"}), 500
+
+    resultado = resposta.json()
+
+    rota = resultado['routes'][0]
+
+    coordenadas = rota['geometry']['coordinates']
+
+    caminho_formatado = [
+        {"lat": coord[1], "lon": coord[0]}
+        for coord in coordenadas
+    ]
+
+    distancia_km = round(rota['distance'] / 1000, 2)
+    duracao_min = round(rota['duration'] / 60, 1)
+
+    return jsonify({
+        "path": caminho_formatado,
+        "distance_km": distancia_km,
+        "duration_min": duracao_min,
+        "origem": inicio.nome,
+        "destino": destino.nome
     })
 
 if __name__ == '__main__':

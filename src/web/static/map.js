@@ -49,3 +49,39 @@ function desenhar_rota(dados_caminho) {
     // Ajusta a visualização para enquadrar toda a rota
     mapa.fitBounds(coordenadas);
 }
+
+async function calcularRotaReal(startId, targetId) {
+    const resposta = await fetch('/api/rota_real', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            start: startId,
+            target: targetId
+        })
+    });
+
+    const dados = await resposta.json();
+
+    limpar_rota();
+
+    const coordenadas = dados.path.map(function(p) {
+        return [p.lat, p.lon];
+    });
+
+    camada_rota = L.polyline(coordenadas, {
+        color: 'blue',
+        weight: 5
+    }).addTo(mapa);
+
+    mapa.fitBounds(coordenadas);
+
+    alert(
+        'Rota real calculada via API OSRM\n' +
+        'Origem: ' + dados.origem + '\n' +
+        'Destino: ' + dados.destino + '\n' +
+        'Distância: ' + dados.distance_km + ' km\n' +
+        'Tempo estimado: ' + dados.duration_min + ' min'
+    );
+}

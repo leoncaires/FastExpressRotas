@@ -49,11 +49,48 @@ function calcular_e_mostrar_rota() {
     });
 }
 
+
+
+// Função para calcular rota real usando API OSRM
+function calcularRotaReal(id_origem, id_destino) {
+    var div_texto = document.getElementById('texto_rota');
+
+    fetch('/api/rota_real', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ start: id_origem, target: id_destino })
+    })
+    .then(function(resposta) { return resposta.json(); })
+    .then(function(dados) {
+
+        if (dados.path && dados.path.length > 0) {
+
+            div_texto.innerHTML =
+                '<strong>Rota real encontrada</strong>' +
+                '<br><strong>Origem:</strong> ' + dados.origem +
+                '<br><strong>Destino:</strong> ' + dados.destino +
+                '<br><strong>Distância:</strong> ' + dados.distance_km + ' km' +
+                '<br><strong>Tempo estimado:</strong> ' + dados.duration_min + ' min';
+
+            desenhar_rota(dados.path);
+
+        } else {
+            div_texto.innerHTML = "Não foi possível calcular a rota real.";
+            limpar_rota();
+        }
+    })
+    .catch(function(erro) {
+        div_texto.innerHTML = "Erro ao consultar API real.";
+        console.error(erro);
+    });
+}
+
+
 // Botão "Calcular Rota"
 document.getElementById('botao_calcular').addEventListener('click', function() {
     ultima_origem = document.getElementById('origem').value;
     ultimo_destino = document.getElementById('destino').value;
-    calcular_e_mostrar_rota();
+    calcularRotaReal(ultima_origem, ultimo_destino);
 });
 
 // Socket.IO: ao receber evento de trânsito, recalcula automaticamente
