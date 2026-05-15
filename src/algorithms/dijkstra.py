@@ -10,6 +10,10 @@ def dijkstra(grafo, id_inicio, id_alvo=None):
 
     Se id_alvo for informado, a execução para ao alcançá-lo (otimização).
     """
+    # Se o vértice de início não existe no grafo, retorna dicionários vazios
+    if id_inicio not in grafo.vertices:
+        return {}, {}
+
     distancias = {v: float('inf') for v in grafo.vertices}
     antecessores = {v: None for v in grafo.vertices}
     distancias[id_inicio] = 0
@@ -41,12 +45,16 @@ def dijkstra(grafo, id_inicio, id_alvo=None):
 
 def reconstruir_caminho(antecessores, id_inicio, id_alvo):
     """Reconstrói o caminho (sequência de vértices) a partir do dicionário de antecessores."""
+    # Se o destino não foi alcançado (não está nos antecessores), retorna vazio
+    if not antecessores or id_alvo not in antecessores:
+        return []
+
     caminho = []
     atual = id_alvo
     # Parte do destino e segue os antecessores até a origem
     while atual is not None:
         caminho.append(atual)
-        atual = antecessores[atual]
+        atual = antecessores.get(atual)   # usa .get() para evitar KeyError
     caminho.reverse()
     # Se o primeiro elemento for a origem, o caminho é válido
     if caminho and caminho[0] == id_inicio:
