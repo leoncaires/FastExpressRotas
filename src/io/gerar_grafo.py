@@ -1,71 +1,53 @@
 import osmnx as ox
+from shapely.geometry import LineString
 import json
 import os
 
 # Coordenadas da Praça da Sé, São Paulo
 latitude = -23.5505
 longitude = -46.6333
-distancia = 800  # metros (mais ruas, ainda central)
+distancia = 1200  # metros
 
 print(f"Baixando grafo ao redor da Praça da Sé (lat={latitude}, lon={longitude}, raio={distancia}m)...")
 grafo_ox = ox.graph_from_point(
     (latitude, longitude),
     dist=distancia,
     dist_type='bbox',
-    network_type='drive'
+    network_type='drive'   # simplify=True (padrão)
 )
 
 vertices = []
 arestas = []
 
-# Mapeamento auxiliar: node -> rua principal (a mais frequente nas arestas incidentes)
-node_to_best_street = {}
+# 1. Mapeamento auxiliar: node -> ruas incidentes (para nomes de esquina)
+node_to_streets = {}
 for u, v, key, data in grafo_ox.edges(keys=True, data=True):
     street = data.get('name', None)
     if isinstance(street, list):
         street = street[0]
     if not street:
         continue
-    # Para cada nó, guardamos a rua (a primeira que aparecer já serve, mas vamos pegar a mais comum)
-    for node in (u, v):
-        if node not in node_to_best_street:
-            node_to_best_street[node] = street
-        # podemos trocar se quisermos, mas manter a primeira já resolve
+    node_to_streets.setdefault(u, set()).add(street)
+    node_to_streets.setdefault(v, set()).add(street)
 
-# Agora gera os vértices com nomes legíveis
+# 2. Gerar vértices com nomes únicos
 for node in grafo_ox.nodes():
     data = grafo_ox.nodes[node]
     lat = data['y']
     lon = data['x']
 
-    # 1. Nome próprio do nó (praças, pontos de referência)
-    nome = data.get('name', None)
+    nome_proprio = data.get('name', None)
+    ruas = node_to_streets.get(node, set())
 
-    if not nome:
-        # 2. Usa a rua principal associada ao nó (se houver)
-        nome = node_to_best_street.get(node, None)
-
-    if not nome:
-        # 3. Último recurso: busca nas arestas diretamente
-        for _, v, k, edge_data in grafo_ox.edges(node, keys=True, data=True):
-            rua = edge_data.get('name', None)
-            if isinstance(rua, list):
-                rua = rua[0]
-            if rua:
-                nome = rua
-                break
-        if not nome:
-            for u, _, k, edge_data in grafo_ox.in_edges(node, keys=True, data=True):
-                rua = edge_data.get('name', None)
-                if isinstance(rua, list):
-                    rua = rua[0]
-                if rua:
-                    nome = rua
-                    break
-
-    if not nome:
-        # Se ainda não tiver, mantém o ID mas como "Rua (ID)" – bem raro acontecer
-        nome = f"Rua {node}"
+    if nome_proprio:
+        nome = nome_proprio
+    elif len(ruas) >= 2:
+        ruas_ordenadas = sorted(ruas)
+        nome = f"{ruas_ordenadas[0]} c/ {ruas_ordenadas[1]}"
+    elif len(ruas) == 1:
+        nome = list(ruas)[0]
+    else:
+        nome = f"Ponto {node}"
 
     vertices.append({
         "id": node,
@@ -74,7 +56,7 @@ for node in grafo_ox.nodes():
         "lon": lon
     })
 
-# Arestas: agora também guardamos o nome da rua (se disponível) no atributo "nome"
+# 3. Arestas com geometria e nome
 for u, v, key, data in grafo_ox.edges(keys=True, data=True):
     length = data.get('length', 100)
     speed_kmh = 30
@@ -86,16 +68,40 @@ for u, v, key, data in grafo_ox.edges(keys=True, data=True):
         street = street[0]
     nome_aresta = street if street else f"Via {u}→{v}"
 
+    # Trata geometria como LineString (Shapely) ou lista
+    geom = data.get('geometry', None)
+    if geom is None:
+        # Fallback: linha reta entre os nós
+        no_u = grafo_ox.nodes[u]
+        no_v = grafo_ox.nodes[v]
+        coords = [[no_u['y'], no_u['x']], [no_v['y'], no_v['x']]]
+    elif isinstance(geom, LineString):
+        # Converte LineString para lista de [lat, lon]
+        coords = [[lat, lon] for lon, lat in geom.coords]
+    else:
+        # Caso venha como lista de tuplas (modos antigos)
+        coords = [[lat, lon] for lon, lat in geom]
+
+    # Adiciona a aresta original
     arestas.append({
         "origem": u,
         "destino": v,
         "peso": peso,
-        "nome": nome_aresta
+        "nome": nome_aresta,
+        "geometry": coords
     })
+
+    # Adiciona a aresta reversa (mesmo peso e geometria invertida)
+    arestas.append({
+    "origem": u,
+    "destino": v,
+    "peso": peso,
+    "nome": nome_aresta,
+    "geometry": coords
+})
 
 dataset = {"vertices": vertices, "arestas": arestas}
 
-# Salva em data/malha_exemplo.json
 raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 caminho_data = os.path.join(raiz_projeto, "data")
 os.makedirs(caminho_data, exist_ok=True)

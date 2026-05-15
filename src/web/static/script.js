@@ -1,14 +1,3 @@
-// Aguarda o carregamento do DOM e carrega marcadores de todos os vértices
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('/api/vertices')
-        .then(function(resposta) { return resposta.json(); })
-        .then(function(lista_vertices) {
-            lista_vertices.forEach(function(v) {
-                L.marker([v.lat, v.lon]).addTo(mapa).bindPopup(v.nome);
-            });
-        });
-});
-
 // Guarda a última origem/destino para recálculo automático
 var ultima_origem = null;
 var ultimo_destino = null;
@@ -41,8 +30,13 @@ function calcular_e_mostrar_rota() {
                                 : 'Percurso não disponível';
             
             var resumo_rota = '<strong>De</strong> ' + primeiro_nome + 
-                              ' <strong>para</strong> ' + ultimo_nome + 
-                              '<br><strong>Percurso:</strong> ' + ruas_percurso;
+                              ' <strong>para</strong> ' + ultimo_nome;
+
+            // Percurso detalhado em bloco expansível
+            var detalhes_percurso = '<details style="margin-top: 10px;">' +
+                                    '<summary style="cursor: pointer; font-weight: bold;">🗺️ Ver percurso detalhado</summary>' +
+                                    '<p style="margin: 5px 0 0 20px; line-height: 1.6;">' + ruas_percurso + '</p>' +
+                                    '</details>';
 
             // Armazena o tempo da primeira rota calculada (para comparação de eficiência)
             if (!window.tempo_inicial) {
@@ -54,6 +48,7 @@ function calcular_e_mostrar_rota() {
 
             div_texto.innerHTML =
                 resumo_rota +
+                detalhes_percurso +
                 '<br><strong>Tempo total:</strong> ' + dados.distance.toFixed(2) + ' min' +
                 '<br><strong>Eficiência:</strong> ' + eficiencia + '%' +
                 ' (tempo inicial: ' + window.tempo_inicial.toFixed(2) + ' min, atual: ' + tempo_atual.toFixed(2) + ' min)';
@@ -122,7 +117,6 @@ document.getElementById('botao_simular_evento').addEventListener('click', functi
         alert('Calcule uma rota interna (Dijkstra) primeiro.');
         return;
     }
-    // Chama o endpoint que usa o SimuladorTransito
     fetch('/api/simular_evento', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -133,12 +127,19 @@ document.getElementById('botao_simular_evento').addEventListener('click', functi
             fator: 3.0
         })
     })
-    .then(function() {
-        // Após aplicar o evento, recalcula a rota interna
+    .then(function(resposta) {
+        if (!resposta.ok) {
+            throw new Error('Erro na resposta da API');
+        }
+        return resposta.json();
+    })
+    .then(function(dados) {
+        console.log('Evento simulado:', dados.mensagem);
         calcular_e_mostrar_rota();
     })
     .catch(function(erro) {
         console.error('Erro ao simular evento:', erro);
+        alert('Erro ao simular evento. Veja o console.');
     });
 });
 

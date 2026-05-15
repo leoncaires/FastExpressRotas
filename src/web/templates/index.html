@@ -20,23 +20,20 @@
         <label for="origem">Origem:</label>
         <select id="origem">
             {% for v in vertices %}
-                <option value="{{ v.id }}">{{ v.nome }} (ID {{ v.id }})</option>
+                <option value="{{ v.id }}">{{ v.nome }}</option>
             {% endfor %}
         </select>
 
         <label for="destino">Destino:</label>
         <select id="destino">
             {% for v in vertices %}
-                <option value="{{ v.id }}">{{ v.nome }} (ID {{ v.id }})</option>
+                <option value="{{ v.id }}">{{ v.nome }}</option>
             {% endfor %}
         </select>
 
-        
         <button id="botao_calcular_real">Calcular Rota (Real)</button>
         <button id="botao_calcular_interno">Calcular Rota Interna (Dijkstra)</button>
         <button id="botao_simular_evento">Simular Evento na Rota Atual</button>
-        <button id="botao_iniciar_entrega" disabled>Iniciar Entrega</button>
-        <button id="botao_parar_entrega" disabled>Parar Entrega</button>
     </div>
 
     <!-- Área de resultado -->
@@ -46,9 +43,9 @@
     </div>
 
     <!-- Scripts -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>  
-<script src="/static/map.js"></script>
-<script src="/static/script.js"></script>                       
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>  
+    <script src="/static/map.js"></script>
+    <script src="/static/script.js"></script>                       
 </body>
 </html>

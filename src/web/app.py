@@ -29,6 +29,7 @@ simulador = SimuladorTransito(grafo, notificar_evento_transito)
 @app.route('/')
 def indice():
     vertices = [{"id": v.id, "nome": v.nome} for v in grafo.obter_todos_vertices()]
+    vertices.sort(key=lambda x: x['nome'].lower())
     return render_template('index.html', vertices=vertices)
 
 @app.route('/api/vertices', methods=['GET'])
@@ -45,34 +46,61 @@ def calcular_rota():
 
     caminho, distancia = servico_rota.encontrar_caminho_mais_curto(id_inicio, id_alvo)
 
-    detalhes_caminho = []
-    ruas_percurso = []  # para descrever a rota como sequência de ruas
-
-    for i, id_v in enumerate(caminho):
-        vertice = grafo.obter_vertice(id_v)
-        detalhes_caminho.append({
-            "id": id_v,
-            "nome": vertice.nome,
-            "lat": vertice.lat,
-            "lon": vertice.lon
+    # Se o caminho estiver vazio, não há rota disponível
+    if not caminho:
+        return jsonify({
+            "path": [],
+            "distance": None,
+            "has_path": False,
+            "ruas": []
         })
-        if i > 0:
-            # Busca a aresta entre caminho[i-1] e caminho[i]
-            origem = caminho[i-1]
-            destino = id_v
-            arestas = grafo.obter_adjacentes(origem)
-            nome_rua = None
-            for aresta in arestas:
-                if aresta.destino == destino:
-                    nome_rua = getattr(aresta, 'nome', None)  # se existir o atributo nome
-                    break
-            ruas_percurso.append(nome_rua if nome_rua else f"Via {origem}→{destino}")
+
+    detalhes_caminho = []
+    ruas_percurso = []
+
+    # Adiciona o ponto inicial manualmente
+    primeiro = grafo.obter_vertice(caminho[0])
+    detalhes_caminho.append({
+        "id": caminho[0],
+        "nome": primeiro.nome,
+        "lat": primeiro.lat,
+        "lon": primeiro.lon
+    })
+
+    for i in range(1, len(caminho)):
+        origem = caminho[i-1]
+        destino = caminho[i]
+        arestas = grafo.obter_adjacentes(origem)
+        nome_rua = None
+        geometria = None
+        for aresta in arestas:
+            if aresta.destino == destino:
+                nome_rua = aresta.nome
+                geometria = aresta.geometry
+                break
+        ruas_percurso.append(nome_rua if nome_rua else f"Via {origem}→{destino}")
+        
+        if geometria:
+            for coord in geometria:
+                detalhes_caminho.append({
+                    "lat": coord[0],
+                    "lon": coord[1],
+                    "nome": None
+                })
+        else:
+            v_destino = grafo.obter_vertice(destino)
+            detalhes_caminho.append({
+                "id": destino,
+                "nome": v_destino.nome,
+                "lat": v_destino.lat,
+                "lon": v_destino.lon
+            })
 
     return jsonify({
         "path": detalhes_caminho,
         "distance": distancia if distancia != float('inf') else None,
         "has_path": distancia != float('inf'),
-        "ruas": ruas_percurso  # lista de nomes das ruas (tamanho N-1)
+        "ruas": ruas_percurso
     })
 
 @app.route('/api/rota_real', methods=['POST'])
@@ -115,9 +143,30 @@ def simular_evento():
     id_origem = int(dados['origem'])
     id_destino = int(dados['destino'])
     tipo = dados.get('tipo', 'congestionamento')
-    fator = dados.get('fator', 3.0)
+    fator = float(dados.get('fator', 10.0))   # fator padrão maior
 
-    mensagem = simulador.aplicar_evento_manual(id_origem, id_destino, tipo, fator)
+    # Calcula a rota atual para obter todas as arestas
+    caminho, _ = servico_rota.encontrar_caminho_mais_curto(id_origem, id_destino)
+    if len(caminho) < 2:
+        return jsonify({"erro": "Rota não encontrada ou rota com apenas um ponto."}), 400
+
+    # Localiza a aresta de maior peso no caminho
+    maior_peso = -1
+    aresta_escolhida = None
+    for i in range(len(caminho) - 1):
+        u = caminho[i]
+        v = caminho[i+1]
+        arestas = grafo.obter_adjacentes(u)
+        for aresta in arestas:
+            if aresta.destino == v and aresta.peso > maior_peso:
+                maior_peso = aresta.peso
+                aresta_escolhida = (u, v)
+
+    if not aresta_escolhida:
+        return jsonify({"erro": "Nenhuma aresta encontrada."}), 400
+
+    u, v = aresta_escolhida
+    mensagem = simulador.aplicar_evento_manual(u, v, tipo, fator)
     return jsonify({"mensagem": mensagem})
 
 if __name__ == '__main__':

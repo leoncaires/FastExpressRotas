@@ -36,7 +36,7 @@ class SimuladorTransito:
                     f"Peso multiplicado por {fator} (Novo tempo: {aresta_escolhida.peso} min)."
                 )
             elif tipo_evento == "acidente":
-                aresta_escolhida.peso = 9999
+                aresta_escolhida.peso = float('inf')
                 mensagem = (
                     f"ACIDENTE GRAVE na via {id_origem}->{aresta_escolhida.destino}. "
                     f"Via bloqueada!"
@@ -54,7 +54,7 @@ class SimuladorTransito:
         for aresta in arestas:
             if aresta.destino == id_destino:
                 if tipo == "acidente":
-                    aresta.peso = 9999
+                    aresta.peso = float('inf')
                     mensagem = f"Acidente simulado em {id_origem}→{id_destino}. Via bloqueada!"
                 else:
                     aresta.peso = int(aresta.peso * fator)

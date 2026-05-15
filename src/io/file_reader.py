@@ -25,10 +25,19 @@ def carregar_grafo_de_json(caminho_arquivo: str) -> Grafo:
 
     # Depois adiciona as arestas
     for a_dados in dados.get("arestas", []):
+        geometry = a_dados.get("geometry", None)
+        # Fallback: se não houver geometria no JSON, usa coordenadas dos vértices
+        if geometry is None:
+            v_origem = grafo.obter_vertice(a_dados["origem"])
+            v_destino = grafo.obter_vertice(a_dados["destino"])
+            geometry = [[v_origem.lat, v_origem.lon], [v_destino.lat, v_destino.lon]]
+
         aresta = Aresta(
             origem=a_dados["origem"],
             destino=a_dados["destino"],
-            peso=a_dados["peso"]
+            peso=a_dados["peso"],
+            nome=a_dados.get("nome", None),
+            geometry=geometry
         )
         grafo.adicionar_aresta(aresta)
 
