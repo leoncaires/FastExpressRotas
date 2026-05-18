@@ -30,11 +30,18 @@ class SimuladorTransito:
 
             if tipo_evento == "congestionamento":
                 fator = round(random.uniform(1.5, 3.0), 1)
-                aresta_escolhida.peso = int(aresta_escolhida.peso * fator)
-                mensagem = (
-                    f"Congestionamento na via {id_origem}->{aresta_escolhida.destino}. "
-                    f"Peso multiplicado por {fator} (Novo tempo: {aresta_escolhida.peso} min)."
-                )
+                # Se a aresta já está bloqueada, mantém o bloqueio e apenas notifica
+                if aresta_escolhida.peso == float('inf'):
+                    mensagem = (
+                        f"Tentativa de congestionamento na via {id_origem}->{aresta_escolhida.destino}, "
+                        f"mas a via já está bloqueada por acidente."
+                    )
+                else:
+                    aresta_escolhida.peso = int(aresta_escolhida.peso * fator)
+                    mensagem = (
+                        f"Congestionamento na via {id_origem}->{aresta_escolhida.destino}. "
+                        f"Peso multiplicado por {fator} (Novo tempo: {aresta_escolhida.peso} min)."
+                    )
             elif tipo_evento == "acidente":
                 aresta_escolhida.peso = float('inf')
                 mensagem = (
@@ -57,8 +64,15 @@ class SimuladorTransito:
                     aresta.peso = float('inf')
                     mensagem = f"Acidente simulado em {id_origem}→{id_destino}. Via bloqueada!"
                 else:
-                    aresta.peso = int(aresta.peso * fator)
-                    mensagem = f"Congestionamento simulado em {id_origem}→{id_destino}. Peso multiplicado por {fator}."
+                    # Se a aresta já está bloqueada, mantém o bloqueio
+                    if aresta.peso == float('inf'):
+                        mensagem = (
+                            f"Tentativa de congestionamento em {id_origem}→{id_destino}, "
+                            f"mas a via já está bloqueada por acidente."
+                        )
+                    else:
+                        aresta.peso = int(aresta.peso * fator)
+                        mensagem = f"Congestionamento simulado em {id_origem}→{id_destino}. Peso multiplicado por {fator}."
                 # Notifica os clientes via callback
                 self.funcao_retorno(mensagem)
                 return mensagem

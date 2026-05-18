@@ -168,6 +168,33 @@ def simular_evento():
     u, v = aresta_escolhida
     mensagem = simulador.aplicar_evento_manual(u, v, tipo, fator)
     return jsonify({"mensagem": mensagem})
+from math import radians, cos, sin, asin, sqrt
+
+def haversine(lat1, lon1, lat2, lon2):
+    """Distância em metros entre duas coordenadas (fórmula de Haversine)."""
+    R = 6371000  # raio da Terra em metros
+    dlat = radians(lat2 - lat1)
+    dlon = radians(lon2 - lon1)
+    a = sin(dlat/2)**2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dlon/2)**2
+    c = 2 * asin(sqrt(a))
+    return R * c
+
+@app.route('/api/vertice_proximo', methods=['GET'])
+def vertice_proximo():
+    lat = float(request.args.get('lat'))
+    lon = float(request.args.get('lon'))
+    melhor_id = None
+    melhor_dist = float('inf')
+    for v in grafo.obter_todos_vertices():
+        d = haversine(lat, lon, v.lat, v.lon)
+        if d < melhor_dist:
+            melhor_dist = d
+            melhor_id = v.id
+    if melhor_id is None:
+        return jsonify({"erro": "Grafo vazio"}), 404
+    v = grafo.obter_vertice(melhor_id)
+    return jsonify({"id": v.id, "nome": v.nome, "lat": v.lat, "lon": v.lon, "distancia_m": round(melhor_dist, 2)})
+
 
 if __name__ == '__main__':
     simulador.iniciar()
