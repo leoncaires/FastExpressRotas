@@ -51,11 +51,14 @@ function executar_calculo_rota(id_origem, id_destino) {
             var tempo_atual = dados.distance;
             var eficiencia = ((window.tempo_inicial - tempo_atual) / window.tempo_inicial * 100).toFixed(1);
 
+            // Monta texto com tempo, distância e eficiência
+            var distancia_str = (dados.distancia_km != null) ? dados.distancia_km.toFixed(2) + ' km' : 'N/D';
             div_texto.innerHTML =
-                resumo_rota + detalhes_percurso +
-                '<br><strong>Tempo total:</strong> ' + dados.distance.toFixed(2) + ' min' +
-                '<br><strong>Eficiência:</strong> ' + eficiencia + '%' +
-                ' (tempo inicial: ' + window.tempo_inicial.toFixed(2) + ' min, atual: ' + tempo_atual.toFixed(2) + ' min)';
+            resumo_rota + detalhes_percurso +
+            '<br><strong>Tempo total:</strong> ' + dados.distance.toFixed(2) + ' min' +
+            '<br><strong>Distância:</strong> ' + (dados.distancia_km ? dados.distancia_km.toFixed(2) + ' km' : 'N/D') +
+            '<br><strong>Eficiência:</strong> ' + eficiencia + '%' +
+            '(tempo inicial: ' + window.tempo_inicial.toFixed(2) + ' min, atual: ' + tempo_atual.toFixed(2) + ' min)';
 
             desenhar_rota(dados.path, 'green');
 
@@ -193,7 +196,6 @@ document.getElementById('botao_calcular_interno').addEventListener('click', func
 
 // ------------------------------------------------------------
 // Botão "Simular Evento na Rota Atual"
-// (mantido igual, mas agora chama o recálculo correto)
 // ------------------------------------------------------------
 document.getElementById('botao_simular_evento').addEventListener('click', function() {
     if (!ultima_origem || !ultimo_destino) {
@@ -263,7 +265,7 @@ function iniciar_animacao() {
     });
     if (veiculo) mapa.removeLayer(veiculo);
     veiculo = L.marker(pontos_rota[indice_atual], {icon: icone_caminhao}).addTo(mapa);
-    veiculo.bindPopup('🚚 Em trânsito');
+    veiculo.bindPopup('🚚 Em trânsito').openPopup();  
     animacao_ativa = true;
     document.getElementById('botao_iniciar_entrega').disabled = true;
     document.getElementById('botao_parar_entrega').disabled = false;
@@ -286,6 +288,9 @@ function parar_entrega() {
     limpar_intervalo();
     document.getElementById('botao_iniciar_entrega').disabled = false;
     document.getElementById('botao_parar_entrega').disabled = true;
+    if (veiculo) {
+        veiculo.closePopup();
+    }
 }
 
 function mover_veiculo() {
@@ -297,6 +302,7 @@ function mover_veiculo() {
     }
     indice_atual++;
     veiculo.setLatLng(pontos_rota[indice_atual]);
+    veiculo.openPopup();
     intervalo_animacao = setTimeout(mover_veiculo, 200);
 }
 

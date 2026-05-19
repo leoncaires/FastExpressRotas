@@ -51,12 +51,14 @@ def calcular_rota():
         return jsonify({
             "path": [],
             "distance": None,
+            "distancia_km": 0.0,
             "has_path": False,
             "ruas": []
         })
 
     detalhes_caminho = []
     ruas_percurso = []
+    distancia_total_km = 0.0
 
     # Adiciona o ponto inicial manualmente
     primeiro = grafo.obter_vertice(caminho[0])
@@ -73,13 +75,19 @@ def calcular_rota():
         arestas = grafo.obter_adjacentes(origem)
         nome_rua = None
         geometria = None
+        peso_aresta = 0
         for aresta in arestas:
             if aresta.destino == destino:
                 nome_rua = aresta.nome
                 geometria = aresta.geometry
+                peso_aresta = aresta.peso
                 break
         ruas_percurso.append(nome_rua if nome_rua else f"Via {origem}→{destino}")
         
+        # Calcula distância real em km (assumindo que peso = tempo em minutos e velocidade de 30 km/h)
+        # Distância (km) = (peso / 60) * 30
+        distancia_total_km += (peso_aresta / 60.0) * 30.0
+
         if geometria:
             for coord in geometria:
                 detalhes_caminho.append({
@@ -96,9 +104,16 @@ def calcular_rota():
                 "lon": v_destino.lon
             })
 
+    # Garante que o último ponto tenha o nome do vértice de destino
+    if detalhes_caminho:
+        ultimo_vertice = grafo.obter_vertice(caminho[-1])
+        detalhes_caminho[-1]["nome"] = ultimo_vertice.nome
+        detalhes_caminho[-1]["id"] = ultimo_vertice.id
+
     return jsonify({
         "path": detalhes_caminho,
         "distance": distancia if distancia != float('inf') else None,
+        "distancia_km": round(distancia_total_km, 2),
         "has_path": distancia != float('inf'),
         "ruas": ruas_percurso
     })
