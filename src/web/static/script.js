@@ -1,6 +1,12 @@
 // Guarda a última origem/destino para recálculo automático
 var ultima_origem = null;
 var ultimo_destino = null;
+var tipos_evento = {
+    leve: { fator: 1.3, nome: "Congestionamento leve" },
+    medio: { fator: 1.8, nome: "Congestionamento médio" },
+    grave: { fator: 2.5, nome: "Acidente" },
+    bloqueio: { fator: 999, nome: "Via bloqueada" }
+};
 
 // ---- SIMULAÇÃO DE CARGA ----
 var veiculo = null;          // marcador do caminhão
@@ -120,7 +126,14 @@ function executar_calculo_rota(id_origem, id_destino) {
         console.error(erro);
     });
 }
+function gerar_evento_negativo() {
+    var r = Math.random();
 
+    if (r < 0.5) return "leve";
+    if (r < 0.75) return "medio";
+    if (r < 0.9) return "grave";
+    return "bloqueio";
+}
 // Função que calcula e exibe a rota interna (Dijkstra) – usa os selects
 function calcular_e_mostrar_rota() {
     var id_origem = document.getElementById('origem').value;
@@ -203,8 +216,8 @@ document.getElementById('botao_simular_evento').addEventListener('click', functi
         return;
     }
     
-    var tipo = Math.random() < 0.7 ? 'congestionamento' : 'acidente';
-    var fator = tipo === 'congestionamento' ? (Math.random() * 2 + 1.5).toFixed(1) : 1;
+    var tipo = gerar_evento_negativo();
+    var evento = tipos_evento[tipo];
 
     fetch('/api/simular_evento', {
         method: 'POST',
@@ -213,7 +226,7 @@ document.getElementById('botao_simular_evento').addEventListener('click', functi
             origem: ultima_origem,
             destino: ultimo_destino,
             tipo: tipo,
-            fator: parseFloat(fator)
+             fator: evento.fator
         })
     })
     .then(function(resposta) {
@@ -221,7 +234,7 @@ document.getElementById('botao_simular_evento').addEventListener('click', functi
         return resposta.json();
     })
     .then(function(dados) {
-        console.log('Evento simulado:', dados.mensagem);
+        alert("🚨 Evento gerado: " + evento.nome);
 
         // Se a entrega está ativa, recalcula a partir da posição do veículo
         if (animacao_ativa && veiculo) {
