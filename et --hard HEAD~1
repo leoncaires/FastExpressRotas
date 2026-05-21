@@ -1,0 +1,20 @@
+[33m8d68254[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m versao mais bonita
+[33m7288592[m Implementa sistema de eventos negativos na rota
+[33m749ebd2[m Estilizando o aplicativo
+[33mb026f3a[m Adição da simulação de entrega com congestionamentos de tempo, botões novos e arrumando novamente a questão do recalculo dinâmico.
+[33m59c8f3e[m Atualizando o README.md
+[33m2276e6e[m Adição E3_MVP
+[33md285906[m Implementação do E3, Imagens do E3 e por fim o Read.me para o E3 MVP
+[33m61ea867[m Ajustes na aplicação dos src/tests
+[33m3e83e96[m Corrige recálculo dinâmico do Disjkstra
+[33m63abf8c[m Alguns ajustes na questão da simulação
+[33mdd9e745[m Na parte do front com um pouco de estilização, no quesito de exibição das ruas, eficiências e correções
+[33mae751a3[m Simulação de trânsito manual com o endpoint de eventos
+[33mcb80568[m Infraestrutura de dados, com grafo real com os nomes das ruas
+[33m179fdc4[m Implementando as estruturas iniciais com integração com mapas reais
+[33m7cba008[m correção e adição de botões novos
+[33m172cb7a[m Primeira versão do Projeto, Aplicação do algoritmo com uma simulação de rotas
+[33m4b4ca39[m link do github
+[33m4692350[m link do github
+[33me544e9f[m template e2 e imagens adicionado
+[33me62fb90[m Adição das Imagens e a documentação E1/E2
