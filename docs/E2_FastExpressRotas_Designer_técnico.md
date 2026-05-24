@@ -208,6 +208,8 @@ JSON contendo vértices com coordenadas geográficas (latitude e longitude) e ar
 | 5 | Relatório de eficiência. Comparar tempo da rota original (sem eventos) com tempo da rota dinâmica (após recálculos). | Baixa | Dado um cenário de simulação com pelo menos um evento, quando a entrega for concluída, então o sistema exibe a diferença percentual entre o tempo planejado e o tempo real. |
 | 6 | Interface Web simplificada. Página com seleção de origem/destino, visualização textual da rota e botões para eventos. | Alta | Dado o servidor Flask em execução, quando o usuário acessar a URL raiz, então uma página HTML permite escolher vértices, calcular rota e acionar eventos, exibindo resultado atualizado. |
 | 7 | Visualização da rota em mapa interativo – Exibir grafo e caminho mínimo sobre mapa Leaflet/OpenStreetMap. | Média | Dado um grafo com coordenadas geográficas (lat/lon) e uma rota calculada, quando o usuário solicitar a visualização, então o sistema gera um mapa interativo com a rota destacada e marcadores de origem/destino, utilizando Folium/Leaflet, sem necessidade de chaves de API pagas. |
+| 8 | Simulação de entrega com animação de veículo (caminhão) percorrendo a rota. | Média | Dado que uma rota foi calculada, quando o usuário clicar em "Iniciar Entrega", então um ícone de caminhão percorre a rota no mapa. | 
+| 9 | Recálculo dinâmico a partir da posição atual do veículo, sem retrocessos. | Alta | Dado que um evento de trânsito ocorre durante a entrega, quando a rota é recalculada, então o veículo continua do ponto mais próximo à frente, sem voltar. | 
 
 ### 5.2 Out-of-Scope — O que NÃO será feito
 
