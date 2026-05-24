@@ -43,6 +43,21 @@ def calcular_rota():
     dados = request.get_json()
     id_inicio = int(dados['start'])
     id_alvo = int(dados['target'])
+    posicao_atual = dados.get('current_pos', None)  # Pode receber {lat, lon}
+
+    # Se tem posição atual, encontra o vértice mais próximo
+    if posicao_atual and 'lat' in posicao_atual and 'lon' in posicao_atual:
+        # Encontra o vértice mais próximo da posição atual
+        melhor_id = None
+        melhor_dist = float('inf')
+        for v in grafo.obter_todos_vertices():
+            d = haversine(posicao_atual['lat'], posicao_atual['lon'], v.lat, v.lon)
+            if d < melhor_dist:
+                melhor_dist = d
+                melhor_id = v.id
+        if melhor_id:
+            id_inicio = melhor_id
+            print(f"Posição atual próxima ao vértice {melhor_id} (distância: {melhor_dist:.2f}m)")
 
     caminho, distancia = servico_rota.encontrar_caminho_mais_curto(id_inicio, id_alvo)
 
@@ -85,7 +100,6 @@ def calcular_rota():
         ruas_percurso.append(nome_rua if nome_rua else f"Via {origem}→{destino}")
         
         # Calcula distância real em km (assumindo que peso = tempo em minutos e velocidade de 30 km/h)
-        # Distância (km) = (peso / 60) * 30
         distancia_total_km += (peso_aresta / 60.0) * 30.0
 
         if geometria:

@@ -4,141 +4,127 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;
+    width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f0f2f5;
     color: #333;
+    overflow: hidden;
 }
 
-/* Barra de notificação */
-#notificacao_transito {
-    background: #ff9800;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
+/* ===== MAPA FULL SCREEN ===== */
+#mapa {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    bottom: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 1;
 }
 
-/* Cabeçalho */
-h1 {
-    background: #1a237e;
+.leaflet-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* ===== NOTIFICAÇÃO ===== */
+#notificacao_transito {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #ff3d00;
     color: #fff;
-    margin-top: 44px; /* espaço para a barra de notificação */
-    padding: 15px 30px;
-    font-size: 24px;
+    padding: 8px 14px;
+    font-weight: bold;
+    border-radius: 20px;
+
+    z-index: 1000;
 }
 
-/* Painel de controle */
-#controles {
-    background: #fff;
-    padding: 20px 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: flex-end;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 44px;
-    z-index: 999;
-}
+/* ===== TÍTULO ===== */
+h1 {
+    position: fixed;
+    top: 10px;
+    left: 100px;
 
-#controles label {
-    display: block;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #666;
-    margin-bottom: 4px;
-}
+    z-index: 1000;
 
-#controles select {
+    background: rgba(0, 123, 255, 0.9);
+    color: #fff;
+
     padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
     font-size: 14px;
-    min-width: 220px;
-    background: #fff;
+    border-radius: 8px;
 }
 
+/* ===== PAINEL FLUTUANTE ===== */
+#controles {
+    position: fixed;
+    top: 250px;
+    right: 15px;
+
+    z-index: 1000;
+
+    background: #ffffff;
+    padding: 15px;
+    width: 280px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* labels */
+#controles label {
+    font-size: 11px;
+    color: #555;
+    text-transform: uppercase;
+}
+
+/* selects */
+#controles select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fafafa;
+    outline: none;
+}
+
+/* botões */
 #controles button {
-    padding: 8px 18px;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 6px;
+
+    color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
-    color: #fff;
+
+    transition: 0.2s;
+}
+
+/* cores botões */
+#botao_calcular_real { background: #1e88e5; }
+#botao_calcular_interno { background: #2e7d32; }
+#botao_simular_evento { background: #fb8c00; }
+#botao_iniciar_entrega { background: #43a047; }
+#botao_parar_entrega { background: #e53935; }
+
+#controles button:disabled {
+    background: #bdbdbd !important;
+    cursor: not-allowed;
 }
 
 #controles button:active {
-    transform: scale(0.98);
-}
-
-#botao_calcular_real {
-    background: #2196F3;
-}
-#botao_calcular_real:hover {
-    background: #1976D2;
-}
-
-#botao_calcular_interno {
-    background: #4CAF50;
-}
-#botao_calcular_interno:hover {
-    background: #388E3C;
-}
-
-#botao_simular_evento {
-    background: #FF9800;
-}
-#botao_simular_evento:hover {
-    background: #F57C00;
-}
-
-#botao_iniciar_entrega {
-    background: #8BC34A;
-}
-#botao_iniciar_entrega:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
-
-#botao_parar_entrega {
-    background: #f44336;
-}
-#botao_parar_entrega:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
-
-/* Área de resultado (mapa + painel) */
-#resultado {
-    display: flex;
-    height: calc(100vh - 200px); /* ajuste conforme necessário */
-}
-
-#texto_rota {
-    width: 350px;
-    padding: 20px;
-    background: #fff;
-    border-right: 1px solid #ddd;
-    overflow-y: auto;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-#texto_rota h3 {
-    color: #1a237e;
-    margin-bottom: 10px;
-}
-
-#mapa {
-    flex: 1;
-    height: 100%;
+    transform: scale(0.97);
 }

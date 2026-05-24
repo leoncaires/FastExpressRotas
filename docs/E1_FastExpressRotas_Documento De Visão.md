@@ -33,17 +33,17 @@ Desenvolver um WebApp para a FastExpress que, utilizando um grafo direcionado e 
 
 ## 3. Objetivos Específicos
 
-- [ ] Modelar a região atendida pela FastExpress como um grafo direcionado, onde vértices são cruzamentos e arestas são vias, cada uma com um peso (tempo de percurso) em condições normais.
-- [ ] Implementar um mecanismo para alterar os pesos dinamicamente: acidente bloqueia a aresta (peso infinito), congestionamento multiplica o peso por um fator.
-- [ ] Aplicar o algoritmo de Dijkstra com heap de prioridade para encontrar o caminho de menor tempo a partir dos pesos atuais.
-- [ ] Construir uma interface web por flask onde o gestor da FastExpress informa origem e destino, visualiza a rota e pode simular eventos, onde sistema recalcula a rota se um evento ocorrer durante o trajeto.
-- [ ] Avaliar a diferença de tempo total entre a rota estática (sem eventos) e a rota dinâmica (com recálculo), gerando um relatório de eficiência.
+- [X] Modelar a região atendida pela FastExpress como um grafo direcionado, onde vértices são cruzamentos e arestas são vias, cada uma com um peso (tempo de percurso) em condições normais.
+- [X] Implementar um mecanismo para alterar os pesos dinamicamente: acidente bloqueia a aresta (peso infinito), congestionamento multiplica o peso por um fator.
+- [X] Aplicar o algoritmo de Dijkstra com heap de prioridade para encontrar o caminho de menor tempo a partir dos pesos atuais.
+- [X] Construir uma interface web por flask onde o gestor da FastExpress informa origem e destino, visualiza a rota e pode simular eventos, onde sistema recalcula a rota se um evento ocorrer durante o trajeto.
+- [X] Avaliar a diferença de tempo total entre a rota estática (sem eventos) e a rota dinâmica (com recálculo), gerando um relatório de eficiência.
 
 ---
 
 ## 4. Público-Alvo / Caso de Uso Principal
 
-Gestores de frota e motoristas da FastExpress. Exemplo de uso: um gestor define uma rota inicial para uma entrega. No meio do trajeto, um acidente bloqueia uma via. O sistema recebe a informação (simulada), recalcula a rota a partir da posição atual do veículo e exibe um novo caminho, evitando o atraso.
+Gestores de frota e motoristas da FastExpress. Exemplo de uso: um gestor define uma rota inicial para uma entrega (usando a referência visual da API OSRM ou o próprio Dijkstra). No meio do trajeto, um acidente bloqueia uma via. O sistema recebe a informação (simulada automaticamente ou por um clique), recalcula a rota a partir da posição atual do veículo e exibe um novo caminho, evitando o atraso. O motorista vê o ícone do caminhão ser redirecionado sem retrocessos.
 
 ---
 

@@ -84,7 +84,7 @@ PATRÃO, Brian. Dijkstra's vs Bellman-Ford Algorithm. Medium, [s.d.]. Disponíve
 | Apresentação (UI/CLI) | Interface web com mapa interativo. Exibe rotas sobre mapa real. | `src/web/app.py` (Flask), `templates/index.html`, `static/style.css`, `static/script.js`, `static/map.js` |
 | Aplicação (Service) | Orquestração: recebe requisições, chama Dijkstra, retorna caminho + coordenadas. | `src/service/route_service.py`, `src/service/event_handler.py` |
 | Domínio (Core) | Modelagem do grafo (vértices, arestas) e implementação do algoritmo de Dijkstra. Contém a lógica pura de caminho mínimo. | `src/core/graph.py`, `src/core/vertex.py`, `src/core/edge.py`, `src/algorithms/dijkstra.py` |
-| Infraestrutura (I/O) | Leitura do dataset inicial (malha viária com coordenadas) e salvamento de relatórios. | `src/io/file_reader.py`, `src/io/report_writer.py` |
+| Infraestrutura (I/O) | Leitura do dataset inicial (malha viária com coordenadas), geração de grafos reais e salvamento de relatórios. | `src/io/file_reader.py`, `src/io/report_writer.py`, `src/io/gerar_grafo.py` |
 
 ---
 
@@ -99,10 +99,13 @@ fast-express-rota/
 │
 ├── docs/
 │   ├── E1_FastExpressRotas_Documento De Visão.md
-│   ├── E2_FastExpressRotas_Designer_técnico.md       
+│   ├── E2_FastExpressRotas_Designer_técnico.md   
+│   ├── E3_FastExpressRotas_MVP.md    
 │   └── imagens/
 │       ├── E1_FastExpressRotas.jpeg
-│       └── E2_FastExpressRotas.png
+│       ├── E2_FastExpressRotas.png
+│       ├── E3_mvp_entrada.png
+│       └── E3_mvp_resultado.png
 │
 ├── src/
 │   ├── core/                         # Camada de Domínio
@@ -115,17 +118,20 @@ fast-express-rota/
 │   │
 │   ├── io/                           # Camada de Infraestrutura (I/O)
 │   │   ├── file_reader.py
-│   │   └── report_writer.py
+│   │   ├── report_writer.py
+│   │   └── gerar_grafo.py
 │   │
 │   ├── service/                      # Camada de Aplicação (Service)
 │   │   ├── route_service.py
-│   │   └── event_handler.py
+│   │   ├── event_handler.py
+│   │   └── traffic_simulator.py
 │   │
 │   ├── web/                          # Camada de Apresentação (Flask)
 │   │   ├── app.py
 │   │   ├── templates/
 │   │   │   └── index.html
 │   │   └── static/
+│   │       ├── cargotruck.png
 │   │       ├── style.css
 │   │       ├── script.js
 │   │       └── map.js                # inicialização e controle do mapa 
@@ -143,7 +149,13 @@ fast-express-rota/
     └── grafos_aleatorios/            # gerados durante testes        # ou pom.xml, package.json…
 ```
 
-> **Justificativa de desvios** *(se houver)*: 
+> **Justificativa de desvios** *(se houver)*:
+
+- **`src/io/gerar_grafo.py`**: Adicionado para automatizar a extração da malha viária real do OpenStreetMap, gerando o arquivo `malha_exemplo.json` com coordenadas reais e geometria das vias.
+- **`src/service/traffic_simulator.py`**: Implementa a simulação de trânsito (automática e manual) com alteração dinâmica dos pesos, funcionalidade central para demonstrar o recálculo de rotas.
+- **`src/service/event_handler.py`**: Mantido como esqueleto para gerenciamento de eventos, complementando o simulador.
+
+Essas adições não alteram a arquitetura de 4 camadas planejada; apenas enriquecem as camadas de Aplicação e Infraestrutura.
 
 ---
 
@@ -151,7 +163,7 @@ fast-express-rota/
 
 **Formato de entrada aceito:**
 
-JSON contendo vértices com coordenadas geográficas (latitude e longitude) e arestas com peso (tempo em minutos).
+JSON contendo vértices com coordenadas geográficas (latitude e longitude) e arestas com peso (tempo em minutos), nome e geometria.
 
 **Exemplo de estrutura do arquivo de entrada:**
 
@@ -164,12 +176,8 @@ JSON contendo vértices com coordenadas geográficas (latitude e longitude) e ar
     { "id": 3, "nome": "Industrial", "lat": -23.5401, "lon": -46.6702 }
   ],
   "arestas": [
-    { "origem": 0, "destino": 1, "peso": 8 },
-    { "origem": 1, "destino": 0, "peso": 8 },
-    { "origem": 0, "destino": 2, "peso": 12 },
-    { "origem": 2, "destino": 0, "peso": 12 },
-    { "origem": 1, "destino": 3, "peso": 5 },
-    { "origem": 3, "destino": 2, "peso": 7 }
+    { "origem": 0, "destino": 1, "peso": 8, "nome": "Rua Exemplo", "geometry": [[-23.5505, -46.6333], [-23.5510, -46.6340]] },
+    { "origem": 1, "destino": 0, "peso": 8, "nome": "Rua Exemplo", "geometry": [[-23.5510, -46.6340], [-23.5505, -46.6333]] }
   ]
 }
 ```
@@ -178,10 +186,12 @@ JSON contendo vértices com coordenadas geográficas (latitude e longitude) e ar
 
 | Parâmetro | Descrição |
 |-----------|-----------|
-| Número de vértices | Configurável via argumento CLI ou interface |
-| Região geográfica | Bounding box (lat_min, lat_max, lon_min, lon_max) para gerar pontos dentro de uma área real (ex.: centro de São Paulo). |
-| Densidade | Probabilidade de existência de uma aresta entre dois vértices com distância euclidiana inferior a um raio máximo. |
-| Faixa de pesos | Pesos proporcionais à distância geográfica multiplicada por um fator de trânsito (ex.: 1 a 3), ou aleatórios entre min_peso e max_peso. |
+| Número de vértices | Obtidos das tags name do OSM ou, na ausência, dos nomes das ruas incidentes. |
+| Região geográfica | Ponto central (Praça da Sé, São Paulo) com raio de 1500 m, usando dist_type='network' para garantir conectividade. |
+| Fonte de dados | OpenStreetMap, extraídos via OSMnx. |
+| Peso das arestas | Comprimento da via (metros) ÷ 30 km/h, convertido para minutos. |
+| Geometria | Coordenadas reais da via (LineString do Shapely). |
+| Arestas reversas | Adicionadas para permitir manobras e desvios. |
 
 ---
 
@@ -203,9 +213,9 @@ JSON contendo vértices com coordenadas geográficas (latitude e longitude) e ar
 
 | Funcionalidade excluída | Motivo |
 |------------------------|--------|
-| Roteirização com múltiplos veículos (frota) | O projeto foca em um único veículo realizando uma entrega. Roteirização de frota exigiria algoritmos de VRP (Vehicle Routing Problem), fora do escopo.O projeto foca em um único veículo realizando uma entrega. Roteirização de frota exigiria algoritmos de VRP (Vehicle Routing Problem), fora do escopo. |
-| Persistência de histórico de rotas em banco de dados | Apenas geração de relatório em memória/arquivo é exigida. Não há necessidade de armazenar múltiplas rotas para consulta futura. |
-| Atualização dinâmica de trânsito em tempo real (via API externa) | Os eventos (acidente, congestionamento) são simulados manualmente pelo usuário, não integrados com fontes externas de dados. |
+| Roteirização com múltiplos veículos (frota) | O projeto foca em um único veículo realizando uma entrega. |
+| Persistência de histórico de rotas em banco de dados | Apenas geração de relatório em memória/arquivo é exigida. |
+| Atualização dinâmica de trânsito em tempo real (via API externa) | Os eventos são simulados manual e automaticamente, não integrados com fontes externas. |
 
 
 ---

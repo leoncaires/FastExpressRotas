@@ -1,6 +1,12 @@
 // Guarda a última origem/destino para recálculo automático
 var ultima_origem = null;
 var ultimo_destino = null;
+var tipos_evento = {
+    leve: { fator: 1.3, nome: "Congestionamento leve" },
+    medio: { fator: 1.8, nome: "Congestionamento médio" },
+    grave: { fator: 2.5, nome: "Acidente" },
+    bloqueio: { fator: 999, nome: "Via bloqueada" }
+};
 
 // ---- SIMULAÇÃO DE CARGA ----
 var veiculo = null;          // marcador do caminhão
@@ -19,108 +25,155 @@ function limpar_intervalo() {
 // ------------------------------------------------------------
 // Função interna que executa o cálculo de rota (chamada pelas demais)
 // ------------------------------------------------------------
-function executar_calculo_rota(id_origem, id_destino) {
+function executar_calculo_rota(id_origem, id_destino, posicao_exata = null) {
     var div_texto = document.getElementById('texto_rota');
     div_texto.innerHTML = "Recalculando rota...";
 
-    fetch('/api/rota', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ start: id_origem, target: id_destino })
-    })
-    .then(function(resposta) { return resposta.json(); })
-    .then(function(dados) {
-        console.log('Resposta /api/rota:', dados);
-        if (dados.has_path) {
-            var primeiro_nome = dados.path[0].nome;
-            var ultimo_nome = dados.path[dados.path.length - 1].nome;
-            var ruas_percurso = (dados.ruas && dados.ruas.length > 0) 
-                                ? dados.ruas.join(' → ') 
-                                : 'Percurso não disponível';
-
-            var resumo_rota = '<strong>De</strong> ' + primeiro_nome + 
-                              ' <strong>para</strong> ' + ultimo_nome;
-            var detalhes_percurso = '<details style="margin-top: 10px;">' +
-                                    '<summary style="cursor: pointer; font-weight: bold;">🗺️ Ver percurso detalhado</summary>' +
-                                    '<p style="margin: 5px 0 0 20px; line-height: 1.6;">' + ruas_percurso + '</p>' +
-                                    '</details>';
-
-            if (!window.tempo_inicial) {
-                window.tempo_inicial = dados.distance;
-            }
-            var tempo_atual = dados.distance;
-            var eficiencia = ((window.tempo_inicial - tempo_atual) / window.tempo_inicial * 100).toFixed(1);
-
-            // Monta texto com tempo, distância e eficiência
-            var distancia_str = (dados.distancia_km != null) ? dados.distancia_km.toFixed(2) + ' km' : 'N/D';
-            div_texto.innerHTML =
-            resumo_rota + detalhes_percurso +
-            '<br><strong>Tempo total:</strong> ' + dados.distance.toFixed(2) + ' min' +
-            '<br><strong>Distância:</strong> ' + (dados.distancia_km ? dados.distancia_km.toFixed(2) + ' km' : 'N/D') +
-            '<br><strong>Eficiência:</strong> ' + eficiencia + '%' +
-            '(tempo inicial: ' + window.tempo_inicial.toFixed(2) + ' min, atual: ' + tempo_atual.toFixed(2) + ' min)';
-
-            desenhar_rota(dados.path, 'green');
-
-            // Atualiza pontos da rota global
-            pontos_rota = dados.path.map(function(p) { return [p.lat, p.lon]; });
-
-            // Se a entrega estiver ativa, reposiciona o veículo na nova rota
-            if (animacao_ativa) {
-                console.log('Entrega ativa - reposicionando veículo na nova rota');
-                limpar_intervalo();
-                if (veiculo && pontos_rota.length > 0) {
-                    var pos_atual = veiculo.getLatLng();
-
-                    // Procura o ponto mais próximo **depois** do índice atual
-                    var idx_proximo = -1;
-                    var dist_min = Infinity;
-                    for (var i = indice_atual; i < pontos_rota.length; i++) {
-                        var d = Math.pow(pontos_rota[i][0] - pos_atual.lat, 2) + Math.pow(pontos_rota[i][1] - pos_atual.lng, 2);
-                        if (d < dist_min) {
-                            dist_min = d;
-                            idx_proximo = i;
-                        }
-                    }
-
-                    if (idx_proximo === -1) {
-                        console.log('Nenhum ponto à frente – reiniciando animação');
-                        if (veiculo) { mapa.removeLayer(veiculo); veiculo = null; }
-                        indice_atual = 0;
-                        iniciar_animacao();
-                    } else {
-                        indice_atual = idx_proximo;
-                        veiculo.setLatLng(pontos_rota[indice_atual]);
-                        mover_veiculo();
-                        alert('⚠️ Rota alterada devido a evento de trânsito! O veículo foi redirecionado.');
-                    }
-                } else {
-                    if (veiculo) { mapa.removeLayer(veiculo); veiculo = null; }
-                    indice_atual = 0;
-                    iniciar_animacao();
-                }
-            } else {
-                // Entrega não está ativa – habilita botão de iniciar
-                document.getElementById('botao_iniciar_entrega').disabled = false;
-                if (veiculo) { mapa.removeLayer(veiculo); veiculo = null; }
-                limpar_intervalo();
-            }
-        } else {
-            console.log('Nenhuma rota encontrada.');
-            div_texto.innerHTML = "Não há rota disponível entre os vértices selecionados.";
-            limpar_rota();
-            document.getElementById('botao_iniciar_entrega').disabled = true;
-            if (animacao_ativa) {
-                parar_entrega();
-            }
+    // Se temos uma posição exata do veículo (quando está em movimento)
+    if (posicao_exata && animacao_ativa) {
+        // Adiciona à requisição para o backend processar
+        var body = { start: id_origem, target: id_destino };
+        if (posicao_exata) {
+            body.current_pos = posicao_exata;
         }
-    })
-    .catch(function(erro) {
-        div_texto.innerHTML = "Erro ao calcular rota.";
-        console.error(erro);
-    });
+        
+        fetch('/api/rota', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        })
+        .then(function(resposta) { return resposta.json(); })
+        .then(function(dados) {
+            processar_resposta_rota(dados, true);
+        })
+        .catch(function(erro) {
+            div_texto.innerHTML = "Erro ao calcular rota.";
+            console.error(erro);
+        });
+    } else {
+        // Comportamento normal sem posição atual
+        fetch('/api/rota', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ start: id_origem, target: id_destino })
+        })
+        .then(function(resposta) { return resposta.json(); })
+        .then(function(dados) {
+            processar_resposta_rota(dados, false);
+        })
+        .catch(function(erro) {
+            div_texto.innerHTML = "Erro ao calcular rota.";
+            console.error(erro);
+        });
+    }
 }
 
+function processar_resposta_rota(dados, com_posicao_atual) {
+    var div_texto = document.getElementById('texto_rota');
+    
+    if (dados.has_path) {
+        var primeiro_nome = dados.path[0].nome;
+        var ultimo_nome = dados.path[dados.path.length - 1].nome;
+        var ruas_percurso = (dados.ruas && dados.ruas.length > 0) 
+                            ? dados.ruas.join(' → ') 
+                            : 'Percurso não disponível';
+
+        var resumo_rota = '<strong>De</strong> ' + primeiro_nome + 
+                          ' <strong>para</strong> ' + ultimo_nome;
+        var detalhes_percurso = '<details style="margin-top: 10px;">' +
+                                '<summary style="cursor: pointer; font-weight: bold;">🗺️ Ver percurso detalhado</summary>' +
+                                '<p style="margin: 5px 0 0 20px; line-height: 1.6;">' + ruas_percurso + '</p>' +
+                                '</details>';
+
+        if (!window.tempo_inicial) {
+            window.tempo_inicial = dados.distance;
+        }
+        var tempo_atual = dados.distance;
+        var eficiencia = ((window.tempo_inicial - tempo_atual) / window.tempo_inicial * 100).toFixed(1);
+
+        var distancia_str = (dados.distancia_km != null) ? dados.distancia_km.toFixed(2) + ' km' : 'N/D';
+        div_texto.innerHTML =
+        resumo_rota + detalhes_percurso +
+        '<br><strong>Tempo total:</strong> ' + dados.distance.toFixed(2) + ' min' +
+        '<br><strong>Distância:</strong> ' + (dados.distancia_km ? dados.distancia_km.toFixed(2) + ' km' : 'N/D') +
+        '<br><strong>Eficiência:</strong> ' + eficiencia + '%' +
+        '(tempo inicial: ' + window.tempo_inicial.toFixed(2) + ' min, atual: ' + tempo_atual.toFixed(2) + ' min)';
+
+        desenhar_rota(dados.path, 'green');
+
+        // Atualiza pontos da rota global
+        pontos_rota = dados.path.map(function(p) { return [p.lat, p.lon]; });
+
+        // Se a entrega estiver ativa, reposiciona o veículo suavemente
+        if (animacao_ativa && veiculo) {
+            console.log('Entrega ativa - reposicionando veículo na nova rota');
+            limpar_intervalo();
+            
+            var pos_atual = veiculo.getLatLng();
+            
+            // Encontra o ponto mais próximo na nova rota
+            var idx_proximo = encontrar_ponto_mais_proximo(pos_atual, pontos_rota);
+            
+            if (idx_proximo !== -1 && idx_proximo < pontos_rota.length - 1) {
+                indice_atual = idx_proximo;
+                
+                // Move suavemente para o ponto encontrado
+                veiculo.setLatLng(pontos_rota[indice_atual]);
+                veiculo.bindPopup('🔄 Rota recalculada!').openPopup();
+                setTimeout(function() {
+                    if (veiculo) veiculo.closePopup();
+                }, 2000);
+                
+                // Continua a animação
+                mover_veiculo();
+                alert('⚠️ Evento de trânsito detectado! Rota ajustada a partir da posição atual.');
+            } else {
+                console.log('Veículo muito distante da nova rota - reiniciando');
+                if (veiculo) { mapa.removeLayer(veiculo); veiculo = null; }
+                indice_atual = 0;
+                iniciar_animacao();
+            }
+        } else {
+            // Entrega não está ativa
+            document.getElementById('botao_iniciar_entrega').disabled = false;
+            if (veiculo) { mapa.removeLayer(veiculo); veiculo = null; }
+            limpar_intervalo();
+        }
+    } else {
+        console.log('Nenhuma rota encontrada.');
+        div_texto.innerHTML = "Não há rota disponível entre os vértices selecionados.";
+        limpar_rota();
+        document.getElementById('botao_iniciar_entrega').disabled = true;
+        if (animacao_ativa) {
+            parar_entrega();
+        }
+    }
+}
+
+// Função auxiliar para encontrar o ponto mais próximo
+function encontrar_ponto_mais_proximo(pos, pontos) {
+    var idx = -1;
+    var dist_min = Infinity;
+    
+    for (var i = 0; i < pontos.length; i++) {
+        var d = Math.pow(pontos[i][0] - pos.lat, 2) + Math.pow(pontos[i][1] - pos.lng, 2);
+        if (d < dist_min) {
+            dist_min = d;
+            idx = i;
+        }
+    }
+    
+    return idx;
+
+}
+function gerar_evento_negativo() {
+    var r = Math.random();
+
+    if (r < 0.5) return "leve";
+    if (r < 0.75) return "medio";
+    if (r < 0.9) return "grave";
+    return "bloqueio";
+}
 // Função que calcula e exibe a rota interna (Dijkstra) – usa os selects
 function calcular_e_mostrar_rota() {
     var id_origem = document.getElementById('origem').value;
@@ -197,14 +250,15 @@ document.getElementById('botao_calcular_interno').addEventListener('click', func
 // ------------------------------------------------------------
 // Botão "Simular Evento na Rota Atual"
 // ------------------------------------------------------------
+// Botão "Simular Evento na Rota Atual"
 document.getElementById('botao_simular_evento').addEventListener('click', function() {
     if (!ultima_origem || !ultimo_destino) {
         alert('Calcule uma rota primeiro.');
         return;
     }
     
-    var tipo = Math.random() < 0.7 ? 'congestionamento' : 'acidente';
-    var fator = tipo === 'congestionamento' ? (Math.random() * 2 + 1.5).toFixed(1) : 1;
+    var tipo = gerar_evento_negativo();
+    var evento = tipos_evento[tipo];
 
     fetch('/api/simular_evento', {
         method: 'POST',
@@ -213,7 +267,7 @@ document.getElementById('botao_simular_evento').addEventListener('click', functi
             origem: ultima_origem,
             destino: ultimo_destino,
             tipo: tipo,
-            fator: parseFloat(fator)
+            fator: evento.fator
         })
     })
     .then(function(resposta) {
@@ -221,22 +275,12 @@ document.getElementById('botao_simular_evento').addEventListener('click', functi
         return resposta.json();
     })
     .then(function(dados) {
-        console.log('Evento simulado:', dados.mensagem);
+        alert("🚨 Evento gerado: " + evento.nome);
 
-        // Se a entrega está ativa, recalcula a partir da posição do veículo
+        // Se a entrega está ativa, recalcula a partir da posição atual
         if (animacao_ativa && veiculo) {
             var pos = veiculo.getLatLng();
-            fetch('/api/vertice_proximo?lat=' + pos.lat + '&lon=' + pos.lng)
-            .then(function(res) { return res.json(); })
-            .then(function(vertice) {
-                console.log('Vértice próximo:', vertice);
-                ultima_origem = vertice.id;
-                executar_calculo_rota(ultima_origem, ultimo_destino);
-            })
-            .catch(function() {
-                // fallback: usa a origem original
-                executar_calculo_rota(ultima_origem, ultimo_destino);
-            });
+            executar_calculo_rota(ultima_origem, ultimo_destino, {lat: pos.lat, lon: pos.lng});
         } else {
             // Entrega não ativa: recalcula normalmente
             executar_calculo_rota(ultima_origem, ultimo_destino);
@@ -248,6 +292,23 @@ document.getElementById('botao_simular_evento').addEventListener('click', functi
     });
 });
 
+// Socket.IO: ao receber evento de trânsito, recalcula automaticamente
+var socket = io.connect('http://' + location.hostname + ':' + location.port);
+socket.on('traffic_event', function(data) {
+    document.getElementById('texto_notificacao').innerText = data.mensagem;
+
+    if (ultima_origem && ultimo_destino) {
+        // Se a entrega está ativa, recalcula a partir da posição do veículo
+        if (animacao_ativa && veiculo) {
+            var pos = veiculo.getLatLng();
+            executar_calculo_rota(ultima_origem, ultimo_destino, {lat: pos.lat, lon: pos.lng});
+        } else {
+            // Entrega não ativa: recalcula normalmente
+            executar_calculo_rota(ultima_origem, ultimo_destino);
+        }
+    }
+});
+
 // ------------------------------------------------------------
 // FUNÇÕES DE ENTREGA (ANIMAÇÃO DO VEÍCULO)
 // ------------------------------------------------------------
@@ -257,15 +318,17 @@ function iniciar_animacao() {
         return;
     }
     var icone_caminhao = L.icon({
-        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+        iconUrl: './static/cargotruck.png',  // verifique o caminho
         shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34]
+        iconSize: [40, 40],          // tamanho ajustado
+        iconAnchor: [20, 40],        // ponto de referência
+        popupAnchor: [0, -35]
     });
+
     if (veiculo) mapa.removeLayer(veiculo);
     veiculo = L.marker(pontos_rota[indice_atual], {icon: icone_caminhao}).addTo(mapa);
-    veiculo.bindPopup('🚚 Em trânsito').openPopup();  
+    veiculo.bindPopup('Em trânsito').openPopup();  
+
     animacao_ativa = true;
     document.getElementById('botao_iniciar_entrega').disabled = true;
     document.getElementById('botao_parar_entrega').disabled = false;

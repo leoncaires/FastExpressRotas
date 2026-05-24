@@ -2,8 +2,9 @@
 var mapa = L.map('mapa').setView([-23.555, -46.64], 13);
 
 // Camada de tiles do OpenStreetMap (gratuita, sem chave de API)
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; Stadia Maps & OpenStreetMap',
+    maxZoom: 20
 }).addTo(mapa);
 
 // Variáveis para gerenciar a linha da rota e marcadores
