@@ -14,6 +14,16 @@
 
 ---
 
+## 📝 Contribuições dos Integrantes
+
+| Integrante | Principais atividades |
+|------------|----------------------|
+| **Leonel Santos Caires** | Implementação do algoritmo de Dijkstra com min‑heap, desenvolvimento do servidor Flask e endpoints REST (`app.py`), integração com Socket.IO, simulação de trânsito (`traffic_simulator.py`), extração da malha viária real com OSMnx (`gerar_grafo.py`), recálculo dinâmico, lógica de eficiência, documentação dos documentos E1, E2 e E3, README, testes unitários e de integração. |
+| **Matheus Henrique da Trindade** | Melhorias no mapa e interface Leaflet, implementação do sistema de eventos negativos na rota (acidentes e congestionamentos), suporte à visualização das rotas e ajustes de usabilidade no front‑end. |
+| **Elton dos Santos Rodrigues** | Desenvolvimento do front‑end com HTML, CSS e JavaScript, exibição das rotas e percurso detalhado, estilização da interface, implementação dos botões de controle (Iniciar/Parar Entrega, Simular Evento), e suporte à correção de exibição de eficiência. |
+
+---
+
 ## Contexto e Motivação
 A transportadora **FastExpress** precisa realizar entregas com rapidez, mas enfrenta imprevistos como acidentes e congestionamentos.  
 Sistemas de navegação comuns oferecem uma rota inicial, porém não se adaptam quando as condições do trânsito mudam após o veículo já estar em movimento.
@@ -59,10 +69,10 @@ Desenvolver um WebApp para a FastExpress que, utilizando um grafo direcionado e 
 
 ### 3. Simulação de eventos de trânsito
 - **Simulador automático**: thread que a cada 20s escolhe uma aresta aleatória e aplica:
-- Congestionamento (peso × fator 1.5–3.0)
-- Acidente (peso = ∞, via bloqueada)
+  - Congestionamento (peso × fator 1.5–3.0).
+  - Acidente (peso = ∞, via bloqueada).
 - **Simulador manual**: botão “Simular Evento na Rota Atual” que aplica o evento na aresta mais pesada do caminho atual.
-- O evento altera o peso da aresta **no grafo em memória** e emite um sinal via Socket.IO.
+  - O evento altera o peso da aresta **no grafo em memória** e emite um sinal via Socket.IO.
 
 ### 4. Recálculo dinâmico da rota
 1. O evento de trânsito modifica o peso de uma aresta no grafo.
